@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-container":"#303436","on-secondary-fixed-variant":"#005227","on-surface":"#0b1c30","inverse-surface":"#213145","on-primary-container":"#799dd6","surface-tint":"#3a5f94","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3c","primary-fixed-dim":"#a7c8ff","inverse-primary":"#a7c8ff","error":"#ba1a1a","on-tertiary-container":"#999c9e","tertiary":"#1b1f20","secondary-fixed-dim":"#66dd8b","on-tertiary":"#ffffff","on-secondary-container":"#00743a","outline":"#737780","on-tertiary-fixed-variant":"#444749","surface-container":"#e5eeff","on-primary":"#ffffff","secondary":"#006d36","surface-variant":"#d3e4fe","on-error-container":"#93000a","error-container":"#ffdad6","on-primary-fixed-variant":"#1f477b","primary-fixed":"#d5e3ff","outline-variant":"#c3c6d1","primary":"#001e40","on-secondary-fixed":"#00210c","surface-container-low":"#eff4ff","surface-container-high":"#dce9ff","primary-container":"#003366","on-tertiary-fixed":"#191c1e","on-error":"#ffffff","background":"#f8f9ff","surface-bright":"#f8f9ff","surface":"#f8f9ff","tertiary-fixed-dim":"#c4c7c9","secondary-container":"#83fba5","on-secondary":"#ffffff","on-surface-variant":"#43474f","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff","surface-dim":"#cbdbf5","secondary-fixed":"#83fba5","tertiary-fixed":"#e0e3e5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"base":"4px","xl":"64px","margin-desktop":"48px","gutter":"24px","lg":"40px","sm":"16px","margin-mobile":"16px","md":"24px","xs":"8px","max-width":"1280px"},"fontFamily":{"mono-price":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"title-lg":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"]},"fontSize":{"mono-price":["16px",{"lineHeight":"24px","fontWeight":"700"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-sm"><div class="px-md pt-xs flex flex-col gap-xs"><div class="flex items-center gap-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">apartment</span></div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-primary tracking-tight">EspaciosChile</span><span class="font-label-md text-label-md text-on-surface-variant uppercase">Backoffice Pro</span></div></div><div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-surface-container-highest w-fit"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">PRODUCCIÓN CL v2.4</span></div></div><div class="px-md pt-xs"><span class="font-label-md text-label-md text-outline uppercase tracking-wider">Gestión Inmobiliaria</span></div><nav class="flex flex-col gap-base px-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-general" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-sm text-body-sm">Dashboard General</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="moderacion-de-espacios" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-body-sm text-body-sm">Moderación de Espacios</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="verificacion-de-identidad" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-sm text-body-sm">Verificación de Identidad</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="transacciones-y-pagos" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-sm text-body-sm">Transacciones y Pagos</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="usuarios-y-propietarios" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-sm text-body-sm">Usuarios y Propietarios</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="auditoria-y-configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings_suggest</span><span class="font-body-sm text-body-sm">Auditoría y Configuración</span></a></nav></div><div class="px-md flex flex-col gap-xs"><div class="p-xs rounded-lg bg-surface-container flex flex-col gap-base"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">API Gateway CL</span><span class="inline-flex items-center gap-base font-label-md text-label-md text-secondary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Operativo</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">Latencia Santiago</span><span class="font-label-md text-label-md text-on-surface">24 ms</span></div></div><div class="flex items-center justify-between px-xs py-base"><a class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">support_agent</span><span class="font-label-md text-label-md">Mesa de Ayuda TI</span></a><span class="font-label-md text-label-md text-outline">CLT (UTC-3)</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-md"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-sm text-outline text-[20px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-10 pr-sm py-xs rounded-lg placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Buscar por RUT (ej: 12.345.678-9), ID de Contrato o Bodega..." type="text"/></div></div><div class="flex items-center gap-md"><div class="hidden xl:flex items-center gap-sm"><div class="flex items-center gap-xs px-xs py-base rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Webpay Plus: Activo</span></div><div class="flex items-center gap-xs px-xs py-base rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Sync SII: Conectado</span></div></div><div class="relative flex items-center justify-center"><button aria-label="Notificaciones críticas" class="p-xs rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface"></span></button></div><div class="flex items-center gap-xs pl-xs"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Super Admin</span><span class="font-label-md text-label-md text-on-surface-variant">admin@espacioschile.cl</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-gutter min-h-screen bg-surface"><div class="flex flex-col w-full pb-xl">
+<!-- Top Navigation Sub-bar & Context -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-sm py-sm border-b-0 mb-md">
+<div class="flex flex-col gap-base">
+<div class="flex items-center gap-xs text-on-surface-variant font-label-md text-label-md">
+<span>CUMPLIMIENTO &amp; SEGURIDAD LEGAL</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-semibold">COTEJO REGISTRO CIVIL &amp; RES</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+        Consola de Verificación de Identidad y Cotejo Oficial (Registro Civil / ClaveÚnica)
+      </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl">
+        Plataforma unificada de validación biométrica facial, consulta automática a base de datos de cédulas vigentes (SRCeI) y verificación de personerías jurídicas vigentes ante el Ministerio de Economía.
+      </p>
+</div>
+<div class="flex items-center gap-xs self-start md:self-auto">
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sincronizar SRCeI</span>
+</button>
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exportar Reporte CMF</span>
+</button>
+</div>
+</div>
+<!-- KPI Metrics Banner (Asymmetric Bento layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-md mb-lg">
+<!-- Metric 1 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Cola de Solicitudes</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+</div>
+<div class="my-xs flex items-baseline gap-xs">
+<span class="font-display-lg text-display-lg text-primary font-bold">34</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">+6 en última hora</span>
+</div>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>8 de alta prioridad (Empresas SpA)</span>
+</div>
+<div class="absolute right-0 bottom-0 translate-x-3 translate-y-3 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[90px]">fingerprint</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Acierto Biométrico</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">face</span>
+</div>
+</div>
+<div class="my-xs flex items-baseline gap-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">98.4%</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Liveness v3.2</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 98.4%"></div>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md text-on-surface-variant mt-xs">
+<span>Umbral de tolerancia: 95%</span>
+<span class="text-secondary font-semibold">Óptimo</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Fraude Detectado (Mes)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+</div>
+<div class="my-xs flex items-baseline gap-xs">
+<span class="font-display-lg text-display-lg text-primary font-bold">0</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Incidentes críticos</span>
+</div>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>1,420 validaciones limpias</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="relative overflow-hidden bg-primary text-on-primary p-md rounded-xl shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-wider">SLA Promedio Respuesta</span>
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+</div>
+<div class="my-xs flex items-baseline gap-xs">
+<span class="font-display-lg text-display-lg text-on-primary font-bold">14<span class="font-headline-md text-headline-md font-normal text-primary-fixed-dim ml-base">min</span></span>
+</div>
+<div class="flex items-center gap-xs font-body-sm text-body-sm text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">trending_down</span>
+<span>32% más veloz que la meta nacional</span>
+</div>
+</div>
+</div>
+<!-- Filters and Segment Selectors -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm mb-lg flex flex-col gap-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-sm">
+<!-- User Type Tabs -->
+<div class="flex flex-wrap items-center gap-base bg-surface-container-low p-base rounded-lg">
+<button class="px-sm py-xs rounded font-label-md text-label-md font-semibold bg-surface-container-lowest text-primary shadow-sm">
+          Todos los Casos (34)
+        </button>
+<button class="px-sm py-xs rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">
+          Propietarios (19)
+        </button>
+<button class="px-sm py-xs rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">
+          Clientes Arrendatarios (11)
+        </button>
+<button class="px-sm py-xs rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">
+          Representantes SpA / Empresas (4)
+        </button>
+</div>
+<!-- Quick filters -->
+<div class="flex flex-wrap items-center gap-xs">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+<span>Nivel: ClaveÚnica SMS</span>
+<span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-primary">close</span>
+</div>
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+<span>Cédula Frontal / Reverso</span>
+<span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-primary">close</span>
+</div>
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>Estatutos RES (Min. Economía)</span>
+<span class="material-symbols-outlined text-[14px] cursor-pointer hover:text-primary">close</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Dual Inspection View Section -->
+<div class="flex flex-col gap-lg mb-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">visibility</span>
+<h2 class="font-headline-md text-headline-md text-primary">Inspección Forense y Auditoría Documental en Tiempo Real</h2>
+</div>
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider">Cotejo Activo 2 de 34</span>
+</div>
+<!-- CASE 1: Carlos Henríquez Silva (Natural Person / Owner) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Case Header -->
+<div class="p-md bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-lg">
+            CH
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-title-lg text-title-lg text-on-surface">Carlos Henríquez Silva</span>
+<span class="px-xs py-base rounded-full bg-surface-container text-primary font-label-md text-label-md font-semibold">PROPIETARIO</span>
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-base">
+<span class="material-symbols-outlined text-[14px]">verified</span> ClaveÚnica Confirmada
+              </span>
+</div>
+<div class="flex items-center gap-sm font-mono-price text-body-sm text-on-surface-variant">
+<span>RUT: 14.892.341-K</span>
+<span>•</span>
+<span>ID Solicitud: KY-2024-9102</span>
+<span>•</span>
+<span>Ingreso: Hoy, 11:22 CLT</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs self-end md:self-auto">
+<div class="flex flex-col items-end mr-sm">
+<span class="font-label-md text-label-md text-outline uppercase">Match Biométrico</span>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span class="font-mono-price text-title-lg text-secondary">98.0%</span>
+</div>
+</div>
+<button class="px-sm py-xs rounded-lg bg-surface-container text-error hover:bg-error-container hover:text-on-error-container font-label-md text-label-md transition-all">
+            Rechazar por Foto Ilegible
+          </button>
+<button class="px-md py-xs rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Aprobar y Emitir Certificado Digital</span>
+</button>
+</div>
+</div>
+<!-- Case Content Body: Dual Inspection Grid -->
+<div class="p-md grid grid-cols-1 lg:grid-cols-12 gap-md">
+<!-- Visual Evidence Column (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">document_scanner</span>
+            Documentos Capturados vs. Prueba de Vida Facial
+          </span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-xs">
+<!-- Front ID Card -->
+<div class="flex flex-col gap-base">
+<div class="relative rounded-lg overflow-hidden bg-surface-container h-44 shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Chilean National Identity Card front view macro shot, professional high-resolution scan showing legal hologram, watermark, photo portrait, document number, and official seal of the Republic of Chile on clean minimal corporate surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY1O6LzjeZl3mvdD1turpV_LARkGW03pvXX559p1oEFS1W8lAIKjpwBSsY8nyDCKAZ51dQHhqqQh6idKVbnnYx5XU9e9mFR5l-qCiiqx9SxHmsnOoGxWN4ekrEk4Yh7Wbu4jrJ9Uy8BTo24Loop7L4F5y344-WxAGcVMGqYnbCLukc-Xt5o8nGkcrBcPAItvaSxUO217SMkB-AOVDIlVva7kXlV6suZQ0lrU6iFeg5Qcty3wqXh6Vb"/>
+<div class="absolute top-2 left-2 bg-primary/80 backdrop-blur-md px-xs py-base rounded text-on-primary font-label-md text-label-md">
+                  Frontal Cédula
+                </div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-xs py-base rounded text-on-surface font-label-md text-label-md flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary text-[14px]">check</span> OCR OK
+                </div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant text-center">N° Documento: 519.824.112</span>
+</div>
+<!-- Rear ID Card -->
+<div class="flex flex-col gap-base">
+<div class="relative rounded-lg overflow-hidden bg-surface-container h-44 shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Chilean National Identity Card backside view, clear macro photograph showing official MRZ machine-readable lines, fingerprint box, barcode and microtext with crisp corporate lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh74OlKOU0oH4Vch-Pn65A5NOnMPMbps1o_uQVyrOZDNyQzSgb3SrYcKSlnP1v7hO7VN-gDJ31e5lzuTehoiPVYBizGqHkfLTEFrHmx5EaAQT1LSGv0L2ceFXCXhGEP3noKJ2EcisvvMWHsJU9GwisA0V-xRPfTOxpY8GdmeVUPfzstKvm-Y8SS1k1pIn72KG2IIiXT-WClISUV-6yem9MNUjJQjaHyTNvS6cE3P00IyXY4Iw5bmW2"/>
+<div class="absolute top-2 left-2 bg-primary/80 backdrop-blur-md px-xs py-base rounded text-on-primary font-label-md text-label-md">
+                  Posterior Cédula
+                </div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-xs py-base rounded text-on-surface font-label-md text-label-md flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary text-[14px]">check</span> MRZ Válido
+                </div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant text-center">Vencimiento: 18/AGO/2029</span>
+</div>
+<!-- Selfie / Liveness Photo -->
+<div class="flex flex-col gap-base">
+<div class="relative rounded-lg overflow-hidden bg-surface-container h-44 shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High quality biometric selfie photo of adult Chilean man in his late 40s looking directly into the camera with neutral expression, crisp lighting, high sharpness against plain neutral studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9AXY0Vsh6oW8WO5HAn0UVQ_jqsDkOGneqL303ojil5M7MMKRGvitpxw7iLt3Qk78V8fFi7aqBPZb2hDUSwIq1P8KDsdsy-IYuuWTsfPPFvWsjnn5I2TiYa6S36YNl5GAVA10w_FtuQRTjptrrSIimZKdwclLHTCWSxYHclrGXlTrxM7i5zNNtjujrzBpv6wwUSOWeg7Xow1y-W0N-kvj4PISiBKaIyJYu_5MpPKWgPDUAC038Kf7q"/>
+<div class="absolute top-2 left-2 bg-secondary/90 backdrop-blur-md px-xs py-base rounded text-on-secondary font-label-md text-label-md">
+                  Liveness Activo
+                </div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 px-xs py-base rounded text-on-surface font-label-md text-label-md flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span> 3D Mesh OK
+                </div>
+</div>
+<span class="font-label-md text-label-md text-secondary font-semibold text-center">Score Vivo: 0.994</span>
+</div>
+</div>
+<!-- Forensic Comparison Metrics Bar -->
+<div class="bg-surface-container-low p-sm rounded-lg flex flex-wrap items-center justify-between gap-sm text-body-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+<span class="text-on-surface font-semibold">Validación en línea SRCeI:</span>
+<span class="text-on-surface-variant">Cédula no registra orden de bloqueo ni robo.</span>
+</div>
+<div class="flex items-center gap-xs font-mono-price text-on-surface">
+<span class="text-outline">Respuesta:</span>
+<span class="text-secondary font-semibold">VIGENTE (HTTP 200 OK)</span>
+</div>
+</div>
+</div>
+<!-- Official Registry & Metadata Column (5 cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-sm bg-surface-container-low p-md rounded-lg">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between border-b-0 pb-xs">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase">Dictamen Automatizado</span>
+<span class="px-xs py-base rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold">APROBACIÓN RECOMENDADA</span>
+</div>
+<!-- Field List -->
+<div class="grid grid-cols-2 gap-xs font-body-sm text-body-sm">
+<div class="text-on-surface-variant">Nombre Completo:</div>
+<div class="text-on-surface font-semibold text-right">Carlos Andrés Henríquez Silva</div>
+<div class="text-on-surface-variant">Nacionalidad:</div>
+<div class="text-on-surface font-semibold text-right">Chilena</div>
+<div class="text-on-surface-variant">Dirección Notificada:</div>
+<div class="text-on-surface text-right truncate">Av. Kennedy 5600, Las Condes</div>
+<div class="text-on-surface-variant">Estado Civil Registro Civil:</div>
+<div class="text-on-surface font-semibold text-right">Casado</div>
+<div class="text-on-surface-variant">Propiedades en Plataforma:</div>
+<div class="text-on-surface font-semibold text-right">2 Bodegas (Pudahuel)</div>
+</div>
+<!-- Mini Audit Verification Trace -->
+<div class="bg-surface-container-lowest p-xs rounded flex flex-col gap-base text-label-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Consulta ClaveÚnica API:</span>
+<span class="font-mono-price text-on-surface">Autenticado vía TOTP SMS</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Hash Criptográfico SHA-256:</span>
+<span class="font-mono-price text-on-surface truncate max-w-[180px]">7f83b1657ff1fc53b92dc18148a...</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs text-outline font-label-md text-label-md pt-xs">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>La firma avanzada (FEA) se habilitará inmediatamente tras la confirmación.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CASE 2: Transportes y Bodegajes Andinos SpA (Legal Entity & RES) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Case Header -->
+<div class="p-md bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold text-lg">
+            TB
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-title-lg text-title-lg text-on-surface">Transportes y Bodegajes Andinos SpA</span>
+<span class="px-xs py-base rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold">EMPRESA / SpA</span>
+<span class="px-xs py-base rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold flex items-center gap-base">
+<span class="material-symbols-outlined text-[14px]">domain_verification</span> RES Vigente
+              </span>
+</div>
+<div class="flex items-center gap-sm font-mono-price text-body-sm text-on-surface-variant">
+<span>RUT Empresa: 76.812.900-4</span>
+<span>•</span>
+<span>ID Solicitud: KY-2024-8843</span>
+<span>•</span>
+<span>Representante Designada: Andrea Morales Fuenzalida</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs self-end md:self-auto">
+<div class="flex flex-col items-end mr-sm">
+<span class="font-label-md text-label-md text-outline uppercase">Poderes y Personería</span>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">gavel</span>
+<span class="font-mono-price text-title-lg text-secondary">OK (Vigente)</span>
+</div>
+</div>
+<button class="px-sm py-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all">
+            Solicitar Aclaratoria RES
+          </button>
+<button class="px-md py-xs rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md font-semibold shadow-sm transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Aprobar Representación Legal</span>
+</button>
+</div>
+</div>
+<!-- Case Content Body: Legal Validation Grid -->
+<div class="p-md grid grid-cols-1 lg:grid-cols-12 gap-md">
+<!-- Representative Biometrics (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-sm bg-surface-container-low p-md rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase">Representante Legal</span>
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold">Cotejo Aprobado</span>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of an executive professional Chilean businesswoman in dark blazer, high definition, neutral corporate background with sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbEPLp9Eno19fHj28SPUcJ6SUM_0pkf8TedE4vC_61eJNWdjSSWp2zXG2xYk2Go-LnUh7F-3u9Q-cXG5F2kf4QNR76bRuFdsnPSnIPVJFnD-RSaBSolh5QSpV0SPIfsJPHZx_2HqubxPQPh4dZXPSzrDE7-bOvFHkIL4LU5SrOD8ss-csQ1ZtnlIpvMlMR0zr8SPvVV9DjIVlCATyeqq8egoxMUZVeWmNmVNW0wVUuf1--LHrMTZiO"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Andrea Morales Fuenzalida</span>
+<span class="font-mono-price text-body-sm text-on-surface-variant">RUT: 17.320.118-4</span>
+<span class="font-label-md text-label-md text-secondary">Gerente General &amp; Apoderada Clase A</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-lg flex flex-col gap-base font-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Cédula Oficial:</span>
+<span class="font-mono-price font-semibold text-secondary">Verificada SRCeI</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Facultad Arriendo &gt; 5 años:</span>
+<span class="font-semibold text-on-surface">Explícita en Estatuto</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Firma FEA Token:</span>
+<span class="font-mono-price text-on-surface">E-Sign Token Activo</span>
+</div>
+</div>
+</div>
+<!-- Official Registry Certificate & Details (8 cols) -->
+<div class="lg:col-span-8 flex flex-col justify-between gap-sm">
+<div>
+<div class="flex items-center justify-between mb-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+                Certificado de Estatuto Actualizado (Registro Empresas y Sociedades - Min. Economía)
+              </span>
+<span class="font-mono-price text-label-md text-outline">Código Verificación RES: 2024-9981-CHL</span>
+</div>
+<!-- RES Document summary Card -->
+<div class="bg-surface-container-low p-md rounded-lg grid grid-cols-1 md:grid-cols-3 gap-sm mb-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline">Razón Social Registrada</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Transportes y Bodegajes Andinos SpA</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline">Giro Comercial SII</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Almacenamiento y Depósito Nacional</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline">Fecha Constitución Legal</span>
+<span class="font-mono-price text-body-sm text-on-surface font-semibold">14 de Marzo 2019</span>
+</div>
+</div>
+<!-- Live Status indicators -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-xs font-body-sm">
+<div class="p-xs bg-surface-container rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="text-on-surface font-body-sm">Certificado de Vigencia: <strong class="text-secondary">OK (Emisión: Hoy)</strong></span>
+</div>
+<div class="p-xs bg-surface-container rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="text-on-surface font-body-sm">Anotaciones Marginales: <strong class="text-secondary">Sin Gravámenes</strong></span>
+</div>
+<div class="p-xs bg-surface-container rounded flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="text-on-surface font-body-sm">Facturación Electrónica: <strong class="text-secondary">Habilitada SII</strong></span>
+</div>
+</div>
+</div>
+<!-- Document download shortcut -->
+<div class="flex items-center justify-between p-xs bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">picture_as_pdf</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Certificado_Estatutos_Actualizados_768129004.pdf</span>
+<span class="font-label-md text-label-md text-outline">(2.4 MB, Firmado Digitalmente por Subsecretaría de Economía)</span>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline font-semibold flex items-center gap-base" href="#">
+<span>Abrir Documento Completo</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Historical Audit Logs & Official Certifications (Tabular Data Panel) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-xl">
+<div class="p-md flex flex-col sm:flex-row sm:items-center justify-between gap-sm bg-surface-container-low">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">history_edu</span>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary">Registro Oficial de Auditoría &amp; Trazabilidad Notarial</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Log inmutable de resoluciones de identidad, emisión de certificados y firmas electrónicas avanzadas (Ley 19.799).</p>
+</div>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md text-outline">Filtro por Operador:</span>
+<select class="bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded px-xs py-base border-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary">
+<option>Todos los Auditores</option>
+<option>M. Valenzuela (Oficial Legal)</option>
+<option>C. Tapia (KYC Specialist)</option>
+<option>Sistema Automático (API Bot)</option>
+</select>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<tr>
+<th class="py-xs px-md">Fecha &amp; Hora CLT</th>
+<th class="py-xs px-md">Sujeto / Razón Social</th>
+<th class="py-xs px-md">RUT Oficial</th>
+<th class="py-xs px-md">Mecanismo Validado</th>
+<th class="py-xs px-md">Operador / Auditor</th>
+<th class="py-xs px-md">Resolución &amp; Sellos</th>
+<th class="py-xs px-md text-right">Comprobante</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-md font-mono-price text-on-surface">14/Nov/2024 10:48:12</td>
+<td class="py-sm px-md">
+<div class="font-semibold text-on-surface">Ignacio Valenzuela Prieto</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Arrendatario Residencial</div>
+</td>
+<td class="py-sm px-md font-mono-price text-on-surface">18.441.902-3</td>
+<td class="py-sm px-md text-on-surface">ClaveÚnica + Cédula Frontal</td>
+<td class="py-sm px-md">
+<div class="flex items-center gap-xs">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-[10px]">MV</span>
+<span class="text-on-surface">M. Valenzuela (Legal)</span>
+</div>
+</td>
+<td class="py-sm px-md">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-base">
+<span class="material-symbols-outlined text-[12px]">verified</span> Identidad Verificada
+                </span>
+<span class="px-xs py-base rounded-full bg-surface-container text-primary font-label-md text-label-md font-semibold">
+                  FEA Activa
+                </span>
+</div>
+</td>
+<td class="py-sm px-md text-right">
+<button class="p-base hover:bg-surface-container rounded text-primary transition-colors" title="Descargar Hash Notarial">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-sm px-md font-mono-price text-on-surface">14/Nov/2024 09:30:45</td>
+<td class="py-sm px-md">
+<div class="font-semibold text-on-surface">Agrícola y Logística El Roble SpA</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Propietario Gran Bodega</div>
+</td>
+<td class="py-sm px-md font-mono-price text-on-surface">77.104.223-9</td>
+<td class="py-sm px-md text-on-surface">Estatutos RES + Firma Electrónica</td>
+<td class="py-sm px-md">
+<div class="flex items-center gap-xs">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-[10px]">BOT</span>
+<span class="text-on-surface">Auto-Cotejo RES v4</span>
+</div>
+</td>
+<td class="py-sm px-md">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-base">
+<span class="material-symbols-outlined text-[12px]">verified</span> Identidad Verificada
+                </span>
+<span class="px-xs py-base rounded-full bg-surface-container text-primary font-label-md text-label-md font-semibold">
+                  FEA Activa
+                </span>
+</div>
+</td>
+<td class="py-sm px-md text-right">
+<button class="p-base hover:bg-surface-container rounded text-primary transition-colors" title="Descargar Hash Notarial">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-md font-mono-price text-on-surface">13/Nov/2024 17:15:20</td>
+<td class="py-sm px-md">
+<div class="font-semibold text-on-surface">Loreto Paz Santander Lagos</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Propietaria Mini-Bodega</div>
+</td>
+<td class="py-sm px-md font-mono-price text-on-surface">15.933.001-2</td>
+<td class="py-sm px-md text-on-surface">Cédula Frontal / Reverso Biometría</td>
+<td class="py-sm px-md">
+<div class="flex items-center gap-xs">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-[10px]">CT</span>
+<span class="text-on-surface">C. Tapia (KYC)</span>
+</div>
+</td>
+<td class="py-sm px-md">
+<div class="flex items-center gap-xs">
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold flex items-center gap-base">
+<span class="material-symbols-outlined text-[12px]">verified</span> Identidad Verificada
+                </span>
+<span class="px-xs py-base rounded-full bg-surface-container text-primary font-label-md text-label-md font-semibold">
+                  FEA Activa
+                </span>
+</div>
+</td>
+<td class="py-sm px-md text-right">
+<button class="p-base hover:bg-surface-container rounded text-primary transition-colors" title="Descargar Hash Notarial">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Audit Footer Info -->
+<div class="p-sm bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-xs font-label-md text-label-md text-on-surface-variant">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Cumplimiento Ley 19.628 de Protección de Datos Personales &amp; Ley 19.799 sobre Documentos Electrónicos.</span>
+</div>
+<div class="flex items-center gap-sm">
+<span>Mostrando 3 de 1,420 registros de auditoría</span>
+<button class="text-primary font-semibold hover:underline">Ver Histórico Completo</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for visual feedback on verification buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    const approveBtns = document.querySelectorAll('button');
+    approveBtns.forEach(btn => {
+      if (btn.textContent.includes('Aprobar') || btn.textContent.includes('Rechazar')) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const originalText = this.innerHTML;
+          const isApprove = this.textContent.includes('Aprobar');
+          
+          this.style.opacity = '0.7';
+          this.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">autorenew</span> Procesando...`;
+          
+          setTimeout(() => {
+            this.style.opacity = '1';
+            if (isApprove) {
+              this.classList.remove('bg-secondary', 'bg-primary');
+              this.classList.add('bg-on-secondary-container');
+              this.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span> Certificado Emitido`;
+            } else {
+              this.classList.add('bg-error', 'text-on-error');
+              this.innerHTML = `<span class="material-symbols-outlined text-[18px]">block</span> Notificación Enviada`;
+            }
+          }, 800);
+        });
+      }
+    });
+  });
+</script></main></div></body></html>

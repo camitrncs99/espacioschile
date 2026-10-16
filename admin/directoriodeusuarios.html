@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-container":"#303436","on-secondary-fixed-variant":"#005227","on-surface":"#0b1c30","inverse-surface":"#213145","on-primary-container":"#799dd6","surface-tint":"#3a5f94","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3c","primary-fixed-dim":"#a7c8ff","inverse-primary":"#a7c8ff","error":"#ba1a1a","on-tertiary-container":"#999c9e","tertiary":"#1b1f20","secondary-fixed-dim":"#66dd8b","on-tertiary":"#ffffff","on-secondary-container":"#00743a","outline":"#737780","on-tertiary-fixed-variant":"#444749","surface-container":"#e5eeff","on-primary":"#ffffff","secondary":"#006d36","surface-variant":"#d3e4fe","on-error-container":"#93000a","error-container":"#ffdad6","on-primary-fixed-variant":"#1f477b","primary-fixed":"#d5e3ff","outline-variant":"#c3c6d1","primary":"#001e40","on-secondary-fixed":"#00210c","surface-container-low":"#eff4ff","surface-container-high":"#dce9ff","primary-container":"#003366","on-tertiary-fixed":"#191c1e","on-error":"#ffffff","background":"#f8f9ff","surface-bright":"#f8f9ff","surface":"#f8f9ff","tertiary-fixed-dim":"#c4c7c9","secondary-container":"#83fba5","on-secondary":"#ffffff","on-surface-variant":"#43474f","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff","surface-dim":"#cbdbf5","secondary-fixed":"#83fba5","tertiary-fixed":"#e0e3e5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"base":"4px","xl":"64px","margin-desktop":"48px","gutter":"24px","lg":"40px","sm":"16px","margin-mobile":"16px","md":"24px","xs":"8px","max-width":"1280px"},"fontFamily":{"mono-price":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"title-lg":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"]},"fontSize":{"mono-price":["16px",{"lineHeight":"24px","fontWeight":"700"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-sm"><div class="px-md pt-xs flex flex-col gap-xs"><div class="flex items-center gap-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">apartment</span></div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-primary tracking-tight">EspaciosChile</span><span class="font-label-md text-label-md text-on-surface-variant uppercase">Backoffice Pro</span></div></div><div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-surface-container-highest w-fit"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">PRODUCCIÓN CL v2.4</span></div></div><div class="px-md pt-xs"><span class="font-label-md text-label-md text-outline uppercase tracking-wider">Gestión Inmobiliaria</span></div><nav class="flex flex-col gap-base px-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-general" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-sm text-body-sm">Dashboard General</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="moderacion-de-espacios" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-body-sm text-body-sm">Moderación de Espacios</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="verificacion-de-identidad" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-sm text-body-sm">Verificación de Identidad</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="transacciones-y-pagos" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-sm text-body-sm">Transacciones y Pagos</span></a><a aria-current="page" class="flex items-center gap-sm px-sm py-xs rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold" data-path="usuarios-y-propietarios" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-sm text-body-sm">Usuarios y Propietarios</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="auditoria-y-configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings_suggest</span><span class="font-body-sm text-body-sm">Auditoría y Configuración</span></a></nav></div><div class="px-md flex flex-col gap-xs"><div class="p-xs rounded-lg bg-surface-container flex flex-col gap-base"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">API Gateway CL</span><span class="inline-flex items-center gap-base font-label-md text-label-md text-secondary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Operativo</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">Latencia Santiago</span><span class="font-label-md text-label-md text-on-surface">24 ms</span></div></div><div class="flex items-center justify-between px-xs py-base"><a class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">support_agent</span><span class="font-label-md text-label-md">Mesa de Ayuda TI</span></a><span class="font-label-md text-label-md text-outline">CLT (UTC-3)</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-md"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-sm text-outline text-[20px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-10 pr-sm py-xs rounded-lg placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Buscar por RUT (ej: 12.345.678-9), ID de Contrato o Bodega..." type="text"/></div></div><div class="flex items-center gap-md"><div class="hidden xl:flex items-center gap-sm"><div class="flex items-center gap-xs px-xs py-base rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Webpay Plus: Activo</span></div><div class="flex items-center gap-xs px-xs py-base rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Sync SII: Conectado</span></div></div><div class="relative flex items-center justify-center"><button aria-label="Notificaciones críticas" class="p-xs rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface"></span></button></div><div class="flex items-center gap-xs pl-xs"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Super Admin</span><span class="font-label-md text-label-md text-on-surface-variant">admin@espacioschile.cl</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-gutter min-h-screen bg-surface"><div class="flex flex-col w-full pb-xl">
+<!-- Top Context Ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-sm py-sm mb-base">
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-semibold">Módulo Auditoría &amp; Personas</span>
+<span class="text-outline">/</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Registro Oficial SII &amp; ClaveÚnica</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        Sincronización Notaría Digital: En Línea
+      </span>
+<button class="inline-flex items-center gap-xs px-sm py-xs bg-primary text-on-primary rounded-lg font-body-sm text-body-sm font-semibold shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+        Nuevo Propietario / Empresa
+      </button>
+</div>
+</div>
+<!-- Main Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md mb-lg">
+<div class="flex flex-col max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-semibold mb-base">Backoffice Chile Regional</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Gestión Centralizada de Usuarios, Propietarios y Arrendatarios</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Supervisión integral de perfiles persona natural y SpA, validaciones de cédula chilena, score de puntualidad y fiscalización de contratos notariales.</p>
+</div>
+<div class="flex items-center gap-xs self-start md:self-auto bg-surface-container-low p-xs rounded-xl shadow-sm">
+<button class="px-sm py-xs rounded-lg font-body-sm text-body-sm text-on-surface bg-surface-container-lowest font-semibold shadow-sm">Vista Detallada</button>
+<button class="px-sm py-xs rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Auditoría Rápida</button>
+<button class="p-xs text-on-surface-variant hover:text-primary rounded-lg" title="Descargar Reporte Excel">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- High-Density Metrics Bento Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-md mb-lg">
+<!-- Card 1 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Usuarios Activos</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="mt-md">
+<span class="font-display-lg text-display-lg text-primary tracking-tight">1.840</span>
+<div class="flex items-center gap-xs mt-base">
+<span class="inline-flex items-center text-secondary font-mono-price text-label-md">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +6.2%
+          </span>
+<span class="font-label-md text-label-md text-on-surface-variant">mes anterior</span>
+</div>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-container/30 rounded-full blur-xl pointer-events-none"></div>
+</div>
+<!-- Card 2 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Propietarios Validados</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">domain_verification</span>
+</div>
+</div>
+<div class="mt-md">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">420</span>
+<div class="flex items-center gap-xs mt-base">
+<span class="font-label-md text-label-md text-secondary font-semibold">100% SII Sincronizado</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-xs overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Arrendatarios</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-surface-tint">
+<span class="material-symbols-outlined text-[18px]">key</span>
+</div>
+</div>
+<div class="mt-md">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">1.420</span>
+<div class="flex items-center gap-xs mt-base">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Con contrato activo</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-xs overflow-hidden">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 76%"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Calificación Red</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="mt-md">
+<div class="flex items-baseline gap-xs">
+<span class="font-display-lg text-display-lg text-primary tracking-tight">4.85</span>
+<span class="font-title-lg text-title-lg text-on-surface-variant">/5.0</span>
+</div>
+<div class="flex items-center gap-xs mt-base text-secondary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">sentiment_very_satisfied</span> Confianza Alta
+        </div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Índice Reclamos</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-md">
+<span class="font-display-lg text-display-lg text-secondary tracking-tight">&lt; 0.8%</span>
+<div class="flex items-center gap-xs mt-base">
+<span class="font-label-md text-label-md text-on-surface-variant">Tolerancia máx: 2.5%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Multi-Criteria Search & Filter Command Panel -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm mb-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-sm items-center">
+<!-- Search RUT / Name -->
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[20px]">badge</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-sm py-xs rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" id="filter-input-search" placeholder="Buscar por RUT, Nombre o Razón Social..." type="text"/>
+</div>
+<!-- Comuna Filter -->
+<div class="md:col-span-3 relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[20px]">location_on</span>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-sm py-xs rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-sm appearance-none cursor-pointer" id="filter-comuna">
+<option value="">Todas las Comunas (Chile)</option>
+<option value="santiago">Santiago Centro</option>
+<option value="providencia">Providencia</option>
+<option value="las-condes">Las Condes</option>
+<option value="pudahuel">Pudahuel (Bodegas Logísticas)</option>
+<option value="valparaiso">Valparaíso</option>
+<option value="concepcion">Concepción</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Role Filter -->
+<div class="md:col-span-3 relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[20px]">manage_accounts</span>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-sm py-xs rounded-lg focus:outline-none focus:bg-surface-container-lowest shadow-sm appearance-none cursor-pointer" id="filter-role">
+<option value="">Todos los Roles</option>
+<option value="propietario">Propietario Platinum</option>
+<option value="empresa">Empresa &amp; SpA</option>
+<option value="arrendatario">Arrendatario Frecuente</option>
+<option value="revision">En Revisión / Pendiente</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Apply / Reset Buttons -->
+<div class="md:col-span-2 flex items-center gap-xs justify-end">
+<button class="flex-1 px-sm py-xs bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm rounded-lg font-semibold text-center transition-colors" type="button">
+          Limpiar
+        </button>
+<button class="p-xs bg-primary text-on-primary rounded-lg hover:bg-primary-container transition-colors" title="Búsqueda Avanzada" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Quick Filter Category Tabs -->
+<div class="flex items-center gap-xs overflow-x-auto pt-md mt-sm">
+<button class="filter-tab px-sm py-xs rounded-full font-body-sm text-body-sm font-semibold whitespace-nowrap bg-primary text-on-primary shadow-sm" data-tab="all">
+        Todos los Usuarios <span class="ml-xs px-xs py-0.5 rounded-full bg-primary-container text-on-primary text-label-md">1.840</span>
+</button>
+<button class="filter-tab px-sm py-xs rounded-full font-body-sm text-body-sm font-semibold whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-tab="propietarios">
+        Propietarios Verificados <span class="ml-xs px-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface text-label-md">420</span>
+</button>
+<button class="filter-tab px-sm py-xs rounded-full font-body-sm text-body-sm font-semibold whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-tab="empresas">
+        Empresas &amp; SpA <span class="ml-xs px-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface text-label-md">184</span>
+</button>
+<button class="filter-tab px-sm py-xs rounded-full font-body-sm text-body-sm font-semibold whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface" data-tab="arrendatarios">
+        Arrendatarios Activos <span class="ml-xs px-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface text-label-md">1.420</span>
+</button>
+<button class="filter-tab px-sm py-xs rounded-full font-body-sm text-body-sm font-semibold whitespace-nowrap bg-surface-container-low text-error hover:bg-error-container/30" data-tab="suspendidos">
+        Cuentas Suspendidas / En Revisión <span class="ml-xs px-xs py-0.5 rounded-full bg-error-container text-on-error-container text-label-md font-bold">14</span>
+</button>
+</div>
+</div>
+<!-- Master Layout: Table Area + Side Drawer Preview -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-md items-start">
+<!-- Main Interactive Table Container -->
+<div class="xl:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Header Utility -->
+<div class="px-md py-sm flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-xs">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Mostrando 6 de 1.840 registros</span>
+<span class="text-outline">|</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Orden: Última Actividad Notarial</span>
+</div>
+<div class="flex items-center gap-xs">
+<button class="p-xs text-on-surface-variant hover:text-primary rounded" title="Actualizar Datos">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary rounded" title="Densidad compacta">
+<span class="material-symbols-outlined text-[18px]">view_headline</span>
+</button>
+</div>
+</div>
+<!-- Table Body -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+<th class="py-sm px-md">Usuario &amp; RUT</th>
+<th class="py-sm px-sm">Rol &amp; Categoría</th>
+<th class="py-sm px-sm text-center">Espacios / Contratos</th>
+<th class="py-sm px-sm">Verificación</th>
+<th class="py-sm px-sm">Puntualidad &amp; CLP</th>
+<th class="py-sm px-md text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Propietario Platinum SpA -->
+<tr class="user-row hover:bg-surface-container-low transition-colors cursor-pointer" data-userid="USR-9921" onclick="selectUser('USR-9921')">
+<td class="py-md px-md">
+<div class="flex items-center gap-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden bg-primary-container shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Corporate professional portrait of a Chilean property developer executive in a modern Santiago office suite, wearing a dark navy blazer with clean architectural background, soft natural daylighting and crisp corporate tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3EjNpmVIZEX7UjuNGn7aACh7aOQeorsAXu51ppD84nCDRSc6OHh7QiN_CKO9K1xe_nWU80VU2skkCQNWoVgDBtgd11lGs9XVSpnWD1T5-uOQzyqQDK2Jmm3xSERkBlLU96dowD0Nwum80DAUJOMjYVj-M_5j_-IKtLtHuiLm6aIznPCvii8-IdnzlnfdVJkcLtugpmjLn0zpvm1zKbXxne9sankCBnQGVKK5VdWLsUVXpXxyHoc1s"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Inmobiliaria Los Andes SpA</span>
+<span class="font-mono-price text-label-md text-on-surface">RUT 76.842.119-K</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">contacto@losandesspa.cl</span>
+</div>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col gap-base">
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold w-fit">
+<span class="material-symbols-outlined text-[12px]">workspace_premium</span> Propietario Platinum
+                  </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Pudahuel &amp; Providencia</span>
+</div>
+</td>
+<td class="py-md px-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono-price text-mono-price text-on-surface">18 Bodegas</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">16 Arrendadas (88%)</span>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> ClaveÚnica + SII
+                </div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col">
+<span class="font-mono-price text-mono-price text-primary font-bold">$ 48.950.000</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">★ 4.96 • Puntualidad 100%</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-base">
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Ver Expediente" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Chat Interno" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-error transition-colors" title="Suspender Cuenta" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Propietario Persona Natural -->
+<tr class="user-row hover:bg-surface-container-low transition-colors cursor-pointer bg-surface-container-low/40" data-userid="USR-8140" onclick="selectUser('USR-8140')">
+<td class="py-md px-md">
+<div class="flex items-center gap-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a 45-year-old Chilean male entrepreneur with glasses, smiling confidently against an urban Santiago background with mild bokeh, sharp focus, wearing minimalist navy polo shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP70DkPQl4wJ8ZXXSDu8bSYpxYS5biiwU6CRfdLSN8GpVF_6ylvSd_Uu00OaiPUXrZkQZpq4eHG7Y3f-UCJzZjQ4rllzZVyCHGnpjC9rD7sibPJsYBuce6i1WVLY-rCZyxn1yKgQKmHQHUJiaFJsMEmYJWeGaNNyxh-iStxJjKIbnboqgvA_zGWWEU5pkdCC0v6tc_AL94G-icC7AiHSuFwXuBt-9A_MTgwVWkIWTSle6SNApIRwsB"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Rodrigo Valenzuela Pinto</span>
+<span class="font-mono-price text-label-md text-on-surface">RUT 15.489.204-7</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">r.valenzuela@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col gap-base">
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold w-fit">
+<span class="material-symbols-outlined text-[12px]">home_work</span> Propietario Verificado
+                  </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Las Condes</span>
+</div>
+</td>
+<td class="py-md px-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono-price text-mono-price text-on-surface">4 Departamentos</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">4 Arrendados (100%)</span>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">badge</span> Cédula Validada
+                </div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col">
+<span class="font-mono-price text-mono-price text-primary font-bold">$ 12.800.000</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">★ 4.88 • Puntualidad 98%</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-base">
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Ver Expediente" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Chat Interno" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-error transition-colors" title="Suspender Cuenta" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Arrendatario Empresa -->
+<tr class="user-row hover:bg-surface-container-low transition-colors cursor-pointer" data-userid="USR-7012" onclick="selectUser('USR-7012')">
+<td class="py-md px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center font-title-lg font-bold shrink-0">
+                    SL
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Servicios Logísticos del Sur SpA</span>
+<span class="font-mono-price text-label-md text-on-surface">RUT 77.214.930-3</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">operaciones@logsur.cl</span>
+</div>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col gap-base">
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold w-fit">
+<span class="material-symbols-outlined text-[12px]">store</span> Empresa &amp; SpA
+                  </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Concepción</span>
+</div>
+</td>
+<td class="py-md px-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono-price text-mono-price text-on-surface">6 Contratos</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Arrendatario Activo</span>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> ClaveÚnica + SII
+                </div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col">
+<span class="font-mono-price text-mono-price text-primary font-bold">$ 22.400.000</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">★ 4.90 • Puntualidad 100%</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-base">
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Ver Expediente" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Chat Interno" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-error transition-colors" title="Suspender Cuenta" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Arrendatario Frecuente -->
+<tr class="user-row hover:bg-surface-container-low transition-colors cursor-pointer" data-userid="USR-5541" onclick="selectUser('USR-5541')">
+<td class="py-md px-md">
+<div class="flex items-center gap-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Headshot of a Chilean professional woman in her early thirties, friendly look, natural lighting, wearing a minimalist modern beige trench coat in an urban Providencia setting, ultra clean corporate portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFzhYRIMGd2Q6CzETL6TN3UcYr9BdFLVSyc4V8Tw7mEmbPRyRhxbycGgbWIoSq4BF-Q3iSiNr6vF4remlkb2M_DLSGtvKynEAG2OfVRVG1XYYJPolMB7zElwdTFn96Sh7mwHYUz6xE7WOazweyEIayf77bFkJZcbMOJ-F7EY56O6SqRUs-eS4TjrZRZLz44fio9tmEUjV4nnOb-eNJ0t_XRUlF8_kK_s8la-Qf6qChLwfeV1Q2rmyi"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Camila Soto Morales</span>
+<span class="font-mono-price text-label-md text-on-surface">RUT 18.903.621-5</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">camilasoto.m@gmail.com</span>
+</div>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col gap-base">
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-semibold w-fit">
+<span class="material-symbols-outlined text-[12px]">person</span> Arrendatario Frecuente
+                  </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Santiago Centro</span>
+</div>
+</td>
+<td class="py-md px-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono-price text-mono-price text-on-surface">2 Bodegas</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Alquiler Activo</span>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">badge</span> Cédula Validada
+                </div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col">
+<span class="font-mono-price text-mono-price text-primary font-bold">$ 3.120.000</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">★ 4.75 • Puntualidad 94%</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-base">
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Ver Expediente" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Chat Interno" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-error transition-colors" title="Suspender Cuenta" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Cuenta en Revisión / Preventiva -->
+<tr class="user-row hover:bg-surface-container-low transition-colors cursor-pointer bg-error-container/10" data-userid="USR-3209" onclick="selectUser('USR-3209')">
+<td class="py-md px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Transportes Valparaíso Ltda</span>
+<span class="font-mono-price text-label-md text-on-surface">RUT 78.102.341-2</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">adm@transvalp.cl</span>
+</div>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col gap-base">
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">gavel</span> En Revisión Legal
+                  </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Valparaíso</span>
+</div>
+</td>
+<td class="py-md px-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono-price text-mono-price text-error">1 Bloqueada</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Disputa de Pago</span>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">pending</span> Doc. Notarial Expirado
+                </div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col">
+<span class="font-mono-price text-mono-price text-error font-bold">$ 8.700.000</span>
+<span class="font-label-md text-label-md text-error font-semibold">★ 3.20 • Moroso (18 días)</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-base">
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Ver Expediente" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Chat Interno" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-xs bg-error text-on-error rounded-lg transition-colors" title="Levantar Suspensión" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Propietario Bodegas Pudahuel -->
+<tr class="user-row hover:bg-surface-container-low transition-colors cursor-pointer" data-userid="USR-1088" onclick="selectUser('USR-1088')">
+<td class="py-md px-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-primary flex items-center justify-center font-title-lg font-bold shrink-0">
+                    GB
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Gestión de Bodegas ENEA SpA</span>
+<span class="font-mono-price text-label-md text-on-surface">RUT 76.994.312-8</span>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">arriendos@bodegasenea.cl</span>
+</div>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col gap-base">
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold w-fit">
+<span class="material-symbols-outlined text-[12px]">workspace_premium</span> Propietario Platinum
+                  </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Pudahuel / Enea</span>
+</div>
+</td>
+<td class="py-md px-sm text-center">
+<div class="flex flex-col items-center">
+<span class="font-mono-price text-mono-price text-on-surface">32 Bodegas</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">29 Arrendadas (91%)</span>
+</div>
+</td>
+<td class="py-md px-sm">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span> ClaveÚnica + SII
+                </div>
+</td>
+<td class="py-md px-sm">
+<div class="flex flex-col">
+<span class="font-mono-price text-mono-price text-primary font-bold">$ 94.200.000</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">★ 4.98 • Puntualidad 100%</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-base">
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Ver Expediente" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-primary transition-colors" title="Chat Interno" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-xs hover:bg-surface-container rounded-lg text-on-surface-variant hover:text-error transition-colors" title="Suspender Cuenta" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Strip -->
+<div class="p-sm bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Página 1 de 307 • Mostrando 6 de 1.840 usuarios validados</span>
+<div class="flex items-center gap-xs">
+<button class="px-sm py-base rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm shadow-sm">Anterior</button>
+<button class="px-sm py-base rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold">1</button>
+<button class="px-sm py-base rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm">2</button>
+<button class="px-sm py-base rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm">3</button>
+<span class="px-xs text-outline">...</span>
+<button class="px-sm py-base rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm shadow-sm">Siguiente</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Expediente Drawer / Profile Card -->
+<div class="xl:col-span-4 flex flex-col gap-md sticky top-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-md flex flex-col" id="user-dossier-panel">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-sm">
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Expediente Oficial</span>
+<span class="px-xs py-0.5 rounded bg-surface-container font-mono-price text-label-md text-primary" id="drawer-user-id">USR-9921</span>
+</div>
+<span class="inline-flex items-center gap-xs px-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[14px]">shield</span> Vigente
+          </span>
+</div>
+<!-- Entity Identity Card -->
+<div class="flex items-start gap-md mt-sm p-sm rounded-lg bg-surface-container-low">
+<div class="w-16 h-16 rounded-lg overflow-hidden bg-primary shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Corporate headshot portrait of modern Chilean property director in Santiago with clean navy suit, professional executive lighting and neutral architectural background." id="drawer-avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-5x0aUp507HXArLbkGSXIzsYb4XzN6BBp1pKdkXNME83aFPx0yI3pcMNnTf7CGoqg2cJ88nThTMscsD0kw1X3M6TDoAdXo21CUn9qwD6bL-WwoMmm4vngyaHPb5WZUDT-38EtsNXT5UHK1NcxYLHLeewLDS1JescA-yo6UmzA6tH0MGYLthwdt3ZnnqCaU8GOQZSAGcdoyDRxbGupJvpKbtBNKsht2pOcgJ9AAbHE0T7zvNoKfMe0"/>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-title-lg text-title-lg text-primary truncate leading-snug" id="drawer-name">Inmobiliaria Los Andes SpA</h2>
+<span class="font-mono-price text-body-sm text-on-surface font-semibold" id="drawer-rut">RUT 76.842.119-K</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5" id="drawer-rep">Rep. Legal: Matías Errázuriz V.</span>
+<span class="font-body-sm text-body-sm text-surface-tint truncate mt-0.5" id="drawer-email">contacto@losandesspa.cl</span>
+</div>
+</div>
+<!-- Notarial Verification Meta -->
+<div class="grid grid-cols-2 gap-sm my-md">
+<div class="p-xs rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Validación Jurídica</span>
+<span class="font-body-sm text-body-sm font-semibold text-secondary flex items-center gap-xs mt-base">
+<span class="material-symbols-outlined text-[16px]">task_alt</span> SII Razón Vigente
+            </span>
+</div>
+<div class="p-xs rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Firma Notarial</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary flex items-center gap-xs mt-base">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span> FEA Avanzada OK
+            </span>
+</div>
+</div>
+<!-- Chilean Location Distribution Widget -->
+<div class="flex flex-col gap-xs mb-md">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Ubicación de Activos Principales</span>
+<div class="flex items-center gap-xs text-body-sm text-body-sm">
+<span class="material-symbols-outlined text-outline text-[18px]">pin_drop</span>
+<span class="font-semibold text-on-surface">Sector Logístico ENEA Pudahuel, RM</span>
+</div>
+<!-- Mini Location Preview Map Container -->
+<div class="w-full h-28 bg-cover bg-center rounded-lg shadow-inner mt-base relative overflow-hidden" data-location="Pudahuel Santiago Chile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCS7mTFOqpYJVBbmwGvgVQQRMsX0-0FvZCr8n2YWo0VzFbZ7YdglgXQMeXU0YpfkmmsgsvvtG8EvTAdcL9Luw5vnl4uL2eu7fLKOP84I7TimApYbm3Hd4YKD1ihh08ibDV3jJTeqqYgoSI0DwzUai_c4rGkMFUctLjsUnOGfFjXTL4AD9GyR9xwJmnurVo3FP5zIf0RlFf2hoiMNj8Wofa5sYcvYUCw86vixd5UbDvOVYMa0uH3Onsp')">
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-end p-xs">
+<span class="px-xs py-base rounded bg-surface-container-lowest/90 font-label-md text-label-md text-primary font-semibold shadow-sm">
+                18 Unidades Gestionadas (4.200 m² totales)
+              </span>
+</div>
+</div>
+</div>
+<!-- Signed Contracts & FEA Section -->
+<div class="flex flex-col gap-xs mb-md">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Contratos Notariales Firmados (FEA)</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Ver Todos (16)</span>
+</div>
+<div class="flex flex-col gap-xs">
+<!-- Contract Item 1 -->
+<div class="p-xs rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">CTR-2024-B892 (Bodega Industrial 320m²)</span>
+<span class="font-label-md text-label-md text-outline">Firmado el 12 Ene 2024 • Notaría Ruggero</span>
+</div>
+</div>
+<a class="p-xs text-primary hover:bg-surface-container-lowest rounded" href="#" title="Descargar PDF Notariado">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+<!-- Contract Item 2 -->
+<div class="p-xs rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">CTR-2023-A104 (Oficina Providencia 85m²)</span>
+<span class="font-label-md text-label-md text-outline">Firmado el 04 Nov 2023 • Firma Electrónica SII</span>
+</div>
+</div>
+<a class="p-xs text-primary hover:bg-surface-container-lowest rounded" href="#" title="Descargar PDF Notariado">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Active Listings Quick Access -->
+<div class="flex flex-col gap-xs mb-md">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Publicaciones y Espacios Activos</span>
+<div class="grid grid-cols-2 gap-xs">
+<div class="p-xs rounded-lg bg-surface-container flex flex-col justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Bodega San Pablo #840</span>
+<span class="font-mono-price text-label-md text-on-surface mt-xs">$ 1.850.000 /mes</span>
+<span class="font-label-md text-label-md text-secondary mt-base">Disponible Inmediata</span>
+</div>
+<div class="p-xs rounded-lg bg-surface-container flex flex-col justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-primary truncate">Centro Logístico Enea II</span>
+<span class="font-mono-price text-label-md text-on-surface mt-xs">$ 4.200.000 /mes</span>
+<span class="font-label-md text-label-md text-outline mt-base">Arrendado hasta 2025</span>
+</div>
+</div>
+</div>
+<!-- Quick Administration Operations Bar -->
+<div class="flex flex-col gap-xs pt-sm">
+<div class="grid grid-cols-2 gap-xs">
+<button class="px-sm py-xs bg-primary text-on-primary rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">article</span> Expediente
+            </button>
+<button class="px-sm py-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_square</span> Permisos
+            </button>
+</div>
+<button class="w-full px-sm py-xs bg-surface-container-high hover:bg-surface-variant text-primary rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">forum</span> Iniciar Chat Seguro de Mesa de Ayuda
+          </button>
+<button class="w-full px-sm py-xs text-error hover:bg-error-container/20 rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span> Suspender Cuenta Preventivamente
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Filter Tabs Interaction
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.filter-tab').forEach(t => {
+        t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        t.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      this.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    });
+  });
+
+  // Client-side quick drawer switch simulation
+  const mockUsers = {
+    'USR-9921': {
+      id: 'USR-9921',
+      name: 'Inmobiliaria Los Andes SpA',
+      rut: 'RUT 76.842.119-K',
+      rep: 'Rep. Legal: Matías Errázuriz V.',
+      email: 'contacto@losandesspa.cl'
+    },
+    'USR-8140': {
+      id: 'USR-8140',
+      name: 'Rodrigo Valenzuela Pinto',
+      rut: 'RUT 15.489.204-7',
+      rep: 'Persona Natural',
+      email: 'r.valenzuela@gmail.com'
+    },
+    'USR-7012': {
+      id: 'USR-7012',
+      name: 'Servicios Logísticos del Sur SpA',
+      rut: 'RUT 77.214.930-3',
+      rep: 'Rep. Legal: Gonzalo Carrasco F.',
+      email: 'operaciones@logsur.cl'
+    },
+    'USR-5541': {
+      id: 'USR-5541',
+      name: 'Camila Soto Morales',
+      rut: 'RUT 18.903.621-5',
+      rep: 'Persona Natural',
+      email: 'camilasoto.m@gmail.com'
+    },
+    'USR-3209': {
+      id: 'USR-3209',
+      name: 'Transportes Valparaíso Ltda',
+      rut: 'RUT 78.102.341-2',
+      rep: 'Rep. Legal: Esteban Muñoz C.',
+      email: 'adm@transvalp.cl'
+    },
+    'USR-1088': {
+      id: 'USR-1088',
+      name: 'Gestión de Bodegas ENEA SpA',
+      rut: 'RUT 76.994.312-8',
+      rep: 'Rep. Legal: Claudia Navarrete B.',
+      email: 'arriendos@bodegasenea.cl'
+    }
+  };
+
+  function selectUser(id) {
+    const data = mockUsers[id];
+    if (!data) return;
+    document.getElementById('drawer-user-id').textContent = data.id;
+    document.getElementById('drawer-name').textContent = data.name;
+    document.getElementById('drawer-rut').textContent = data.rut;
+    document.getElementById('drawer-rep').textContent = data.rep;
+    document.getElementById('drawer-email').textContent = data.email;
+  }
+</script></main></div></body></html>

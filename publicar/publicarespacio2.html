@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EspaciosChile - Publicar Espacio - Paso 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#83fba5",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "primary": "#001e40",
+                      "primary-container": "#003366",
+                      "tertiary-fixed": "#e0e3e5",
+                      "tertiary": "#1b1f20",
+                      "error": "#ba1a1a",
+                      "on-tertiary-container": "#999c9e",
+                      "on-secondary-container": "#00743a",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "background": "#f8f9ff",
+                      "on-secondary-fixed-variant": "#005227",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#0b1c30",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#66dd8b",
+                      "on-surface": "#0b1c30",
+                      "surface-variant": "#d3e4fe",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "inverse-surface": "#213145",
+                      "tertiary-container": "#303436",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#3a5f94",
+                      "surface-bright": "#f8f9ff",
+                      "surface": "#f8f9ff",
+                      "inverse-primary": "#a7c8ff",
+                      "secondary": "#006d36",
+                      "outline-variant": "#c3c6d1",
+                      "on-primary-container": "#799dd6",
+                      "on-secondary-fixed": "#00210c",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-tertiary-fixed": "#191c1e",
+                      "secondary-fixed": "#83fba5",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#737780",
+                      "on-primary-fixed": "#001b3c",
+                      "surface-container": "#e5eeff",
+                      "surface-container-high": "#dce9ff",
+                      "surface-container-low": "#eff4ff",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-dim": "#cbdbf5",
+                      "on-surface-variant": "#43474f",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d5e3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "48px",
+                      "lg": "40px",
+                      "xs": "8px",
+                      "base": "4px",
+                      "max-width": "1280px",
+                      "xl": "64px",
+                      "sm": "16px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "mono-price": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "mono-price": ["16px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Suppressed due to transactional flow, but kept as required structural shell for a logged in user posting) -->
+<header class="bg-surface dark:bg-on-background docked full-width top-0 border-b border-outline-variant dark:border-on-tertiary-container z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-md">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">EspaciosChile</a>
+</div>
+<div class="hidden md:flex gap-lg items-center">
+<button class="text-on-surface-variant dark:text-on-tertiary-container font-body-md text-body-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors">Salir de la publicación</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-lg max-w-max-width mx-auto w-full">
+<!-- Stepper -->
+<div class="w-full max-w-3xl mx-auto mb-xl">
+<div class="flex items-center justify-between relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-surface-container-high rounded-full z-0"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/2 h-1 bg-primary rounded-full z-0 transition-all duration-500"></div>
+<div class="flex flex-col items-center relative z-10 gap-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">1. Tipo y Modalidad</span>
+</div>
+<div class="flex flex-col items-center relative z-10 gap-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-primary/20">
+                        2
+                    </div>
+<span class="font-label-md text-label-md text-primary font-bold">2. Detalles y Fotos</span>
+</div>
+<div class="flex flex-col items-center relative z-10 gap-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-sm shadow-sm">
+                        3
+                    </div>
+<span class="font-label-md text-label-md text-on-surface-variant">3. Revisión</span>
+</div>
+</div>
+</div>
+<!-- Form Content -->
+<div class="w-full max-w-3xl mx-auto bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-md md:p-lg">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Detalles del Espacio</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl">Proporciona información clara y atractiva para que los interesados encuentren rápidamente lo que necesitan.</p>
+<form class="space-y-xl">
+<!-- Basic Info Section -->
+<section class="space-y-md">
+<h2 class="font-title-lg text-title-lg text-on-surface border-b border-outline-variant pb-xs">Información General</h2>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="titulo">Título del Anuncio</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-body-md" id="titulo" placeholder="Ej: Amplia Bodega en Centro Logístico Quilicura" type="text">
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Destaca la característica principal y la ubicación.</p>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="descripcion">Descripción Detallada</label>
+<textarea class="w-full bg-background border border-outline-variant rounded-lg px-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-body-md resize-y" id="descripcion" placeholder="Describe las características de acceso, seguridad, dimensiones exactas y cualquier ventaja adicional del espacio..." rows="5"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="precio">Precio Base Mensual (CLP)</label>
+<div class="relative">
+<span class="absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant font-mono-price text-mono-price">$</span>
+<input class="w-full bg-background border border-outline-variant rounded-lg pl-10 pr-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-mono-price text-mono-price" id="precio" placeholder="500.000" type="number">
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="superficie">Superficie Total</label>
+<div class="relative">
+<input class="w-full bg-background border border-outline-variant rounded-lg px-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-body-md" id="superficie" placeholder="150" type="number">
+<span class="absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant font-body-md">m²</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Upload Section -->
+<section class="space-y-md">
+<div class="flex justify-between items-end border-b border-outline-variant pb-xs">
+<h2 class="font-title-lg text-title-lg text-on-surface">Imágenes del Espacio</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mínimo 3 fotos</span>
+</div>
+<div class="border-2 border-dashed border-outline rounded-xl bg-surface-container-low p-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high hover:border-primary transition-colors group">
+<div class="w-16 h-16 bg-surface-variant rounded-full flex items-center justify-center text-primary mb-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 0;">cloud_upload</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Arrastra tus fotos aquí</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">o haz clic para explorar tus archivos.</p>
+<button class="bg-primary text-on-primary px-lg py-2 rounded-lg font-label-md text-label-md hover:shadow-[0px_4px_12px_rgba(0,51,102,0.15)] transition-shadow" type="button">Seleccionar Archivos</button>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-sm">Formatos soportados: JPG, PNG. Max 5MB por foto.</p>
+</div>
+<!-- Placeholder for uploaded thumbnails -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm mt-sm">
+<!-- Thumb 1 -->
+<div class="relative rounded-lg overflow-hidden border border-outline-variant aspect-square bg-surface-container-high group">
+<div class="bg-cover bg-center w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A clean, brightly lit interior of a modern industrial warehouse space in Chile, high ceilings, polished concrete floors, daylight streaming in through high windows, minimal and professional aesthetic, modern corporate realism." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCuY5VG68VDRmz8Ut0NV42m3C22XX9GXPGESL3amafR2dDPoasGPiL_KBWQnMXQBWqZB3NXR3aBRbkVeBliTZoCtYazNX4NwFWf8z04LFE_BtxwKQw2dj2PK1-P5NEA9vPCXgPokvicnHWEenDKVCGLRb-HdsHQkexOzm5jULLn_0vTE28Dzs6v9ONLolgPYT_xg0ygyp5nw1pGe4R5PMRjnpfSV-eR3xVSJezsdcPZMtjvyeEnxOLP&quot;);"></div>
+<button class="absolute top-2 right-2 w-8 h-8 bg-surface/80 rounded-full flex items-center justify-center text-error hover:bg-error hover:text-on-error transition-colors backdrop-blur-sm" type="button">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full bg-primary/80 backdrop-blur-sm text-on-primary font-label-md text-label-md py-1 text-center">Portada</div>
+</div>
+<!-- Thumb 2 (Empty slot) -->
+<div class="rounded-lg border border-dashed border-outline-variant aspect-square bg-surface flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="space-y-md">
+<h2 class="font-title-lg text-title-lg text-on-surface border-b border-outline-variant pb-xs">Ubicación</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="region">Región</label>
+<div class="relative">
+<select class="w-full bg-background border border-outline-variant rounded-lg px-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-body-md appearance-none" id="region">
+<option>Región Metropolitana</option>
+<option>Valparaíso</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="comuna">Comuna</label>
+<div class="relative">
+<select class="w-full bg-background border border-outline-variant rounded-lg px-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-body-md appearance-none" id="comuna">
+<option>Quilicura</option>
+<option>Pudahuel</option>
+<option>Santiago Centro</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="direccion">Dirección Exacta</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-sm py-3 text-on-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow font-body-md" id="direccion" placeholder="Av. Américo Vespucio 1234" type="text">
+</div>
+<!-- Interactive Map Placeholder -->
+<div class="w-full h-64 bg-surface-container-high rounded-lg border border-outline-variant overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A stylized interactive map interface showing a pinpoint in Santiago Chile, clean minimal design, light gray roads, soft blue water bodies, high contrast red location marker, professional dashboard style mapping." data-location="Santiago, Chile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz39KGdb1w4fDRRLA6U68gEJo6aqlEDrTAo30vKqDzuyMM2J24btZzYJE_8gFWuNbT_IOf8qWSLZrhQvNqDNsRaDQImrYsAnLZ6bTlb31Oc44AsN-qADJCgGTLBryauc1h7T-QPQbBuUGEyTriaOO-03rjm55tJNhGHSgtr7vQt2i9KH-Ur-4W5ClkzAwN0IH-luAWKtMfbdzEuedrnFgf-nNGUUXKn09GLr_TbXlH1rupumRAeolH">
+<div class="absolute bottom-sm right-sm flex flex-col gap-base">
+<button class="w-10 h-10 bg-surface rounded shadow flex items-center justify-center text-on-surface hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-10 h-10 bg-surface rounded shadow flex items-center justify-center text-on-surface hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex flex-col-reverse md:flex-row justify-between items-center pt-lg border-t border-outline-variant mt-xl gap-sm">
+<button class="w-full md:w-auto px-lg py-3 rounded-lg font-label-md text-label-md border border-outline text-on-surface hover:bg-surface-container-high transition-colors text-center" type="button">Volver al Paso 1</button>
+<button class="w-full md:w-auto px-xl py-3 rounded-lg font-label-md text-label-md bg-secondary text-on-secondary shadow-sm hover:shadow-[0px_4px_12px_rgba(0,109,54,0.15)] transition-shadow text-center" type="button">Guardar y Continuar</button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container w-full mt-xl flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-lg max-w-max-width mx-auto">
+<div class="flex flex-col md:flex-row items-center gap-md">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">EspaciosChile</span>
+<span class="text-on-primary dark:text-on-primary-container opacity-80 font-body-sm text-body-sm">© 2024 EspaciosChile SpA. Todos los derechos reservados.</span>
+</div>
+<div class="flex gap-lg mt-sm md:mt-0">
+<a class="text-on-primary dark:text-on-primary-container opacity-80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Términos y Condiciones</a>
+<a class="text-on-primary dark:text-on-primary-container opacity-80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Privacidad</a>
+<a class="text-on-primary dark:text-on-primary-container opacity-80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Centro de Ayuda</a>
+<a class="text-on-primary dark:text-on-primary-container opacity-80 hover:text-secondary-fixed transition-colors font-label-md text-label-md" href="#">Contacto</a>
+</div>
+</footer>
+
+
+</body></html>

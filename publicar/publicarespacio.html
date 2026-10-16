@@ -1,0 +1,499 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EspaciosChile - Publicar Espacio - Paso 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#83fba5",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "primary": "#001e40",
+                      "primary-container": "#003366",
+                      "tertiary-fixed": "#e0e3e5",
+                      "tertiary": "#1b1f20",
+                      "error": "#ba1a1a",
+                      "on-tertiary-container": "#999c9e",
+                      "on-secondary-container": "#00743a",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "background": "#f8f9ff",
+                      "on-secondary-fixed-variant": "#005227",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#0b1c30",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed-dim": "#66dd8b",
+                      "on-surface": "#0b1c30",
+                      "surface-variant": "#d3e4fe",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "inverse-surface": "#213145",
+                      "tertiary-container": "#303436",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#3a5f94",
+                      "surface-bright": "#f8f9ff",
+                      "surface": "#f8f9ff",
+                      "inverse-primary": "#a7c8ff",
+                      "secondary": "#006d36",
+                      "outline-variant": "#c3c6d1",
+                      "on-primary-container": "#799dd6",
+                      "on-secondary-fixed": "#00210c",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-tertiary-fixed": "#191c1e",
+                      "secondary-fixed": "#83fba5",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#737780",
+                      "on-primary-fixed": "#001b3c",
+                      "surface-container": "#e5eeff",
+                      "surface-container-high": "#dce9ff",
+                      "surface-container-low": "#eff4ff",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-dim": "#cbdbf5",
+                      "on-surface-variant": "#43474f",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d5e3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "48px",
+                      "lg": "40px",
+                      "xs": "8px",
+                      "base": "4px",
+                      "max-width": "1280px",
+                      "xl": "64px",
+                      "sm": "16px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "mono-price": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "mono-price": ["16px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .card-selectable {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .card-selectable:hover {
+            border-color: #003366;
+            background-color: theme('colors.surface-container-low');
+            box-shadow: 0px 4px 12px rgba(0, 51, 102, 0.08);
+        }
+        .card-selectable.selected {
+            border-color: #001e40;
+            background-color: #e5eeff;
+            box-shadow: 0px 4px 14px rgba(0, 30, 64, 0.12);
+        }
+        .card-selectable.selected .space-icon {
+            color: #001e40;
+            font-variation-settings: 'FILL' 1;
+        }
+        .card-selectable.selected .radio-indicator {
+            border-color: #001e40;
+            background-color: #001e40;
+        }
+        .card-selectable.selected .radio-indicator::after {
+            opacity: 1;
+        }
+        .tab-button.active {
+            background-color: #ffffff;
+            color: #001e40;
+            box-shadow: 0px 2px 8px rgba(0, 30, 64, 0.08);
+            border-color: #c3c6d1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Suppressed due to transactional/linear flow) -->
+<!-- Navigation shell is deliberately omitted for this linear "Publicar Espacio" flow to focus the user on the task. -->
+<main class="flex-grow flex flex-col items-center py-lg px-margin-mobile md:px-margin-desktop w-full max-w-max-width mx-auto">
+<!-- Header & Stepper -->
+<div class="w-full max-w-4xl mb-lg">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-md text-center">Publicar Nuevo Espacio</h1>
+<!-- Progress Bar -->
+<div class="flex items-center justify-between w-full relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-outline-variant z-0 rounded-full"></div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/4 h-1 bg-primary z-0 rounded-full transition-all duration-300"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs shadow-sm">1</div>
+<span class="font-label-md text-label-md text-primary font-bold">Información Básica</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs">2</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Ubicación</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs">3</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Detalles</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs">4</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Publicar</span>
+</div>
+</div>
+</div>
+<!-- Main Form Area -->
+<div class="w-full max-w-4xl bg-surface-container-lowest rounded-xl border border-outline-variant p-md md:p-lg shadow-sm">
+<!-- Section: Tipo de Espacio (Taxonomía Completa) -->
+<div class="mb-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface">¿Qué tipo de espacio vas a publicar?</h2>
+<span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-surface-container-high px-2.5 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px]">tune</span> Taxonomía Oficial
+</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Selecciona el tipo de entorno y la categoría que mejor describa las características de tu propiedad.</p>
+<!-- Segmented Controller / Tabs -->
+<div class="bg-surface-container-low p-1.5 rounded-xl border border-outline-variant/60 flex gap-2 mb-md max-w-2xl">
+<button class="tab-button active flex-1 py-2.5 px-3 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 border border-transparent transition-all" id="tab-cerrados" onclick="switchCategoryGroup('cerrados')" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">roofing</span>
+<span>I. Espacios Cerrados</span>
+<span class="ml-1 text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-bold">10</span>
+</button>
+<button class="tab-button flex-1 py-2.5 px-3 rounded-lg text-sm font-semibold text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-2 border border-transparent transition-all" id="tab-abiertos" onclick="switchCategoryGroup('abiertos')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">deck</span>
+<span>II. Espacios Abiertos</span>
+<span class="ml-1 text-xs bg-outline-variant/60 text-on-surface-variant px-2 py-0.5 rounded-full font-bold">7</span>
+</button>
+</div>
+<!-- Tab Content: Espacios Cerrados -->
+<div class="space-y-3" id="content-cerrados">
+<div class="p-3 bg-surface-container-low/70 rounded-lg border border-outline-variant/50 flex items-start gap-2 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">info</span>
+<div>
+<strong class="text-on-surface font-medium">I. Espacios Cerrados (Techados y Climatizados):</strong> Estructurados bajo techo y paredes, con control de clima o aislamiento acústico.
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-sm pt-1">
+<!-- 1. Oficinas Privadas y Tradicionales -->
+<div class="card-selectable selected border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-primary" style="font-variation-settings: 'FILL' 1;">corporate_fare</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Oficinas Privadas y Tradicionales</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Trabajo administrativo o profesional exclusivo para empresas.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 2. Puestos de Cowork / Escritorios Dedicados -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">desk</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Puestos de Cowork / Escritorios Dedicados</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Estaciones en espacios compartidos para freelancers o startups.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 3. Salas de Reuniones y Directorios -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">groups</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Salas de Reuniones y Directorios</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Espacios para juntas ejecutivas, clientes o presentaciones.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 4. Salones de Eventos / Banquetes -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">celebration</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Salones de Eventos / Banquetes</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Fiestas corporativas, cenas y celebraciones bajo techo.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 5. Auditorios y Centros de Convenciones -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">theater_comedy</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Auditorios y Centros de Convenciones</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Conferencias, congresos y eventos masivos.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 6. Pabellones Feriales / Exposcenters -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">storefront</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Pabellones Feriales / Exposcenters</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Grandes naves techadas para ferias y exhibiciones comerciales.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 7. Estudios de Grabación, Fotografía y Streaming -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">videocam</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Estudios de Grabación, Fotografía y Streaming</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Aislamiento acústico, set y producción audiovisual.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 8. Locales Comerciales y Tiendas Pop-Up -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">shopping_bag</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Locales Comerciales y Tiendas Pop-Up</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Venta minorista, vitrinas y lanzamientos temporales.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 9. Bodegas y Centros de Almacenamiento -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">warehouse</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Bodegas y Centros de Almacenamiento</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Guardado de mercadería, logística y enseres.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 10. Salas de Capacitación / Workshops -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">co_present</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Salas de Capacitación / Workshops</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Aulas acondicionadas para formación técnica o talleres.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+</div>
+</div>
+<!-- Tab Content: Espacios Abiertos -->
+<div class="space-y-3 hidden" id="content-abiertos">
+<div class="p-3 bg-surface-container-low/70 rounded-lg border border-outline-variant/50 flex items-start gap-2 text-on-surface-variant text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">park</span>
+<div>
+<strong class="text-on-surface font-medium">II. Espacios Abiertos (Al aire libre y eventos):</strong> Terrazas, quinchos, parcelas y grandes superficies exteriores.
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-sm pt-1">
+<!-- 1. Terrazas -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">deck</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Terrazas</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Vistas despejadas y espacios exteriores confortables.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 2. Jardines y Parques Privados -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">yard</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Jardines y Parques Privados</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Áreas verdes para recepciones o esparcimiento.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 3. Quinchos y Patios con Parrilla -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">outdoor_grill</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Quinchos y Patios con Parrilla</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Equipados para asados, celebraciones sociales y familiares.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 4. Pistas / Áreas Libres Feriales -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">grid_view</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Pistas / Áreas Libres Feriales</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Explanadas amplias para montajes industriales o exposiciones al aire libre.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 5. Centros de Eventos Campestres / Parcelas -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">agriculture</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Centros de Eventos Campestres / Parcelas</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Entornos rurales y quintas para jornadas recreativas o bodas.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 6. Playas Privadas o Concesionadas -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">beach_access</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Playas Privadas o Concesionadas</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Espacios de orilla para rodajes, eventos y deportes.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+<!-- 7. Azoteas (Rooftops) -->
+<div class="card-selectable border border-outline-variant rounded-xl p-3.5 flex items-start gap-3 relative" onclick="selectType(this)">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/50">
+<span class="material-symbols-outlined space-icon text-[24px] text-on-surface-variant">apartment</span>
+</div>
+<div class="flex-grow pr-5">
+<h3 class="font-label-md text-[14px] font-bold text-on-surface leading-snug">Azoteas (Rooftops)</h3>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5 leading-relaxed">Vistas panorámicas urbanas ideales para cócteles y lanzamientos.</p>
+</div>
+<div class="radio-indicator absolute top-3.5 right-3.5 w-4 h-4 rounded-full border-2 border-outline flex items-center justify-center after:content-[''] after:w-1.5 after:h-1.5 after:bg-white after:rounded-full after:opacity-0 transition-all"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Modalidad de Arriendo -->
+<div class="mb-lg">
+<h2 class="font-title-lg text-title-lg text-on-surface mb-sm">Modalidad de Arriendo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">¿Cómo deseas ofrecer este espacio?</p>
+<div class="flex flex-col gap-sm">
+<!-- Option 1 -->
+<label class="flex items-center p-sm border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-surface-container">
+<input class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary mr-md" name="modalidad" type="radio" value="hora">
+<div class="flex-grow">
+<span class="font-label-md text-label-md font-bold block">Por Hora / Evento</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ideal para reuniones cortas o eventos puntuales.</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="flex items-center p-sm border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-surface-container">
+<input class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary mr-md" name="modalidad" type="radio" value="dia">
+<div class="flex-grow">
+<span class="font-label-md text-label-md font-bold block">Por Día</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Coworking o necesidades diarias temporales.</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="flex items-center p-sm border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-surface-container">
+<input checked="" class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary mr-md" name="modalidad" type="radio" value="mes">
+<div class="flex-grow">
+<span class="font-label-md text-label-md font-bold block">Mensual / Prolongado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Arriendos a largo plazo estandarizados.</span>
+</div>
+</label>
+<label class="flex items-center p-sm border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container-low transition-colors has-[:checked]:border-primary has-[:checked]:bg-surface-container">
+<input class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary mr-md" name="modalidad" type="radio" value="todas">
+<div class="flex-grow">
+<span class="font-label-md text-label-md font-bold block">Abierto a todas las modalidades</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flexibilidad total: permite reservas por hora, día, mes o periodos prolongados.</span>
+</div>
+</label></div>
+</div>
+<!-- Action Buttons -->
+<div class="flex justify-between items-center mt-xl pt-md border-t border-outline-variant">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary px-md py-sm rounded-lg transition-colors border border-transparent hover:border-outline-variant" type="button">
+                    Cancelar
+                </button>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-xl py-sm rounded-lg hover:bg-primary-container transition-colors shadow-sm flex items-center gap-xs" type="button">
+                    Siguiente Paso
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<script>
+        function selectType(element) {
+            // Remove selected class from all cards across tabs
+            document.querySelectorAll('.card-selectable').forEach(el => {
+                el.classList.remove('selected');
+                const icon = el.querySelector('.space-icon');
+                if (icon) {
+                    icon.classList.remove('text-primary');
+                    icon.classList.add('text-on-surface-variant');
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                }
+            });
+            // Add to clicked
+            element.classList.add('selected');
+            const icon = element.querySelector('.space-icon');
+            if (icon) {
+                icon.classList.remove('text-on-surface-variant');
+                icon.classList.add('text-primary');
+                icon.style.fontVariationSettings = "'FILL' 1";
+            }
+        }
+
+        function switchCategoryGroup(group) {
+            const tabCerrados = document.getElementById('tab-cerrados');
+            const tabAbiertos = document.getElementById('tab-abiertos');
+            const contentCerrados = document.getElementById('content-cerrados');
+            const contentAbiertos = document.getElementById('content-abiertos');
+
+            if (group === 'cerrados') {
+                tabCerrados.classList.add('active');
+                tabCerrados.classList.remove('text-on-surface-variant');
+                tabAbiertos.classList.remove('active');
+                tabAbiertos.classList.add('text-on-surface-variant');
+                contentCerrados.classList.remove('hidden');
+                contentAbiertos.classList.add('hidden');
+            } else {
+                tabAbiertos.classList.add('active');
+                tabAbiertos.classList.remove('text-on-surface-variant');
+                tabCerrados.classList.remove('active');
+                tabCerrados.classList.add('text-on-surface-variant');
+                contentAbiertos.classList.remove('hidden');
+                contentCerrados.classList.add('hidden');
+            }
+        }
+    </script>
+</body></html>

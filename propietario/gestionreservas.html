@@ -1,0 +1,548 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "surface-tint": "#3a5f94", "secondary-fixed-dim": "#66dd8b", "surface": "#f8f9ff", "tertiary-fixed": "#e0e3e5", "outline-variant": "#c3c6d1", "surface-container-highest": "#d3e4fe", "primary-container": "#003366", "on-primary-container": "#799dd6", "on-background": "#0b1c30", "primary-fixed-dim": "#a7c8ff", "inverse-primary": "#a7c8ff", "primary-fixed": "#d5e3ff", "on-tertiary-fixed-variant": "#444749", "tertiary-fixed-dim": "#c4c7c9", "surface-dim": "#cbdbf5", "secondary": "#006d36", "on-error-container": "#93000a", "surface-container-low": "#eff4ff", "surface-container-high": "#dce9ff", "on-tertiary-container": "#999c9e", "on-primary": "#ffffff", "on-primary-fixed-variant": "#1f477b", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#005227", "on-secondary": "#ffffff", "on-tertiary-fixed": "#191c1e", "on-primary-fixed": "#001b3c", "on-secondary-fixed": "#00210c", "secondary-fixed": "#83fba5", "background": "#f8f9ff", "inverse-surface": "#213145", "tertiary-container": "#303436", "secondary-container": "#83fba5", "surface-container": "#e5eeff", "error": "#ba1a1a", "primary": "#001e40", "inverse-on-surface": "#eaf1ff", "surface-bright": "#f8f9ff", "error-container": "#ffdad6", "on-secondary-container": "#00743a", "on-surface-variant": "#43474f", "on-error": "#ffffff", "tertiary": "#1b1f20", "on-surface": "#0b1c30", "outline": "#737780" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "24px", "margin-mobile": "16px", "xs": "8px", "lg": "40px", "sm": "16px", "md": "24px", "max-width": "1280px", "base": "4px", "xl": "64px", "margin-desktop": "48px" }, "fontFamily": { "display-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-md": ["Inter"], "headline-md": ["Inter"], "body-sm": ["Inter"], "title-lg": ["Inter"], "mono-price": ["Inter"] }, "fontSize": { "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "mono-price": ["16px", { "lineHeight": "24px", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen"><header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between"><div class="flex items-center gap-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">domain</span></div><span class="font-headline-md text-headline-md tracking-tight text-primary">EspaciosChile</span></div><div class="flex items-center gap-gutter"><nav class="hidden md:flex items-center gap-gutter" data-active-classes="text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="publicar-espacio" href="#">Publicar espacio</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="buscar" href="#">Buscar</a><a aria-current="page" class="transition-colors text-primary font-bold" data-path="mis-reservas" href="#">Mi Cuenta</a></nav><div class="flex items-center gap-sm"><button class="inline-flex items-center justify-center px-sm py-xs rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-colors shadow-[0_2px_4px_rgba(0,0,0,0.05)]" type="button">Publicar</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-md"><div class="px-sm"><p class="px-xs pb-sm font-label-md text-label-md uppercase tracking-wider text-outline">Panel Propietario</p><nav class="flex flex-col gap-base" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a aria-current="page" class="flex items-center px-sm py-xs transition-colors group bg-primary-container text-on-primary font-bold rounded-lg" data-path="mis-reservas" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">event_available</span><span class="font-body-sm text-body-sm">Mis Reservas</span></a><a class="flex items-center px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors group" data-path="mis-espacios" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">apartment</span><span class="font-body-sm text-body-sm">Mis Espacios</span></a><a class="flex items-center px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors group" data-path="calendario" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">calendar_month</span><span class="font-body-sm text-body-sm">Calendario</span></a><a class="flex items-center justify-between px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors group" data-path="mensajes" href="#"><div class="flex items-center"><span class="material-symbols-outlined mr-sm text-[20px]">chat</span><span class="font-body-sm text-body-sm">Mensajes</span></div><span class="inline-flex items-center justify-center px-xs py-[2px] rounded-full bg-error text-on-error font-label-md text-[10px]">3</span></a><a class="flex items-center px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors group" data-path="pagos" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">account_balance_wallet</span><span class="font-body-sm text-body-sm">Pagos</span></a><a class="flex items-center px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors group" data-path="configuracion" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">settings</span><span class="font-body-sm text-body-sm">Configuración</span></a></nav></div><div class="px-sm pt-sm"><nav class="flex flex-col gap-base" data-active-classes="bg-surface-container-high text-on-surface font-bold rounded-lg"><a class="flex items-center px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ayuda" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">help_outline</span><span class="font-body-sm text-body-sm">Ayuda</span></a><a class="flex items-center px-sm py-xs rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined mr-sm text-[20px]">logout</span><span class="font-body-sm text-body-sm">Cerrar Sesión</span></a></nav></div></aside><div class="pl-64 flex flex-col min-h-screen"><main class="w-full pt-16 flex-1 px-gutter py-md bg-surface"><div class="flex flex-col w-full">
+<!-- Top Section / View Title & Global Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-md mb-lg">
+<div>
+<div class="flex items-center gap-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-base">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span>Panel de Gestión Inmobiliaria</span>
+<span class="text-outline-variant">•</span>
+<span>Región Metropolitana</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Gestión de Reservas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-base max-w-2xl">
+        Supervisa, aprueba y gestiona todas las solicitudes y arriendos activos de tus propiedades con liquidación centralizada en pesos chilenos.
+      </p>
+</div>
+<div class="flex items-center gap-sm flex-wrap">
+<button class="inline-flex items-center gap-xs px-md py-xs rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exportar Historial</span>
+</button>
+<button class="inline-flex items-center gap-xs px-md py-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sincronizar Calendario</span>
+</button>
+</div>
+</div>
+<!-- KPI Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-md mb-lg">
+<!-- KPI 1: Pendientes -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between mb-sm">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Por Resolver</span>
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-medium">Reservas Pendientes</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="flex items-baseline gap-sm mb-xs">
+<span class="font-display-lg text-display-lg text-primary">4</span>
+<span class="inline-flex items-center px-xs py-[2px] rounded-full bg-surface-container-high text-primary font-label-md text-[11px] font-bold">
+          Prioridad alta
+        </span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-error mt-xs">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Requieren respuesta en &lt; 24 hrs</span>
+</div>
+</div>
+<!-- KPI 2: Arriendos Activos Hoy -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between mb-sm">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">En Operación</span>
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-medium">Arriendos Activos Hoy</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">key</span>
+</div>
+</div>
+<div class="flex items-baseline gap-sm mb-xs">
+<span class="font-display-lg text-display-lg text-primary">8</span>
+<span class="inline-flex items-center px-xs py-[2px] rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-[11px] font-bold">
+          En curso
+        </span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-secondary mt-xs">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>Check-ins validados digitalmente</span>
+</div>
+</div>
+<!-- KPI 3: Completadas este Mes -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between mb-sm">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Desempeño Mensual</span>
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-medium">Completadas este Mes</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+</div>
+<div class="flex items-baseline gap-sm mb-xs">
+<span class="font-display-lg text-display-lg text-primary">36</span>
+<span class="inline-flex items-center text-secondary font-label-md text-label-md gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          +15%
+        </span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface-variant mt-xs">
+<span>Vs. mes anterior (31 arriendos)</span>
+</div>
+</div>
+<!-- KPI 4: Ingresos por Reservas -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between mb-sm">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Finanzas Propietario</span>
+<h3 class="font-body-sm text-body-sm text-on-surface-variant font-medium">Ingresos por Reservas</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+</div>
+<div class="flex items-baseline gap-xs mb-xs">
+<span class="font-mono-price text-headline-md text-primary font-bold tracking-tight">$2.840.000</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-normal">CLP</span>
+</div>
+<div class="flex items-center gap-xs font-label-md text-label-md text-secondary mt-xs">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Total acumulado facturado este mes</span>
+</div>
+</div>
+</div>
+<!-- Segmented Tabs & Operational Filters Area -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm mb-md flex flex-col gap-md">
+<!-- Status Segmented Tabs -->
+<div class="flex items-center gap-xs overflow-x-auto pb-xs">
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm" type="button">
+<span>Todas</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary text-[10px]">48</span>
+</button>
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md whitespace-nowrap" type="button">
+<span>Pendientes de Aprobación</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container text-[10px] font-bold">4</span>
+</button>
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md whitespace-nowrap" type="button">
+<span>Confirmadas / En curso</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold">12</span>
+</button>
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md whitespace-nowrap" type="button">
+<span>Finalizadas</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[10px]">28</span>
+</button>
+<button class="inline-flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md whitespace-nowrap" type="button">
+<span>Canceladas</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[10px]">4</span>
+</button>
+</div>
+<!-- Filters Bar -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-sm items-center">
+<!-- Search Input -->
+<div class="xl:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-sm py-2 rounded-lg bg-surface text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Buscar por arrendatario, código..." type="text">
+</div>
+<!-- Property Selector -->
+<div class="xl:col-span-3">
+<select class="w-full px-sm py-2 rounded-lg bg-surface text-on-surface text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option>Todas las propiedades</option>
+<option>Oficina El Golf - Piso 5 (Las Condes)</option>
+<option>Bodega Industrial M1 (San Bernardo)</option>
+<option>Sala de Directorio Providencia (Providencia)</option>
+<option>Rooftop Corporativo Las Condes</option>
+<option>Bodega Urbana Hub Central (Santiago)</option>
+</select>
+</div>
+<!-- Modality Selector -->
+<div class="xl:col-span-2">
+<select class="w-full px-sm py-2 rounded-lg bg-surface text-on-surface text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option>Todas las modalidades</option>
+<option>Por Hora</option>
+<option>Por Día</option>
+<option>Mensual</option>
+</select>
+</div>
+<!-- Date Range Selector -->
+<div class="xl:col-span-3 flex items-center gap-xs">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline text-[18px]">calendar_today</span>
+<select class="w-full pl-9 pr-sm py-2 rounded-lg bg-surface text-on-surface text-body-sm font-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-inner">
+<option>Este mes (Octubre 2024)</option>
+<option>Próximos 7 días</option>
+<option>Últimos 30 días</option>
+<option>Personalizado...</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Bookings Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col mb-lg">
+<!-- Desktop Responsive Scroll Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1020px]">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-md text-label-md uppercase tracking-wider">
+<th class="py-sm px-md">Código &amp; Espacio</th>
+<th class="py-sm px-md">Arrendatario / Cliente</th>
+<th class="py-sm px-md">Modalidad &amp; Horario</th>
+<th class="py-sm px-md text-right">Monto Total</th>
+<th class="py-sm px-md text-center">Estado</th>
+<th class="py-sm px-md text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Row 1: Pendiente de Aprobación (Action Required) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-md px-md align-top">
+<div class="flex items-start gap-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern executive office space with floor to ceiling windows showing Santiago Andes mountain range, minimalist oak wood desks and ergonomic leather chairs in pristine corporate lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxyu2Rz18DO_YJ0ZNbi3bBQTm1LYLG3Ec-Ax54qWm3e9iTtYZoVZQWAgwa2gR3e7xAKxNG8tDsf5QRtIlbEHC7-NpZD8UW53StONXyFZtStr0NRm8Ohed2h6VMaYPoM2QAHLyzFwOVf8vu7I4muNYextkcLl76HEeElkRGg4VaCb9ZmvYC0KSflpxv_voAbuuD_W8up_0WBvp3O0Yzj-45AglUNGxcDrKrkH-V8qltC0ggVWFVg3uE">
+</div>
+<div>
+<span class="font-label-md text-[11px] font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded">#RES-8921</span>
+<p class="font-body-sm text-body-sm font-semibold text-primary mt-1">Oficina Ejecutiva El Golf</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">location_on</span>
+                    Las Condes, RM
+                  </p>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary font-headline-md text-[13px] flex items-center justify-center font-bold">
+                  CV
+                </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Cristóbal Valenzuela</p>
+<p class="font-label-md text-label-md text-on-surface-variant">c.valenzuela@andesvc.cl</p>
+<span class="font-label-md text-[11px] text-outline">+56 9 8412 9034</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-md text-[11px] font-medium mb-1">
+                Por Hora
+              </span>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">24 Oct 2024</p>
+<p class="font-label-md text-label-md text-on-surface-variant">09:00 - 13:00 hrs (4 horas)</p>
+</td>
+<td class="py-md px-md align-top text-right">
+<span class="font-mono-price text-body-md text-primary font-bold">$60.000 CLP</span>
+<p class="font-label-md text-label-md text-secondary flex items-center justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                En custodia Webpay
+              </p>
+</td>
+<td class="py-md px-md align-top text-center">
+<span class="inline-flex items-center gap-1 px-sm py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Pendiente
+              </span>
+</td>
+<td class="py-md px-md align-top text-right">
+<div class="flex items-center justify-end gap-xs">
+<button class="inline-flex items-center gap-1 px-sm py-1 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container transition-colors font-label-md text-label-md shadow-sm" title="Aprobar de inmediato" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Aprobar</span>
+</button>
+<button class="inline-flex items-center gap-1 px-xs py-1 rounded-lg bg-surface-container text-error hover:bg-error-container hover:text-on-error-container transition-colors font-label-md text-label-md" title="Rechazar solicitud" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: En curso (Active right now) -->
+<tr class="bg-secondary-fixed/10 hover:bg-secondary-fixed/20 transition-colors">
+<td class="py-md px-md align-top">
+<div class="flex items-start gap-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Industrial secure storage warehouse facility with polished concrete floors, steel roll up shutter doors, bright overhead LED industrial lights and security cameras" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxQgD0zubNfiVI670UJoFx6mcvgxklGyoY_beuJqfnEGo-jDmikQtMB-nrvMCIXntsFQ09FtvivdrutuItzie1WgdqR8U7IZM9JEvYzWbe__4Dv9f45pCVnDdA9q231-AfHwjKo9HYsGmRVyRcXRDOkHCVruYo_p7uO69UYGSiaJ2f9tjFu66D5vj7Nan3o21sXveJnWwBJRGUesMZ9EEbRHPg0TxLa6judOyIZ4XXqFjRjwHD0Gh_">
+</div>
+<div>
+<span class="font-label-md text-[11px] font-bold text-secondary bg-secondary-fixed px-1.5 py-0.5 rounded">#RES-8919</span>
+<p class="font-body-sm text-body-sm font-semibold text-primary mt-1">Bodega Industrial M1 - Módulo B</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">location_on</span>
+                    San Bernardo, RM
+                  </p>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary font-headline-md text-[13px] flex items-center justify-center font-bold">
+                  TC
+                </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">TechLogistics Chile SpA</p>
+<p class="font-label-md text-label-md text-on-surface-variant">contacto@techlog.cl</p>
+<span class="font-label-md text-[11px] text-outline">+56 2 2980 4400</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-[11px] font-bold mb-1">
+                Mensual
+              </span>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">01 Oct - 30 Nov 2024</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Arriendo continuo (60 días)</p>
+</td>
+<td class="py-md px-md align-top text-right">
+<span class="font-mono-price text-body-md text-primary font-bold">$1.200.000 CLP</span>
+<p class="font-label-md text-label-md text-secondary flex items-center justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Pagado por Transferencia
+              </p>
+</td>
+<td class="py-md px-md align-top text-center">
+<span class="inline-flex items-center gap-1 px-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                En Curso
+              </span>
+</td>
+<td class="py-md px-md align-top text-right">
+<div class="flex items-center justify-end gap-xs">
+<button class="inline-flex items-center gap-1 px-sm py-1 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Contactar</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Confirmada (Upcoming) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-md px-md align-top">
+<div class="flex items-start gap-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-end corporate boardroom in Providencia Santiago with long conference table, comfortable grey leather swivel chairs, videoconference screens and warm architectural perimeter lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCSuVbEzbi_CQtyPERiOc0JQIrFClLqalS7RT_zLOsGysNoQxrdnZVN5y1Ev4UtXDDsacaROdIRtBODGPywES6Dl0bdA6bCt6vAiMU3vtAqupgISOt4T0UzLkfgnO9wPQUUS628H7REN4QQgkjhN0KpAdmFDBInddyW1H4KOt9KYxiNMp8JIs5xBzDfCYY5rDnLoJHTKsR15Dc9-i-s0Mzo11H-AbfcQMzfbl_1dwKxrC6SMOJ55SH">
+</div>
+<div>
+<span class="font-label-md text-[11px] font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded">#RES-8910</span>
+<p class="font-body-sm text-body-sm font-semibold text-primary mt-1">Sala de Directorio Providencia</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">location_on</span>
+                    Providencia, RM
+                  </p>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-full bg-surface-tint text-on-primary font-headline-md text-[13px] flex items-center justify-center font-bold">
+                  VR
+                </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Valentina Rojas M.</p>
+<p class="font-label-md text-label-md text-on-surface-variant">v.rojas@consultoresasoc.cl</p>
+<span class="font-label-md text-[11px] text-outline">+56 9 9345 7712</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-md text-[11px] font-medium mb-1">
+                Por Día
+              </span>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">26 - 28 Oct 2024</p>
+<p class="font-label-md text-label-md text-on-surface-variant">3 días completos de jornada</p>
+</td>
+<td class="py-md px-md align-top text-right">
+<span class="font-mono-price text-body-md text-primary font-bold">$450.000 CLP</span>
+<p class="font-label-md text-label-md text-secondary flex items-center justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Confirmado &amp; Pagado
+              </p>
+</td>
+<td class="py-md px-md align-top text-center">
+<span class="inline-flex items-center gap-1 px-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Confirmada
+              </span>
+</td>
+<td class="py-md px-md align-top text-right">
+<div class="flex items-center justify-end gap-xs">
+<button class="inline-flex items-center gap-1 px-sm py-1 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span>Ver Detalle</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Pendiente de Aprobación -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-md px-md align-top">
+<div class="flex items-start gap-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sophisticated rooftop terrace event space in Las Condes with timber decking, architectural planters, modern lounge furniture and panoramic twilight city views" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1qpFyunUUOb0hYp_yckWQPIwcTS36qQP3lYqxmu3bmEw-pnUjqn42DJm0no8tuvT7zxd4WwAnNbwJxH8YcpQdqbKTy8RRnKf2q5UoFA2g9nzokiPFcNZplbkjsbLg_nospEPEBpdbwmNRnqC779mGkZJpJ5aglRnHOAz__wRNdys8miuGz24K8pzFP-siC0ARISaSRYie_or42bwq4tvrgA6taR-JuCyHcerMPqJV59P5b2sG42G8">
+</div>
+<div>
+<span class="font-label-md text-[11px] font-bold text-primary bg-primary-fixed px-1.5 py-0.5 rounded">#RES-8902</span>
+<p class="font-body-sm text-body-sm font-semibold text-primary mt-1">Rooftop Corporativo Las Condes</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">location_on</span>
+                    Las Condes, RM
+                  </p>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-full bg-tertiary-container text-on-tertiary font-headline-md text-[13px] flex items-center justify-center font-bold">
+                  MA
+                </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Martín Arriagada S.</p>
+<p class="font-label-md text-label-md text-on-surface-variant">martin@agenciabranding.cl</p>
+<span class="font-label-md text-[11px] text-outline">+56 9 7120 3389</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-md text-[11px] font-medium mb-1">
+                Por Hora
+              </span>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">31 Oct 2024</p>
+<p class="font-label-md text-label-md text-on-surface-variant">18:30 - 23:30 hrs (5 horas)</p>
+</td>
+<td class="py-md px-md align-top text-right">
+<span class="font-mono-price text-body-md text-primary font-bold">$380.000 CLP</span>
+<p class="font-label-md text-label-md text-secondary flex items-center justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                En custodia Webpay
+              </p>
+</td>
+<td class="py-md px-md align-top text-center">
+<span class="inline-flex items-center gap-1 px-sm py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Pendiente
+              </span>
+</td>
+<td class="py-md px-md align-top text-right">
+<div class="flex items-center justify-end gap-xs">
+<button class="inline-flex items-center gap-1 px-sm py-1 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Aprobar</span>
+</button>
+<button class="inline-flex items-center gap-1 px-xs py-1 rounded-lg bg-surface-container text-error hover:bg-error-container hover:text-on-error-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Completada -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-md px-md align-top">
+<div class="flex items-start gap-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Self-storage unit interior with clean metallic roll-up doors, bright strip lighting and concrete floor in urban Santiago storage facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAlhFkZtM2qJnw9lYq8ij3GWzZUcYqjoP1nJlrSMiPBGZ0hU1A5PJXdnKWcUanDWBDLAh4DvFm8za8hCrL0hpa0-DXtM6O6xXAuqkkD7JRufHOW4A_v4YtUhGyuHpBiN54IeGJySxZlxP3IrGtAN-QSIEkhkgInhkLPRyX7LbhNaZgMTEVysWVt2e4QUMwbTVtVVw4lh0D77vj372g8k_hSb9qnpW1F57w67smmHqGHRwhDUKHUQ2S">
+</div>
+<div>
+<span class="font-label-md text-[11px] font-bold text-outline bg-surface-container px-1.5 py-0.5 rounded">#RES-8890</span>
+<p class="font-body-sm text-body-sm font-semibold text-primary mt-1">Bodega Urbana Hub Central</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline">location_on</span>
+                    Santiago Centro, RM
+                  </p>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<div class="flex items-center gap-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant font-headline-md text-[13px] flex items-center justify-center font-bold">
+                  FG
+                </div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Francisca Gómez Peña</p>
+<p class="font-label-md text-label-md text-on-surface-variant">fgomez@innovalatam.cl</p>
+<span class="font-label-md text-[11px] text-outline">+56 9 6632 1190</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md align-top">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-md text-[11px] font-medium mb-1">
+                Por Día
+              </span>
+<p class="font-body-sm text-body-sm font-medium text-on-surface">15 - 18 Oct 2024</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Completado con éxito (4 días)</p>
+</td>
+<td class="py-md px-md align-top text-right">
+<span class="font-mono-price text-body-md text-primary font-bold">$120.000 CLP</span>
+<p class="font-label-md text-label-md text-outline flex items-center justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">account_balance</span>
+                Transferido a cuenta bancaria
+              </p>
+</td>
+<td class="py-md px-md align-top text-center">
+<span class="inline-flex items-center gap-1 px-sm py-1 rounded-full bg-surface-container text-outline font-label-md text-label-md font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Completada
+              </span>
+</td>
+<td class="py-md px-md align-top text-right">
+<div class="flex items-center justify-end gap-xs">
+<button class="inline-flex items-center gap-1 px-sm py-1 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span>Factura / Recibo</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Chilean Standard Pagination -->
+<div class="px-md py-sm bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Mostrando <span class="font-semibold text-on-surface">1 a 5</span> de <span class="font-semibold text-on-surface">48</span> reservas totales
+      </p>
+<div class="flex items-center gap-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-outline-variant flex items-center justify-center cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center font-semibold" type="button">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high flex items-center justify-center transition-colors" type="button">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high flex items-center justify-center transition-colors" type="button">
+          3
+        </button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high flex items-center justify-center transition-colors" type="button">
+          10
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Notice Banner for Landlords -->
+<div class="bg-surface-container-low rounded-xl p-md flex flex-col md:flex-row items-start md:items-center justify-between gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-primary">Protocolo de Garantía y Devolución Segura</p>
+<p class="font-label-md text-label-md text-on-surface-variant">
+          Los pagos quedan asegurados por el sistema de fideicomiso de EspaciosChile hasta 24 horas después de completada la jornada o check-in.
+        </p>
+</div>
+</div>
+<a class="font-label-md text-label-md font-semibold text-primary hover:underline whitespace-nowrap inline-flex items-center gap-1" href="#">
+<span>Ver Términos para Propietarios</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-gutter px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="w-full flex flex-col sm:flex-row items-center justify-between gap-sm text-on-surface-variant"><p class="font-body-sm text-body-sm">© 2024 EspaciosChile. Todos los derechos reservados.</p><div class="flex items-center gap-gutter"><a class="font-body-sm text-body-sm hover:text-on-surface transition-colors" data-path="terminos-y-condiciones" href="#">Términos y Condiciones</a><a class="font-body-sm text-body-sm hover:text-on-surface transition-colors" data-path="politica-de-privacidad" href="#">Privacidad</a><a class="font-body-sm text-body-sm hover:text-on-surface transition-colors" data-path="contacto" href="#">Contacto</a></div></div></footer></div></body></html>

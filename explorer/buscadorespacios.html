@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EspaciosChile - Buscar Espacios</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface": "#0b1c30",
+                        "secondary-fixed-dim": "#66dd8b",
+                        "on-secondary-fixed": "#00210c",
+                        "secondary-container": "#83fba5",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "primary": "#001e40",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#799dd6",
+                        "inverse-surface": "#213145",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary-container": "#999c9e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-dim": "#cbdbf5",
+                        "outline": "#737780",
+                        "on-surface-variant": "#43474f",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-background": "#0b1c30",
+                        "surface-variant": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#00743a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f8f9ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-container-high": "#dce9ff",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-container": "#003366",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c3c6d1",
+                        "surface-tint": "#3a5f94",
+                        "tertiary": "#1b1f20",
+                        "secondary": "#006d36",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001b3c",
+                        "surface-container": "#e5eeff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#303436",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#83fba5",
+                        "surface": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary-fixed-variant": "#005227"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xs": "8px",
+                        "lg": "40px",
+                        "md": "24px",
+                        "max-width": "1280px",
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "margin-desktop": "48px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "mono-price": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "mono-price": ["16px", { "lineHeight": "24px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[style*="'FILL' 1"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-container-low border-b border-outline-variant dark:border-outline z-50 relative sticky top-0 w-full">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-max-width mx-auto h-20">
+<!-- Brand -->
+<div class="flex items-center gap-sm">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">EspaciosChile</a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-md h-full">
+<a class="h-full flex items-center font-title-lg text-title-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Publicar espacio</a>
+<a class="h-full flex items-center font-title-lg text-title-lg text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim opacity-80 transition-opacity" href="#">Buscar</a>
+<a class="h-full flex items-center font-title-lg text-title-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Mi Cuenta</a>
+</div>
+<!-- Trailing Action -->
+<div class="flex items-center gap-sm">
+<button class="bg-secondary text-on-secondary px-md py-xs rounded-lg font-label-md text-label-md hover:shadow-[0px_4px_12px_rgba(0,51,102,0.08)] transition-all">Publicar</button>
+<button class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="Foto de perfil del usuario" class="w-full h-full object-cover" data-alt="Professional headshot of a person, well lit, neutral background, corporate style avatar for real estate platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBtT3li_AUeT7mH4v_yapzEtqLPAAptG7jUwbmSA_dVmjAvRxdonKuy2j74Ho1StLZfLEwvWqMG7H19ZmR6J2sLkhdc5CEdmqD9u-gMlRUsF2aCUF-JSUgfulWDAUK1OH4iRK43NHnNpIt4UFd12QIF6cUCpsIFDcJg9DLEGlZxgLoRrwF61BvyD_h810_ztpsb0J3ARmc6v1r-wX84rSKtQC3n_0USjKePUXeEmuAmyVpy_90wOvP">
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Layout -->
+<main class="flex-grow flex flex-col md:flex-row relative">
+<!-- Left Side: Map Area -->
+
+<!-- Right Side: Search, Filters & Results -->
+<section class="w-full h-full flex flex-col overflow-y-auto bg-background z-10 order-1">
+<!-- Search & Filters Sticky Header -->
+<div class="sticky top-0 bg-background/95 backdrop-blur-sm z-20 border-b border-outline-variant p-md px-margin-desktop">
+<!-- Search Bar -->
+<div class="relative w-full mb-md max-w-max-width mx-auto">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-xl pr-sm py-xs border border-outline-variant rounded-lg bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors font-body-md text-on-surface" placeholder="Buscar por palabra clave..." type="text">
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-sm max-w-max-width mx-auto">
+<!-- Tipo de Espacio -->
+<div class="relative group">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant rounded-lg pl-sm pr-lg py-xs font-label-md text-label-md text-on-surface focus:border-primary focus:outline-none cursor-pointer">
+<option value="">Tipo de espacio</option>
+<option value="bodega">Bodega</option>
+<option value="oficina">Oficina</option>
+<option value="comercial">Local Comercial</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none text-outline text-sm" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Comuna -->
+<div class="relative group">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant rounded-lg pl-sm pr-lg py-xs font-label-md text-label-md text-on-surface focus:border-primary focus:outline-none cursor-pointer">
+<option value="">Comuna</option>
+<option value="providencia">Providencia</option>
+<option value="las_condes">Las Condes</option>
+<option value="santiago_centro">Santiago Centro</option>
+<option value="quinta_normal">Quinta Normal</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none text-outline text-sm" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Precio -->
+<button class="bg-surface-container-lowest border border-outline-variant rounded-lg px-sm py-xs font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors flex items-center gap-base">
+                        Precio (CLP) <span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+</button>
+<!-- Superficie -->
+<button class="bg-surface-container-lowest border border-outline-variant rounded-lg px-sm py-xs font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors flex items-center gap-base">
+                        Superficie (m²) <span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<!-- Results List -->
+<div class="p-md flex flex-col gap-md pb-xl max-w-max-width mx-auto w-full"><div class="flex justify-between items-center mb-sm w-full"><h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">24 Resultados encontrados</h2></div><div class="grid grid-cols-1 md:grid-cols-4 gap-md w-full"><div class="col-span-1 md:col-span-4 grid grid-cols-1 md:grid-cols-4 gap-md"><div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-[0px_4px_12px_rgba(0,51,102,0.08)] transition-shadow flex flex-col group cursor-pointer"><div class="h-48 relative"><img alt="Bodega en Quinta Normal" class="w-full h-full object-cover" data-alt="A clean, spacious industrial warehouse interior with polished concrete floors and high ceilings. Natural light streams in from skylights, illuminating the empty space. The setting is modern and professional, suitable for a real estate listing in a corporate light-mode design. The colors are neutral whites, grays, and subtle blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmSZ48BS__iCZBd6nSI33DNSjDxu_V4AQavHhTcF9IV6vyjCAu6rt5GGjPnLH1ty0iSJd6KGl3T6JbkQ2AEUc10LguJrlrjydiaxMBO3PRTiijyFMoTf6O6SRC6TL3f8rYIiL4T9hPYb43DiNlBF2VeuasOB-uf81h_VLrEiTAsKr6VknOksp9WepnjDqqGomzRHgQ5-dp_wWrUFqeYxVieBbYJLDx4KIar70Hm8vr2yxhds34IoQ1"><div class="absolute top-sm left-sm bg-surface-container-lowest/90 backdrop-blur-sm px-xs py-base rounded text-xs font-label-md text-primary font-bold shadow-sm">Destacado</div></div><div class="p-md flex flex-col flex-grow justify-between"><div><div class="flex justify-between items-start mb-base"><h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Bodega amplia en Quinta Normal</h3><button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span></button></div><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-base mb-sm"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>Quinta Normal, Región Metropolitana</p><div class="flex flex-wrap gap-xs mb-sm"><span class="bg-surface-container px-xs py-base rounded text-xs font-label-md text-on-surface">Bodega</span><span class="bg-surface-container px-xs py-base rounded text-xs font-label-md text-on-surface">Acceso 24/7</span></div></div><div class="flex justify-between items-end mt-sm pt-sm border-t border-outline-variant/50"><div><p class="font-mono-price text-mono-price text-primary mb-base">$450.000 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/ mes</span></p><p class="font-body-sm text-body-sm text-on-surface-variant">120 m²</p></div><div class="flex items-center gap-base text-secondary-fixed-dim"><span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span><span class="font-label-md text-label-md text-on-surface">4.8</span></div></div></div></div><div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-[0px_4px_12px_rgba(0,51,102,0.08)] transition-shadow flex flex-col group cursor-pointer"><div class="h-48 relative"><img alt="Oficina en Providencia" class="w-full h-full object-cover" data-alt="A bright, modern corporate office space in a high-rise building with floor-to-ceiling windows showing a city skyline. The room is empty, featuring a minimalist design with light wood flooring and white walls. The lighting is crisp and natural, fitting a high-end commercial real estate platform aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwruCIBMrfvEZ642Tc8JeQTsXFq1Liz0wAoKUYi4a6HdPWDE1SQOCjHa2mk_HVkjNmUN2qhyX2e1LSPMqqBosSoY8LbHSqiVP6f8HmhpnrDzXmqlJzaCLQzZpVM2NYUtZGe61gvGQphKKWH9kJXfYTvKu3ZesaeFsEIW51u-yNLrA77kkAXXWI2NPZTPRseNXMlU2Ax7CglkTqUKLaajhWCTGwDXCnc7QiHsBy5owtM-sAxTnEia3y"></div><div class="p-md flex flex-col flex-grow justify-between"><div><div class="flex justify-between items-start mb-base"><h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Oficina Planta Libre Providencia</h3><button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span></button></div><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-base mb-sm"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>Providencia, Sector Tobalaba</p><div class="flex flex-wrap gap-xs mb-sm"><span class="bg-surface-container px-xs py-base rounded text-xs font-label-md text-on-surface">Oficina</span><span class="bg-surface-container px-xs py-base rounded text-xs font-label-md text-on-surface">Climatización</span></div></div><div class="flex justify-between items-end mt-sm pt-sm border-t border-outline-variant/50"><div><p class="font-mono-price text-mono-price text-primary mb-base">$1.200.000 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/ mes</span></p><p class="font-body-sm text-body-sm text-on-surface-variant">85 m²</p></div><div class="flex items-center gap-base text-secondary-fixed-dim"><span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span><span class="font-label-md text-label-md text-on-surface">4.5</span></div></div></div></div><div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-[0px_4px_12px_rgba(0,51,102,0.08)] transition-shadow flex flex-col group cursor-pointer"><div class="h-48 relative"><img alt="Mini Bodega Las Condes" class="w-full h-full object-cover" data-alt="A clean, secure self-storage unit facility hallway. Rows of bright blue or white roll-up doors line the corridor. The area is well-lit with fluorescent industrial lighting, conveying safety and cleanliness. The aesthetic is practical, professional, and minimalist, matching a corporate storage management interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcux-akPK8NBJa_TuS2gzjWMq1ptczlXXOtyfsM9deQ1GvbBkrvcQULledlwGJqlb-Tom0LIqVYqzXiBcDbSFF-SUlwcyqeVhT_dXP0lh7gUoNxFP-lI_t1EAr9HXSmhCrFWaItUG0TihSDZZFCOW6NMBEyZXHQ0IyCgMM-29qpW2hLIovUeCz0j8Wr-2rHSjQu64w18bvkKHDfPJ0-QyKXOG87nMTwbhUIsL4YIMcq5WR8d-Qbmdr"></div><div class="p-md flex flex-col flex-grow justify-between"><div><div class="flex justify-between items-start mb-base"><h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Mini Bodega Premium</h3><button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span></button></div><p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-base mb-sm"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>Las Condes, Sector Cantagallo</p><div class="flex flex-wrap gap-xs mb-sm"><span class="bg-surface-container px-xs py-base rounded text-xs font-label-md text-on-surface">Mini Bodega</span><span class="bg-surface-container px-xs py-base rounded text-xs font-label-md text-on-surface">Seguridad 24h</span></div></div><div class="flex justify-between items-end mt-sm pt-sm border-t border-outline-variant/50"><div><p class="font-mono-price text-mono-price text-primary mb-base">$85.000 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/ mes</span></p><p class="font-body-sm text-body-sm text-on-surface-variant">15 m²</p></div><div class="flex items-center gap-base text-secondary-fixed-dim"><span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span><span class="font-label-md text-label-md text-on-surface">5.0</span></div></div></div></div></div></div><button class="w-full py-sm border border-outline border-dashed rounded-lg text-primary font-label-md text-label-md hover:bg-surface-container transition-colors mt-sm">Cargar más resultados</button></div>
+<!-- Footer integrated in scrollable area -->
+<footer class="bg-tertiary dark:bg-tertiary-container w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-lg max-w-max-width mx-auto mt-auto">
+<div class="col-span-1 md:col-span-4 mb-sm">
+<span class="font-title-lg text-title-lg font-bold text-on-tertiary">EspaciosChile</span>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Términos y Condiciones</a>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Privacidad</a>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Contacto Local</a>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Preguntas Frecuentes</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-lg pt-sm border-t border-on-tertiary/20">
+<p class="font-body-sm text-body-sm text-on-tertiary-container dark:text-on-tertiary-fixed-variant">© 2024 EspaciosChile. Gestión de Propiedades y Bodegaje.</p>
+</div>
+</footer>
+</section>
+</main>
+
+
+</body></html>

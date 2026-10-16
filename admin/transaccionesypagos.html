@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-container":"#303436","on-secondary-fixed-variant":"#005227","on-surface":"#0b1c30","inverse-surface":"#213145","on-primary-container":"#799dd6","surface-tint":"#3a5f94","on-background":"#0b1c30","surface-container-lowest":"#ffffff","on-primary-fixed":"#001b3c","primary-fixed-dim":"#a7c8ff","inverse-primary":"#a7c8ff","error":"#ba1a1a","on-tertiary-container":"#999c9e","tertiary":"#1b1f20","secondary-fixed-dim":"#66dd8b","on-tertiary":"#ffffff","on-secondary-container":"#00743a","outline":"#737780","on-tertiary-fixed-variant":"#444749","surface-container":"#e5eeff","on-primary":"#ffffff","secondary":"#006d36","surface-variant":"#d3e4fe","on-error-container":"#93000a","error-container":"#ffdad6","on-primary-fixed-variant":"#1f477b","primary-fixed":"#d5e3ff","outline-variant":"#c3c6d1","primary":"#001e40","on-secondary-fixed":"#00210c","surface-container-low":"#eff4ff","surface-container-high":"#dce9ff","primary-container":"#003366","on-tertiary-fixed":"#191c1e","on-error":"#ffffff","background":"#f8f9ff","surface-bright":"#f8f9ff","surface":"#f8f9ff","tertiary-fixed-dim":"#c4c7c9","secondary-container":"#83fba5","on-secondary":"#ffffff","on-surface-variant":"#43474f","surface-container-highest":"#d3e4fe","inverse-on-surface":"#eaf1ff","surface-dim":"#cbdbf5","secondary-fixed":"#83fba5","tertiary-fixed":"#e0e3e5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"base":"4px","xl":"64px","margin-desktop":"48px","gutter":"24px","lg":"40px","sm":"16px","margin-mobile":"16px","md":"24px","xs":"8px","max-width":"1280px"},"fontFamily":{"mono-price":["Inter"],"display-lg":["Inter"],"body-sm":["Inter"],"headline-lg":["Inter"],"headline-lg-mobile":["Inter"],"title-lg":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"label-md":["Inter"]},"fontSize":{"mono-price":["16px",{"lineHeight":"24px","fontWeight":"700"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-sm"><div class="px-md pt-xs flex flex-col gap-xs"><div class="flex items-center gap-xs"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">apartment</span></div><div class="flex flex-col"><span class="font-title-lg text-title-lg text-primary tracking-tight">EspaciosChile</span><span class="font-label-md text-label-md text-on-surface-variant uppercase">Backoffice Pro</span></div></div><div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-surface-container-highest w-fit"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">PRODUCCIÓN CL v2.4</span></div></div><div class="px-md pt-xs"><span class="font-label-md text-label-md text-outline uppercase tracking-wider">Gestión Inmobiliaria</span></div><nav class="flex flex-col gap-base px-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-general" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-sm text-body-sm">Dashboard General</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="moderacion-de-espacios" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-body-sm text-body-sm">Moderación de Espacios</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="verificacion-de-identidad" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-sm text-body-sm">Verificación de Identidad</span></a><a aria-current="page" class="flex items-center gap-sm px-sm py-xs rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold" data-path="transacciones-y-pagos" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-sm text-body-sm">Transacciones y Pagos</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="usuarios-y-propietarios" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-sm text-body-sm">Usuarios y Propietarios</span></a><a class="flex items-center gap-sm px-sm py-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="auditoria-y-configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings_suggest</span><span class="font-body-sm text-body-sm">Auditoría y Configuración</span></a></nav></div><div class="px-md flex flex-col gap-xs"><div class="p-xs rounded-lg bg-surface-container flex flex-col gap-base"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">API Gateway CL</span><span class="inline-flex items-center gap-base font-label-md text-label-md text-secondary font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Operativo</span></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant">Latencia Santiago</span><span class="font-label-md text-label-md text-on-surface">24 ms</span></div></div><div class="flex items-center justify-between px-xs py-base"><a class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">support_agent</span><span class="font-label-md text-label-md">Mesa de Ayuda TI</span></a><span class="font-label-md text-label-md text-outline">CLT (UTC-3)</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-md"><div class="flex items-center gap-md flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-sm text-outline text-[20px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-10 pr-sm py-xs rounded-lg placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Buscar por RUT (ej: 12.345.678-9), ID de Contrato o Bodega..." type="text"/></div></div><div class="flex items-center gap-md"><div class="hidden xl:flex items-center gap-sm"><div class="flex items-center gap-xs px-xs py-base rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Webpay Plus: Activo</span></div><div class="flex items-center gap-xs px-xs py-base rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-md text-label-md text-on-surface">Sync SII: Conectado</span></div></div><div class="relative flex items-center justify-center"><button aria-label="Notificaciones críticas" class="p-xs rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant relative" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface"></span></button></div><div class="flex items-center gap-xs pl-xs"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Super Admin</span><span class="font-label-md text-label-md text-on-surface-variant">admin@espacioschile.cl</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-gutter min-h-screen bg-surface"><div class="flex flex-col w-full pb-xl">
+<!-- Top Executive Header & Operations Toolbar -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-md mb-lg">
+<div class="flex flex-col gap-xs max-w-3xl">
+<div class="inline-flex items-center gap-xs px-xs py-base rounded-full bg-surface-container-high w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Normativa D.L. 825 • F29 al día</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+        Centro Financiero, Dispersión de Fondos y Cumplimiento Tributario
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Control de liquidaciones automáticas en CLP, recaudación Transbank Webpay Plus, retenciones tributarias SII y escrow bancario institucional en Chile.
+      </p>
+</div>
+<!-- Action Bar -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-lowest text-primary shadow-sm hover:bg-surface-container transition-all font-label-md text-label-md" id="btn-export-txt">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Nómina TEF Banco (TXT/Excel)</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-surface-container-lowest text-primary shadow-sm hover:bg-surface-container transition-all font-label-md text-label-md" id="btn-sii-sync">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Emitir DTEs SII</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs rounded-lg bg-primary text-on-primary shadow-md hover:bg-primary-container transition-all font-label-md text-label-md font-semibold" id="btn-run-tef">
+<span class="material-symbols-outlined text-[18px]">send_money</span>
+<span>Ejecutar Dispersión TEF</span>
+</button>
+</div>
+</div>
+<!-- Real-time Dispersión Alert Banner -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary-container via-primary to-primary text-on-primary p-md shadow-md mb-lg">
+<div class="absolute right-0 top-0 bottom-0 opacity-10 flex items-center pr-md pointer-events-none">
+<span class="material-symbols-outlined text-[180px]">account_balance</span>
+</div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-md">
+<div class="flex items-start sm:items-center gap-sm">
+<div class="w-12 h-12 rounded-xl bg-on-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-[28px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed-dim">Próxima Liquidación Programada</span>
+<span class="px-xs py-base rounded-full bg-secondary text-on-secondary font-label-md text-label-md">Hoy 18:00 CLT</span>
+</div>
+<p class="font-title-lg text-title-lg text-surface-lowest font-bold mt-base">
+            $36.800.000 CLP — Dispersión masiva hacia 28 cuentas corrientes
+          </p>
+<span class="font-body-sm text-body-sm text-surface-container-highest/80">
+            Convenio multi-banco: Banco de Chile &amp; BancoEstado vía API Host-to-Host (Listo para autorización biométrica).
+          </span>
+</div>
+</div>
+<div class="flex items-center gap-sm shrink-0">
+<div class="text-right hidden md:block">
+<div class="font-label-md text-label-md text-surface-container-high">Lote Nómina #CL-8842</div>
+<div class="font-mono-price text-mono-price text-secondary-fixed">28 / 28 RUTs Válidos</div>
+</div>
+<button class="px-md py-xs rounded-lg bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim font-label-md text-label-md font-bold transition-all shadow-sm">
+          Aprobar Lote Completo
+        </button>
+</div>
+</div>
+</div>
+<!-- KPI Grid (5 metrics in asymmetric / dense layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-sm mb-lg">
+<!-- KPI 1: Volumen Mes -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Volumen Mes</span>
+<span class="material-symbols-outlined text-primary text-[20px]">bar_chart</span>
+</div>
+<div class="mt-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+          $184.620.000
+        </div>
+<div class="flex items-center gap-base mt-xs text-secondary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+14.8% vs. mes anterior</span>
+</div>
+</div>
+<div class="mt-sm pt-xs border-t-0 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Transacciones:</span>
+<span class="font-semibold text-on-surface">312 operaciones</span>
+</div>
+</div>
+<!-- KPI 2: Comisiones Brutas -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Fee Plataforma</span>
+<span class="material-symbols-outlined text-primary text-[20px]">monetization_on</span>
+</div>
+<div class="mt-sm">
+<div class="font-headline-md text-headline-md text-primary font-bold tracking-tight">
+          $18.462.000
+        </div>
+<div class="flex items-center gap-base mt-xs text-on-surface-variant font-label-md text-label-md">
+<span class="px-xs py-base rounded bg-surface-container font-mono-price text-on-surface">10.0% promedio</span>
+<span>comisión neta</span>
+</div>
+</div>
+<div class="mt-sm pt-xs flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Margen Operacional:</span>
+<span class="font-semibold text-secondary">92.4%</span>
+</div>
+</div>
+<!-- KPI 3: Retención Legal SII -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Retención IVA SII</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance_wallet</span>
+</div>
+<div class="mt-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+          $2.947.815
+        </div>
+<div class="flex items-center gap-base mt-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">sync</span>
+<span>19% s/ comisiones (F29)</span>
+</div>
+</div>
+<div class="mt-sm pt-xs flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Sincronización SII:</span>
+<span class="font-semibold text-secondary">Al Día (12:40 CLT)</span>
+</div>
+</div>
+<!-- KPI 4: Fondos Escrow -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Garantías / Escrow</span>
+<span class="material-symbols-outlined text-primary text-[20px]">shield_lock</span>
+</div>
+<div class="mt-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+          $42.500.000
+        </div>
+<div class="flex items-center gap-base mt-xs text-on-surface-variant font-label-md text-label-md">
+<span>Banco Chile / BancoEstado</span>
+</div>
+</div>
+<div class="mt-sm pt-xs flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Tasa de Reclamos:</span>
+<span class="font-semibold text-on-surface">0.3% global</span>
+</div>
+</div>
+<!-- KPI 5: Transbank Webpay Uptime -->
+<div class="bg-surface-container-low rounded-xl p-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Pasarela Webpay</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="mt-sm">
+<div class="font-headline-md text-headline-md text-primary font-bold tracking-tight">
+          99.98%
+        </div>
+<div class="flex items-center gap-base mt-xs text-on-surface-variant font-label-md text-label-md">
+<span>Tasa de Éxito Transbank</span>
+</div>
+</div>
+<div class="mt-sm pt-xs flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span>Prom. Aprobación:</span>
+<span class="font-mono-price font-semibold text-on-surface">1.8 seg</span>
+</div>
+</div>
+</div>
+<!-- Bento Section: Main Transactions Table + Tax Compliance & Ledger Widget -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter mb-lg items-start">
+<!-- Transactions Ledger Panel (8 cols) -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header & Filters -->
+<div class="p-md bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-sm">
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-primary tracking-tight">Libro de Transacciones Recientes</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Liquidaciones vinculadas a contratos de arriendo y pasarelas bancarias</span>
+</div>
+<!-- Filter pills -->
+<div class="flex items-center gap-xs overflow-x-auto pb-xs sm:pb-0">
+<button class="px-sm py-base rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold">Todas (312)</button>
+<button class="px-sm py-base rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">En Custodia</button>
+<button class="px-sm py-base rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">Liquidadas</button>
+<button class="px-sm py-base rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">Retenidas SII</button>
+</div>
+</div>
+<!-- High-Density Responsive Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-sm px-md">ID / Fecha</th>
+<th class="py-sm px-md">Inmueble / Tipo</th>
+<th class="py-sm px-md">Partes (RUT)</th>
+<th class="py-sm px-md text-right">Monto CLP</th>
+<th class="py-sm px-md text-right">Fee • IVA</th>
+<th class="py-sm px-md text-center">Estado</th>
+<th class="py-sm px-md text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-md align-top">
+<div class="font-mono-price text-on-surface font-bold">#TX-94021</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Hoy 15:42 CLT</div>
+<span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 489201</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="font-semibold text-primary">Bodega Industrial San Bernardo</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Módulo B-14 • 120 m²</div>
+<span class="font-label-md text-label-md text-outline">ID: BOD-SB-802</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="text-on-surface font-medium">Prop: Inversiones Los Andes SpA</div>
+<div class="text-on-surface-variant text-label-md font-label-md">RUT: 76.491.028-4</div>
+<div class="text-on-surface-variant text-label-md font-label-md mt-base">Arr: Comercializadora Austral</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-on-surface font-bold">$1.850.000</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Webpay Plus</span>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-secondary font-bold">$185.000</div>
+<div class="text-label-md font-label-md text-error font-mono-price">IVA: $35.150</div>
+</td>
+<td class="py-sm px-md align-top text-center">
+<span class="inline-flex items-center gap-base px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Liquidado TEF
+                </span>
+<div class="text-[11px] text-on-surface-variant mt-base">Comprobante #4412</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<button class="p-xs rounded-lg hover:bg-surface-container text-primary transition-colors" title="Ver Folio y Factura SII">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-md align-top">
+<div class="font-mono-price text-on-surface font-bold">#TX-94019</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Hoy 14:18 CLT</div>
+<span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 938102</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="font-semibold text-primary">Mini-Bodega Providencia Centro</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Espacio Lock-22 • 14 m²</div>
+<span class="font-label-md text-label-md text-outline">ID: BOD-PV-019</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="text-on-surface font-medium">Prop: Patricia Soto Alarcón</div>
+<div class="text-on-surface-variant text-label-md font-label-md">RUT: 14.882.903-K</div>
+<div class="text-on-surface-variant text-label-md font-label-md mt-base">Arr: Rodrigo Henríquez T.</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-on-surface font-bold">$340.000</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Webpay Débito</span>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-secondary font-bold">$34.000</div>
+<div class="text-label-md font-label-md text-error font-mono-price">IVA: $6.460</div>
+</td>
+<td class="py-sm px-md align-top text-center">
+<span class="inline-flex items-center gap-base px-xs py-base rounded-full bg-surface-variant text-primary font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  En Escrow
+                </span>
+<div class="text-[11px] text-on-surface-variant mt-base">En lote de 18:00 hrs</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<button class="p-xs rounded-lg hover:bg-surface-container text-primary transition-colors" title="Detalle Transbank">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-md align-top">
+<div class="font-mono-price text-on-surface font-bold">#TX-94002</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Hoy 11:05 CLT</div>
+<span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 104882</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="font-semibold text-primary">Depósito Quilicura Logística</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Nave Principal C • 450 m²</div>
+<span class="font-label-md text-label-md text-outline">ID: LOG-QC-450</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="text-on-surface font-medium">Prop: Renta Capital SpA</div>
+<div class="text-on-surface-variant text-label-md font-label-md">RUT: 96.772.012-9</div>
+<div class="text-on-surface-variant text-label-md font-label-md mt-base">Arr: Logix Express Chile</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-on-surface font-bold">$4.200.000</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Webpay Crédito</span>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-secondary font-bold">$420.000</div>
+<div class="text-label-md font-label-md text-error font-mono-price">IVA: $79.800</div>
+</td>
+<td class="py-sm px-md align-top text-center">
+<span class="inline-flex items-center gap-base px-xs py-base rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Pendiente Check-in
+                </span>
+<div class="text-[11px] text-on-surface-variant mt-base">Llave digital activa mañana</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<button class="p-xs rounded-lg hover:bg-surface-container text-primary transition-colors" title="Gestionar Retención">
+<span class="material-symbols-outlined text-[20px]">manage_history</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-sm px-md align-top">
+<div class="font-mono-price text-on-surface font-bold">#TX-93988</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Ayer 19:30 CLT</div>
+<span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 772190</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="font-semibold text-primary">Estacionamiento + Bodega Las Condes</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Subterráneo -3 #302</div>
+<span class="font-label-md text-label-md text-outline">ID: PK-LC-110</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="text-on-surface font-medium">Prop: Carlos Silva Errázuriz</div>
+<div class="text-on-surface-variant text-label-md font-label-md">RUT: 8.932.114-3</div>
+<div class="text-on-surface-variant text-label-md font-label-md mt-base">Arr: Macarena Vial C.</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-on-surface font-bold">$210.000</div>
+<span class="text-label-md font-label-md text-on-surface-variant">Webpay Plus</span>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-secondary font-bold">$21.000</div>
+<div class="text-label-md font-label-md text-error font-mono-price">IVA: $3.990</div>
+</td>
+<td class="py-sm px-md align-top text-center">
+<span class="inline-flex items-center gap-base px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Liquidado TEF
+                </span>
+<div class="text-[11px] text-on-surface-variant mt-base">Banco de Chile</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<button class="p-xs rounded-lg hover:bg-surface-container text-primary transition-colors" title="Descargar Comprobante">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 (Reembolsado) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-sm px-md align-top">
+<div class="font-mono-price text-error font-bold">#TX-93910</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Ayer 10:14 CLT</div>
+<span class="inline-block mt-xs px-xs py-base rounded bg-error-container font-label-md text-label-md text-on-error-container">TBK Anulación: OK</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="font-semibold text-primary">Bodega Enfriada Pudahuel Enea</div>
+<div class="text-on-surface-variant text-label-md font-label-md">Cámara Fría #04</div>
+<span class="font-label-md text-label-md text-outline">ID: LOG-PU-004</span>
+</td>
+<td class="py-sm px-md align-top">
+<div class="text-on-surface font-medium">Prop: Frigoríficos del Maipo</div>
+<div class="text-on-surface-variant text-label-md font-label-md">RUT: 77.102.390-1</div>
+<div class="text-on-surface-variant text-label-md font-label-md mt-base">Arr: Distribuciones Mar Azul</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-error font-bold">-$980.000</div>
+<span class="text-label-md font-label-md text-on-error-container">Reverso Automático</span>
+</td>
+<td class="py-sm px-md align-top text-right">
+<div class="font-mono-price text-on-surface-variant font-bold">$0</div>
+<div class="text-label-md font-label-md text-on-surface-variant font-mono-price">NC Emitida</div>
+</td>
+<td class="py-sm px-md align-top text-center">
+<span class="inline-flex items-center gap-base px-xs py-base rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Reembolsado
+                </span>
+<div class="text-[11px] text-on-surface-variant mt-base">Disputa cancelada</div>
+</td>
+<td class="py-sm px-md align-top text-right">
+<button class="p-xs rounded-lg hover:bg-surface-container text-primary transition-colors" title="Ver Nota de Crédito SII">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Status Legend -->
+<div class="p-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Mostrando 5 de 312 operaciones del período fiscal en curso
+        </span>
+<div class="flex items-center gap-xs">
+<button class="px-sm py-xs rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm disabled:opacity-50">Anterior</button>
+<button class="px-xs py-base rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold px-sm">1</button>
+<button class="px-xs py-base rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md px-sm">2</button>
+<button class="px-xs py-base rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md px-sm">3</button>
+<button class="px-sm py-xs rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm">Siguiente</button>
+</div>
+</div>
+</div>
+<!-- Right Side: SII Chilean Compliance & Escrow Health (4 cols) -->
+<div class="xl:col-span-4 flex flex-col gap-gutter">
+<!-- SII DTE & F29 Monitor Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-sm">
+<div class="flex items-center gap-xs">
+<span class="w-8 h-8 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</span>
+<div class="flex flex-col">
+<h3 class="font-title-lg text-title-lg text-primary">Cumplimiento SII</h3>
+<span class="font-label-md text-label-md text-on-surface-variant">D.L. 825 • Régimen Inmobiliario</span>
+</div>
+</div>
+<span class="px-xs py-base rounded bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold">100% OK</span>
+</div>
+<div class="space-y-sm mt-xs">
+<div class="p-xs rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Facturas Electrónicas Afectas (Fee)</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Comisiones 10% cobradas</span>
+</div>
+<span class="font-mono-price text-mono-price text-primary">312 emitidas</span>
+</div>
+<div class="p-xs rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Arriendos Exentos / Amoblados</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Arriendos sin servicios adicionales</span>
+</div>
+<span class="font-mono-price text-mono-price text-secondary">Acreditado</span>
+</div>
+<div class="p-xs rounded-lg bg-surface-container flex flex-col gap-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase">Acumulado F29 (IVA Débito Fiscal)</span>
+<span class="font-mono-price text-mono-price text-error">$2.947.815</span>
+</div>
+<!-- Visual Progress Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Vencimiento pago: 20 del mes</span>
+<span>78% cuota estimada</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between">
+<button class="text-primary hover:underline font-label-md text-label-md font-semibold flex items-center gap-base">
+<span class="material-symbols-outlined text-[16px]">file_open</span>
+<span>Descargar Declaración Proforma F29</span>
+</button>
+</div>
+</div>
+<!-- Bank Reconciliation & Escrow Safety Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-sm">
+<div class="flex items-center gap-xs">
+<span class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</span>
+<div class="flex flex-col">
+<h3 class="font-title-lg text-title-lg text-primary">Conciliación Bancaria</h3>
+<span class="font-label-md text-label-md text-on-surface-variant">Cuentas Segregadas de Garantía</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-base font-label-md text-label-md text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> En Línea
+          </span>
+</div>
+<div class="flex flex-col gap-sm mt-xs">
+<!-- Banco de Chile -->
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm font-bold text-on-surface">Banco de Chile • Cta Cte Escrow</span>
+</div>
+<span class="font-mono-price text-mono-price text-primary font-bold">$27.500.000</span>
+</div>
+<div class="flex justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Cta #994-01992-00</span>
+<span>Diferencia contable: $0 CLP</span>
+</div>
+</div>
+<!-- BancoEstado -->
+<div class="p-sm rounded-lg bg-surface-container-low flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm font-bold text-on-surface">BancoEstado • Fondos Reserva</span>
+</div>
+<span class="font-mono-price text-mono-price text-primary font-bold">$15.000.000</span>
+</div>
+<div class="flex justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Cta #001-83921-22</span>
+<span>Conciliado hoy a las 14:00</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Mini Bar Chart: Daily Volume -->
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold uppercase">Flujo TEF últimos 7 días</span>
+<span class="font-mono-price text-mono-price text-secondary font-semibold">+12% vs sem. pasada</span>
+</div>
+<div class="w-full h-16 flex items-end justify-between gap-xs pt-xs">
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary transition-all" style="height: 38px;"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Lun</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary transition-all" style="height: 46px;"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Mar</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary transition-all" style="height: 32px;"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Mié</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary transition-all" style="height: 52px;"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Jue</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary transition-all" style="height: 58px;"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Vie</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-surface-container-highest rounded-t hover:bg-primary transition-all" style="height: 24px;"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Sáb</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-base">
+<div class="w-full bg-primary rounded-t shadow-sm" style="height: 64px;"></div>
+<span class="font-label-md text-[10px] font-bold text-primary">Hoy</span>
+</div>
+</div>
+</div>
+<button class="mt-md w-full py-xs rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md font-semibold text-center">
+          Ver Log Auditoría Bancaria
+        </button>
+</div>
+</div>
+</div>
+<!-- Detailed Chilean Real Estate Asset & Storage Ledger (Photo-rich context) -->
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-title-lg text-title-lg text-primary">Liquidaciones Principales en Dispersión Inmediata</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Centros logísticos y bodegas comerciales con liberación aprobada para hoy</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">28 Unidades en Proceso</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
+<div class="relative h-44 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern industrial logistics center warehouse in Santiago Chile with high ceilings polished concrete floors organized storage bays and clear daylight entering through skylights, minimal clean architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkCbNveWXum_i83Csg3V4LigPzDo93mZAh05PaFnoeyROId8U509JGs6fVdk9RuREkdKJRH0PtsdPlQ6iEuA9hSURcJHdyUY3AtJrq3UDNER-fgllo-cViHxTEsdrFdYQxagArFRuPjXx7pZn_bF6dXPMCp8bgkdGc7MvLVZHJQ1mYDH4vXkghGSd8lsDb4dh4D1SXxh10O3JaI7LUpcd0SN-ktRNnhG5Zo6caWjF6QEsnC2js503X"/>
+<div class="absolute top-xs right-xs bg-primary/90 backdrop-blur-md text-on-primary px-xs py-base rounded font-mono-price text-mono-price shadow-sm">
+            $1.850.000 CLP
+          </div>
+<div class="absolute bottom-xs left-xs bg-surface-container-lowest/90 backdrop-blur-md px-xs py-base rounded text-on-surface font-label-md text-label-md font-semibold">
+            San Bernardo • Región Metropolitana
+          </div>
+</div>
+<div class="p-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Nave Industrial B-14</span>
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md">Check-in OK</span>
+</div>
+<h4 class="font-body-lg text-body-lg text-primary font-bold mt-xs">Bodega Logística Los Andes</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-base">
+              Arrendatario: Comercializadora Austral • Contrato Anual.
+            </p>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between text-label-md font-label-md">
+<span class="text-on-surface-variant">Nómina Banco Chile:</span>
+<span class="font-mono-price text-secondary font-bold">Abono: $1.665.000 CLP</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
+<div class="relative h-44 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Row of clean blue and silver self-storage units in an urban facility in Providencia Santiago Chile with wide well lit corridors industrial security doors and signage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClQfqVKC4us1N3B5w-DCeouNmMlkKFMFneYlsGcfsVoCht0IHMgf1P096_2_f5JSZQzoJJkJ9c3VXVW_jE-SACmpN8JFyTcz4MsC0FFOchrWE6JOsHjpOqoampHT7Q-aNBOEa7QRRRfthDZwfVowHJ3iNfKeeicTAA5aH2Sjoq1PzQc6PsCHwxljA2QImzMCcEcDXTJWyVzm5kMr_vhZzaiIIO7kxaKwiZE79RmHpWMpZIp_g_CZH5"/>
+<div class="absolute top-xs right-xs bg-primary/90 backdrop-blur-md text-on-primary px-xs py-base rounded font-mono-price text-mono-price shadow-sm">
+            $340.000 CLP
+          </div>
+<div class="absolute bottom-xs left-xs bg-surface-container-lowest/90 backdrop-blur-md px-xs py-base rounded text-on-surface font-label-md text-label-md font-semibold">
+            Providencia • Región Metropolitana
+          </div>
+</div>
+<div class="p-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Box Privado Lock-22</span>
+<span class="px-xs py-base rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-md text-label-md">En Escrow 18:00</span>
+</div>
+<h4 class="font-body-lg text-body-lg text-primary font-bold mt-xs">Mini-Bodega Providencia</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-base">
+              Propietaria: Patricia Soto • RUT 14.882.903-K.
+            </p>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between text-label-md font-label-md">
+<span class="text-on-surface-variant">Nómina Santander:</span>
+<span class="font-mono-price text-secondary font-bold">Abono: $306.000 CLP</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
+<div class="relative h-44 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Wide shot of a massive logistics park warehouse hub in Quilicura Chile with multiple cargo loading docks heavy semi-trucks parked and expansive commercial asphalt under bright daytime sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8bAR4P1t4iri7yBerj7WhVTQpXFUWft6vbuWRmUNW4BeOqGZISvOXBwuTmkj560dIHPVZh2GZEJdaW8UQpVYcO5w1Fu9gzk7beRJ8jlgcTFp1zKfMayc4qHPm2YLmy40keJfrfNDFo3u9H9cWw7n25HyLSwLjkJajyYXevwIhiNbM2DZ3Q2pJYrtQ6SZtvUdpx-46YE8c3xD-qr7tZc18cMq78c1iLwxdL5WzaV_WPMIHkkurDqQ8"/>
+<div class="absolute top-xs right-xs bg-primary/90 backdrop-blur-md text-on-primary px-xs py-base rounded font-mono-price text-mono-price shadow-sm">
+            $4.200.000 CLP
+          </div>
+<div class="absolute bottom-xs left-xs bg-surface-container-lowest/90 backdrop-blur-md px-xs py-base rounded text-on-surface font-label-md text-label-md font-semibold">
+            Quilicura • Hub Logístico
+          </div>
+</div>
+<div class="p-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Nave C-Logix</span>
+<span class="px-xs py-base rounded-full bg-surface-variant text-primary font-label-md text-label-md">Garantía Activa</span>
+</div>
+<h4 class="font-body-lg text-body-lg text-primary font-bold mt-xs">Depósito Quilicura Renta</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-base">
+              Garantía en custodia Escrow por $4.200.000 CLP hasta fin de contrato.
+            </p>
+</div>
+<div class="mt-md pt-sm flex items-center justify-between text-label-md font-label-md">
+<span class="text-on-surface-variant">Custodia BancoEstado:</span>
+<span class="font-mono-price text-primary font-bold">Retenido $4.200.000 CLP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Feedback Toast Notification (Hidden by default, triggered via JS) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-primary text-on-primary px-md py-sm rounded-xl shadow-xl flex items-center gap-sm" id="action-toast">
+<span class="material-symbols-outlined text-secondary-container" id="toast-icon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold" id="toast-title">Acción Realizada</span>
+<span class="font-label-md text-label-md text-primary-fixed-dim" id="toast-desc">El proceso se ejecutó con éxito.</span>
+</div>
+</div>
+<!-- Inline Script for UI feedback micro-interactions -->
+<script>
+    (function() {
+      const toast = document.getElementById('action-toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastDesc = document.getElementById('toast-desc');
+
+      function showToast(title, desc) {
+        toastTitle.textContent = title;
+        toastDesc.textContent = desc;
+        toast.classList.remove('translate-y-24', 'opacity-0');
+        setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0');
+        }, 4000);
+      }
+
+      const btnTef = document.getElementById('btn-run-tef');
+      if (btnTef) {
+        btnTef.addEventListener('click', () => {
+          showToast(
+            'Dispersión TEF Ejecutada',
+            'Se han enviado $36.800.000 CLP a las 28 cuentas vía Banco de Chile y BancoEstado.'
+          );
+        });
+      }
+
+      const btnExport = document.getElementById('btn-export-txt');
+      if (btnExport) {
+        btnExport.addEventListener('click', () => {
+          showToast(
+            'Archivo Nómina Generado',
+            'Archivo formato bancario TEF_MASIVO_CL_2025.txt descargado correctamente.'
+          );
+        });
+      }
+
+      const btnSii = document.getElementById('btn-sii-sync');
+      if (btnSii) {
+        btnSii.addEventListener('click', () => {
+          showToast(
+            'Sincronización SII Exitosa',
+            'Se enviaron 312 folios DTE de comisiones afectas al Servicio de Impuestos Internos.'
+          );
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

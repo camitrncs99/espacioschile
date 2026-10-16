@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>¡Éxito! Espacio Publicado - EspaciosChile</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e0e3e5",
+                    "outline-variant": "#c3c6d1",
+                    "inverse-primary": "#a7c8ff",
+                    "secondary": "#006d36",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "surface": "#f8f9ff",
+                    "surface-container-high": "#dce9ff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-background": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#00743a",
+                    "on-surface": "#0b1c30",
+                    "primary-container": "#003366",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#001b3c",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "on-primary-container": "#799dd6",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-secondary-fixed-variant": "#005227",
+                    "on-secondary-fixed": "#00210c",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#001e40",
+                    "on-error": "#ffffff",
+                    "outline": "#737780",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-dim": "#cbdbf5",
+                    "tertiary": "#1b1f20",
+                    "secondary-container": "#83fba5",
+                    "primary-fixed": "#d5e3ff",
+                    "on-tertiary-container": "#999c9e",
+                    "surface-tint": "#3a5f94",
+                    "secondary-fixed": "#83fba5",
+                    "tertiary-container": "#303436",
+                    "background": "#f8f9ff",
+                    "on-surface-variant": "#43474f",
+                    "inverse-surface": "#213145",
+                    "secondary-fixed-dim": "#66dd8b",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-fixed-dim": "#c4c7c9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "sm": "16px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "max-width": "1280px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "lg": "40px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "mono-price": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "mono-price": ["16px", {"lineHeight": "24px", "fontWeight": "700"}]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        /* Custom animations for discrete confetti and card entry */
+        @keyframes float-up {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            80% { transform: scale(1.5); opacity: 0; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .animate-card {
+            animation: float-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .pulse-circle::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background-color: theme('colors.secondary-container');
+            z-index: -1;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+
+        /* Discrete CSS Confetti */
+        .confetti-piece {
+            position: absolute;
+            width: 8px;
+            height: 16px;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        /* Generating a few static pieces for the effect */
+        .c-1 { left: 20%; background-color: theme('colors.secondary'); animation: confetti-fall 3s linear infinite; animation-delay: 0.2s; }
+        .c-2 { left: 40%; background-color: theme('colors.primary'); animation: confetti-fall 4s linear infinite; animation-delay: 1.5s; width: 12px; height: 12px; border-radius: 50%; }
+        .c-3 { left: 60%; background-color: theme('colors.primary-fixed-dim'); animation: confetti-fall 2.5s linear infinite; animation-delay: 0.8s; }
+        .c-4 { left: 80%; background-color: theme('colors.secondary-fixed'); animation: confetti-fall 3.5s linear infinite; animation-delay: 2.1s; width: 10px; height: 10px; border-radius: 50%; }
+        .c-5 { left: 30%; background-color: theme('colors.surface-tint'); animation: confetti-fall 3.2s linear infinite; animation-delay: 0.5s; }
+        .c-6 { left: 70%; background-color: theme('colors.secondary'); animation: confetti-fall 2.8s linear infinite; animation-delay: 1.2s; width: 6px; height: 12px; }
+
+    </style>
+</head>
+<body class="bg-surface min-h-screen flex items-center justify-center relative overflow-hidden font-body-md text-on-surface">
+<!-- Background Atmospheric Image (Abstract/Corporate) -->
+<div class="absolute inset-0 z-0 opacity-10 bg-cover bg-center" data-alt="A subtle, high-key abstract architectural photograph of a modern glass and steel warehouse interior. The lighting is bright and airy, creating a clean light-mode aesthetic. Soft geometric shadows play across white and pale blue surfaces. The mood is highly professional, clean, and optimistic, aligning with modern corporate minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmRU02fj51tJ1SOso1yL0dw8ou94HH0La61GoyDfo76tPTvus-V4Ck7g6WazEVlePK9IL0cdF5FkWN6PIv3bu2GN8v6KOBO5xNzf67XTQ6e3xCfsS-I_1TdsxDJzD0gfT8rQzLHm-ef10B4SlIEJejDH-87AkxoJpZdOesiOdVDklx-d1vKqFlh_oFPZquPqNq43JXgflKb_TrwXq5P4Qyzbm4CDFb2AWzfJDILfJRc6R5gm8XZbO-')"></div>
+<!-- Discrete Confetti Overlay -->
+<div class="absolute inset-0 z-10 overflow-hidden pointer-events-none">
+<div class="confetti-piece c-1"></div>
+<div class="confetti-piece c-2"></div>
+<div class="confetti-piece c-3"></div>
+<div class="confetti-piece c-4"></div>
+<div class="confetti-piece c-5"></div>
+<div class="confetti-piece c-6"></div>
+</div>
+<!-- Main Content Card -->
+<main class="animate-card z-20 w-full max-w-lg mx-gutter bg-surface-container-lowest border border-outline-variant rounded-xl shadow-lg p-lg text-center relative">
+<!-- Success Icon -->
+<div class="flex justify-center mb-8 relative">
+<div class="pulse-circle relative flex items-center justify-center w-24 h-24 bg-surface-container rounded-full">
+<span class="material-symbols-outlined text-[64px] text-secondary" style="font-variation-settings: 'FILL' 1;">
+                    check_circle
+                </span>
+</div>
+</div>
+<!-- Typography -->
+<h1 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-on-surface mb-4">
+            ¡Éxito!
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl px-4">
+            Tu espacio ha sido publicado correctamente y ya está disponible para recibir solicitudes de arriendo.
+        </p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-outline-variant text-primary font-label-md text-label-md hover:bg-surface-container-low transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">
+                    visibility
+                </span>
+                Ver anuncio en vivo
+            </a>
+<a class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-on-primary-fixed-variant shadow-sm transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">
+                    dashboard
+                </span>
+                Ir al Dashboard
+            </a>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html><html class="light" lang="es" style="width: 1280px; min-height: 100%; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EspaciosChile - Rentabiliza tu espacio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#d3e4fe",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-surface": "#0b1c30",
+                      "secondary-fixed-dim": "#66dd8b",
+                      "on-secondary-fixed": "#00210c",
+                      "secondary-container": "#83fba5",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "primary": "#001e40",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#799dd6",
+                      "inverse-surface": "#213145",
+                      "inverse-primary": "#a7c8ff",
+                      "on-tertiary-container": "#999c9e",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "surface-dim": "#cbdbf5",
+                      "outline": "#737780",
+                      "on-surface-variant": "#43474f",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "on-background": "#0b1c30",
+                      "surface-variant": "#d3e4fe",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#00743a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#f8f9ff",
+                      "on-tertiary-fixed": "#191c1e",
+                      "surface-container-high": "#dce9ff",
+                      "primary-fixed": "#d5e3ff",
+                      "primary-container": "#003366",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#c3c6d1",
+                      "surface-tint": "#3a5f94",
+                      "tertiary": "#1b1f20",
+                      "secondary": "#006d36",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#001b3c",
+                      "surface-container": "#e5eeff",
+                      "tertiary-fixed": "#e0e3e5",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#303436",
+                      "background": "#f8f9ff",
+                      "secondary-fixed": "#83fba5",
+                      "surface": "#f8f9ff",
+                      "surface-container-low": "#eff4ff",
+                      "on-secondary-fixed-variant": "#005227"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "xs": "8px",
+                      "lg": "40px",
+                      "md": "24px",
+                      "max-width": "1280px",
+                      "gutter": "24px",
+                      "sm": "16px",
+                      "base": "4px",
+                      "margin-desktop": "48px",
+                      "xl": "64px"
+              },
+              "fontFamily": {
+                      "mono-price": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "mono-price": ["16px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
+<div class="flex justify-between items-center px-margin-desktop w-full max-w-max-width mx-auto h-20">
+<div class="flex items-center gap-md">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">EspaciosChile</a>
+<div class="hidden md:flex items-center gap-md ml-lg">
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Publicar espacio</a>
+<a class="font-title-lg text-title-lg text-primary border-b-2 border-primary pb-1" href="#">Buscar</a>
+<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Mi Cuenta</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:shadow-lg transition-all">
+                    Publicar
+                </button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant ml-sm hidden md:block">
+<img alt="Foto de perfil del usuario" class="w-full h-full object-cover" data-alt="A professional headshot of a smiling young adult wearing smart casual attire, lit by soft natural light against a blurred bright modern office background. High quality corporate portrait photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3oj6hsS-Hy_9x8wjbgKyabeQPaTV0N3ETgfOp5I6-9YcOhM3UncQCRiYr8s0UJ8zkLuZKr1OTv9kKuJk7stdPxydPENBkqU4FGtduC-tXlpr9Dvcuu_oZ4RP-HlSxIp3WfAZIUvpLSLbI6jIA5G22qU8cN1rPmT69JzyxAwRm83hgFVG_w4yGKkRIZ6P9v2wS5U5SpPPbg604MGl9bhS8yZIAqweY3JrkngXwBay714eZsEbHBde">
+</div>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
+<div class="relative rounded-xl overflow-hidden min-h-[500px] flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A bright, modern corporate office space located in Santiago, Chile, featuring floor-to-ceiling windows with panoramic city views including the Andes mountains. The interior is decorated in a modern minimalist style with sleek ergonomic furniture, glass partitions, and polished concrete floors. Natural sunlight floods the room, creating a crisp, professional light-mode aesthetic that emphasizes productivity, cleanliness, and premium real estate quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_jKGeBwLb86iPW0pfF0amQl742C0-GOQCH45GNZg5Bbs9nljEKPNYyJT5ahf4R2dmJDXiL03WskLj_XnF6knNLe7pvgKNgwiAl_Fs4QpPKDPJoBWzKhuFIFYslzvuvNcvS4GXEwkwF7Jq4ZwwKdUkLs_dPVStQ5QnQ5wtuXRUGPRKjrurRsXEBOMfoH2zmxc_k2qB-iDzJY0rT_l14-qP0U3XEDzmEV_thSXLKeWSSBOVJoj9KWXa')"></div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 w-full max-w-4xl mx-auto px-md text-center flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-md drop-shadow-md hidden md:block">Convierte tu espacio desocupado en ingresos extra</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-primary mb-md drop-shadow-md md:hidden">Convierte tu espacio desocupado en ingresos extra</h1>
+<p class="font-body-lg text-body-lg text-surface-container-low mb-xl max-w-2xl drop-shadow">La plataforma líder en Chile para rentabilizar bodegas, oficinas y departamentos</p>
+<!-- Search Bar (Glassmorphism) -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md p-xs rounded-xl shadow-lg w-full max-w-3xl flex flex-col md:flex-row gap-xs items-center border border-surface-container-high">
+<div class="flex-1 w-full relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-xl pr-sm py-md rounded-lg border-none bg-transparent focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface placeholder-on-surface-variant" placeholder="¿Qué buscas? (ej. Bodega 10m2)" type="text">
+</div>
+<div class="hidden md:block w-px h-10 bg-outline-variant"></div>
+<div class="flex-1 w-full relative border-t md:border-t-0 border-outline-variant md:border-transparent pt-xs md:pt-0">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant mt-xs md:mt-0">location_on</span>
+<input class="w-full pl-xl pr-sm py-md rounded-lg border-none bg-transparent focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface placeholder-on-surface-variant" placeholder="¿Dónde? (ej. Providencia)" type="text">
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-primary-container transition-colors mt-xs md:mt-0 flex items-center justify-center gap-xs">
+                            Buscar
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+<div class="text-center max-w-3xl mx-auto mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Explora por Categorías</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Encuentra el lugar ideal para cada propósito o rentabiliza tus metros cuadrados disponibles según el tipo de entorno.</p>
+</div>
+<!-- Interactive Category Tabs / Toggle -->
+<div class="flex justify-center mb-xl">
+<div class="inline-flex p-1.5 bg-surface-container-high/60 backdrop-blur-sm rounded-full border border-surface-container-highest shadow-inner">
+<button class="flex items-center gap-xs px-md py-2.5 rounded-full font-label-md text-sm font-semibold transition-all duration-200 bg-primary text-on-primary shadow-md" id="tab-btn-cerrados" onclick="switchCategoryTab('cerrados')">
+<span>🏢</span>
+<span>Espacios Cerrados</span>
+<span class="text-xs py-0.5 px-2 rounded-full bg-white/20 ml-1 hidden sm:inline-block">Techados y Climatizados</span>
+</button>
+<button class="flex items-center gap-xs px-md py-2.5 rounded-full font-label-md text-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="tab-btn-abiertos" onclick="switchCategoryTab('abiertos')">
+<span>🌿</span>
+<span>Espacios Abiertos</span>
+<span class="text-xs py-0.5 px-2 rounded-full bg-surface-container-highest text-secondary font-medium ml-1 hidden sm:inline-block">Al Aire Libre</span>
+</button>
+</div>
+</div>
+<!-- Grupo 1: Espacios Cerrados Content -->
+<div class="transition-opacity duration-300" id="panel-cerrados">
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-surface-container-high pb-md mb-lg gap-sm">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-primary text-3xl">roofing</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Espacios Cerrados</h3>
+<span class="bg-surface-container-high text-primary font-label-md text-label-md px-sm py-xs rounded-full ml-xs">Techados y Climatizados</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Espacios bajo techo con climatización y aislamiento para trabajo corporativo, eventos, almacenaje y comercio.</p>
+</div>
+<span class="text-xs font-semibold text-primary/70 bg-primary-fixed/50 px-3 py-1.5 rounded-full border border-primary-fixed-dim/40 w-fit">10 subcategorías disponibles</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md">
+<!-- Oficinas Privadas (Fotografía Destacada) -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 overflow-hidden">
+<img alt="Oficinas Privadas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmoVGRgl1fjmkqHV4SbF3kfOFo893dj63hRCAAqg8qQjv-_-56kFYdjmwOsYZRVhT5aepTWJVI5gaVp_brv5I6VS6i2UI0ot3K2eh8T4e4PNQDjCNBfwsO8zMlOUuEuwI-trVMV7ZCgwQQy36v-iEZVOa-0XhZ6_kJO_7ZZ1LsDMez2GjR2EuHxfNrCSxg_b2fUTdvV7yPAgwhNVQrW_63poGWNPaeIaIR0rg6gHMSXYcn8v5HL3cg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<span class="absolute top-3 right-3 bg-primary text-on-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">234 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary">
+<span class="material-symbols-outlined text-xl">desk</span>
+<span class="text-xs font-medium tracking-wide uppercase">Oficina Premium</span>
+</div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Oficinas Privadas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Inmuebles ejecutivos amoblados para trabajo corporativo exclusivo y confidencial.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Desde 15 m²</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Bodegas y Almacén (Fotografía Destacada) -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 overflow-hidden">
+<img alt="Bodegas y Almacén" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYknpczZdal93nzKPONMcPc0YhdA_sIeMc3pxF8c6LzgkZjlwsJyTc84k7jwsmbIbSjSj_U1J5EAe47zS2coBIlP_9y-Ogfd_LwGjh4BETZylQaVuMHmD6JaH0VdiAURyoOpqo6h0nKDyYFBGKt8tnZC87Z9FMvx_TFcp3y7sj5d8VEzSsqWqW8KzJV_jDooAIpuMbQjVEPcxKaG1RO85IkP2DXZqzZ-rndfMQvH2vbT_4vZvzw03O">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<span class="absolute top-3 right-3 bg-primary text-on-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">189 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<span class="text-xs font-medium tracking-wide uppercase">Logística y Bodegaje</span>
+</div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Bodegas y Almacén</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Bodegas seguras, control de acceso 24/7 y racks para mercadería o enseres.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Desde 6 m²</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Puestos de Cowork -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-primary-container via-surface-tint to-primary flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">co_present</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">142 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-surface-container-low text-xs font-medium">
+<span class="material-symbols-outlined text-sm">wifi</span> Conexión fibra y café
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Puestos de Cowork</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Estaciones flexibles o dedicadas en comunidades dinámicas y creativas.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Por día o mes</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Salas de Reuniones -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-surface-tint to-primary-container flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">groups</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">96 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-surface-container-low text-xs font-medium">
+<span class="material-symbols-outlined text-sm">tv</span> Equipamiento audiovisual
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Salas de Reuniones</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Salas de directorio ejecutivas con pantallas interactivas y catering opcional.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Por horas</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Salones de Eventos -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-primary via-primary-container to-surface-tint flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">celebration</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">64 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-surface-container-low text-xs font-medium">
+<span class="material-symbols-outlined text-sm">volume_up</span> Acústica pro
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Salones de Eventos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Celebraciones corporativas, galas, lanzamientos y recepciones elegantes.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Hasta 300 pers.</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Auditorios -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-tertiary-container via-primary-container to-primary flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">theater_comedy</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">38 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-surface-container-low text-xs font-medium">
+<span class="material-symbols-outlined text-sm">mic</span> Sistema de audio y cabina
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Auditorios</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Conferencias de gran escala, simposios y presentaciones magistrales.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Hasta 800 butacas</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Estudios y Streaming -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-primary-container via-surface-tint to-surface-container-highest flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">videocam</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">52 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-surface-container-low text-xs font-medium">
+<span class="material-symbols-outlined text-sm">tune</span> Aislación acústica
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Estudios y Streaming</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Sets con croma, cabinas de podcast y producción audiovisual profesional.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Por jornada</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Locales Comerciales & Pop-ups -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-primary-fixed-dim/70 to-primary-container flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/25 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">storefront</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">78 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-surface-container-low text-xs font-medium">
+<span class="material-symbols-outlined text-sm">visibility</span> Alto tráfico peatonal
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-primary transition-colors">Locales Comerciales</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Puntos de venta temporal, tiendas pop-up y showrooms comerciales a pie de calle.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Plazos flexibles</span>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Grupo 2: Espacios Abiertos Content -->
+<div class="hidden transition-opacity duration-300" id="panel-abiertos">
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-surface-container-high pb-md mb-lg gap-sm">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-secondary text-3xl">deck</span>
+<h3 class="font-headline-md text-headline-md text-secondary font-bold">Espacios Abiertos</h3>
+<span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-sm py-xs rounded-full ml-xs">Al Aire Libre</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Entornos al aire libre ideales para eventos corporativos, esparcimiento, ferias gastronómicas o experiencias al exterior.</p>
+</div>
+<span class="text-xs font-semibold text-secondary bg-secondary-container/60 px-3 py-1.5 rounded-full border border-secondary-fixed-dim/40 w-fit">7 subcategorías disponibles</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md">
+<!-- Azoteas (Rooftops) (Fotografía Destacada) -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 overflow-hidden">
+<img alt="Azoteas y Terrazas Rooftop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgaqUfoL5UidDu_rZx5tjc5clARmQmbKeIDaFf1mmQ7b-t8AHAxtmOgT8yuEEPqrgmGflOKgZsN8-lGjvz1h7i2PORzcoTPs34ceTvZDW6qhDo2NWlAnco4h0q57lWMQjnBMtnmQGNlQOUCjoEkKAJHng5ORJfjX4sJLkWp24hRSErZn86MDl9dtZFi6UyytFbNUTjurCal9TwGUDL4lqcOjm9lYvrWrHuT-ZaYxE9hwgr6EUO-NnO">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 right-3 bg-secondary text-on-secondary text-xs font-semibold px-2.5 py-1 rounded-full shadow">83 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-white">
+<span class="material-symbols-outlined text-xl">apartment</span>
+<span class="text-xs font-medium tracking-wide uppercase">Vista Panorámica Cordillera</span>
+</div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Azoteas (Rooftops)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Vistas espectaculares de la ciudad y los Andes para cócteles, eventos y lanzamientos.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Ubicaciones top</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Jardines y Parques Privados (Fotografía Destacada) -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 overflow-hidden">
+<img alt="Jardines y Parques para eventos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5G23RnHJS3f6Tt7IZugJRs5YqyYkmlaa4awkjcs2vs1j6SyngG3vaeRfaFDJc34xUczDZELrjg7k_Lsg3XhDdQ_zeZ0rXBTDQLTCk1nUSbK3hGL4clsyA8F0zH3MQs1n3eIKPKgQ6VwVsLHmFtaCqZEZccvisVQL6e3VxdkPJv6mtsblKbhWJbMWhLNo9oV9IQJ1t_QDtSh7714wIHCyGQbaUcayKmTTNYqiOx2HTrYRgH3V9OPlW">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 right-3 bg-secondary text-on-secondary text-xs font-semibold px-2.5 py-1 rounded-full shadow">115 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-white">
+<span class="material-symbols-outlined text-xl">yard</span>
+<span class="text-xs font-medium tracking-wide uppercase">Áreas Verdes Amplias</span>
+</div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Jardines y Parques</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Áreas verdes acondicionadas para eventos corporativos al aire libre, team building y carpas.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Desde 500 m²</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Terrazas -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-secondary via-secondary/80 to-primary-container flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">balcony</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-sm text-secondary text-xs font-semibold px-2.5 py-1 rounded-full shadow">74 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-sm">wb_sunny</span> Sombra y calefacción
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Terrazas Urbanas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Espacios al aire libre diseñados para afterworks, coffee breaks ejecutivos y networking.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Capacidad media</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Quinchos y Parrillas -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-[#8a4216] via-[#b85a20] to-secondary flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">outdoor_grill</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-sm text-[#8a4216] text-xs font-semibold px-2.5 py-1 rounded-full shadow">128 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-sm">fireplace</span> Totalmente equipados
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Quinchos y Parrillas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Zonas recreativas con parrillas profesionales, hornos de barro y mobiliario de quincho.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Por día / fin de semana</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Parcelas Campestres -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-[#1b5e20] via-secondary to-[#2e7d32] flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">cottage</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-sm text-secondary text-xs font-semibold px-2.5 py-1 rounded-full shadow">62 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-sm">nature_people</span> Entorno natural
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Parcelas Campestres</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Locaciones campestres de gran hectárea para paseos de fin de año y retiros empresariales.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">5.000+ m²</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Áreas Feriales y Explanadas -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-surface-tint via-primary-container to-secondary flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">crop_original</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-sm text-primary text-xs font-semibold px-2.5 py-1 rounded-full shadow">41 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-sm">local_shipping</span> Acceso vehículos pesados
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Áreas Feriales y Explanadas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Grandes superficies niveladas ideales para exposiciones al exterior y montaje de stands.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Gran envergadura</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+<!-- Playas y Frentes Costeros -->
+<div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-secondary transition-all duration-300 flex flex-col group">
+<div class="relative h-44 bg-gradient-to-br from-[#0284c7] via-[#0369a1] to-secondary flex items-center justify-center p-md">
+<div class="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">beach_access</span>
+</div>
+<span class="absolute top-3 right-3 bg-surface-container-lowest/95 backdrop-blur-sm text-[#0284c7] text-xs font-semibold px-2.5 py-1 rounded-full shadow">29 espacios</span>
+<div class="absolute bottom-3 left-3 flex items-center gap-1 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-sm">waves</span> Orilla de playa / lago
+          </div>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-xs group-hover:text-secondary transition-colors">Playas y Frentes Costeros</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Espacios costeros y riberas concesionadas para activaciones de marca y eventos de verano.</p>
+</div>
+<div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Temporada estival</span>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+  function switchCategoryTab(category) {
+    const btnCerrados = document.getElementById('tab-btn-cerrados');
+    const btnAbiertos = document.getElementById('tab-btn-abiertos');
+    const panelCerrados = document.getElementById('panel-cerrados');
+    const panelAbiertos = document.getElementById('panel-abiertos');
+
+    if (category === 'cerrados') {
+      // Buttons state
+      btnCerrados.className = 'flex items-center gap-xs px-md py-2.5 rounded-full font-label-md text-sm font-semibold transition-all duration-200 bg-primary text-on-primary shadow-md';
+      btnAbiertos.className = 'flex items-center gap-xs px-md py-2.5 rounded-full font-label-md text-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface';
+      
+      // Panels toggle with fade
+      panelAbiertos.classList.add('hidden');
+      panelCerrados.classList.remove('hidden');
+      panelCerrados.style.opacity = '0';
+      setTimeout(() => { panelCerrados.style.opacity = '1'; }, 20);
+    } else {
+      // Buttons state
+      btnAbiertos.className = 'flex items-center gap-xs px-md py-2.5 rounded-full font-label-md text-sm font-semibold transition-all duration-200 bg-secondary text-on-secondary shadow-md';
+      btnCerrados.className = 'flex items-center gap-xs px-md py-2.5 rounded-full font-label-md text-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface';
+
+      // Panels toggle with fade
+      panelCerrados.classList.add('hidden');
+      panelAbiertos.classList.remove('hidden');
+      panelAbiertos.style.opacity = '0';
+      setTimeout(() => { panelAbiertos.style.opacity = '1'; }, 20);
+    }
+  }
+</script>
+<!-- Benefits Section -->
+<section class="bg-surface-bright py-xl border-y border-surface-container-high">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-center text-on-surface mb-xl">¿Por qué publicar tu espacio con nosotros?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+<div class="flex flex-col items-center text-center p-md">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">campaign</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs font-bold">Publicación gratuita</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sube tu propiedad sin costos iniciales. Solo cobramos una pequeña comisión cuando se concrete el arriendo.</p>
+</div>
+<div class="flex flex-col items-center text-center p-md">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs font-bold">Seguro incluido</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tu tranquilidad es primordial. Cada contrato incluye cobertura contra daños para proteger tu inversión.</p>
+</div>
+<div class="flex flex-col items-center text-center p-md">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs font-bold">Pagos garantizados</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Gestionamos la cobranza mensual y aseguramos que recibas tu dinero puntualmente cada mes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="bg-primary rounded-xl p-xl text-center relative overflow-hidden flex flex-col items-center">
+<!-- Subtle background pattern using tailwind -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<h2 class="relative z-10 font-display-lg text-display-lg text-on-primary mb-md hidden md:block">¿Tienes un espacio vacío?</h2>
+<h2 class="relative z-10 font-headline-lg-mobile text-headline-lg-mobile text-on-primary mb-md md:hidden">¿Tienes un espacio vacío?</h2>
+<p class="relative z-10 font-body-lg text-body-lg text-primary-fixed-dim mb-lg max-w-xl mx-auto">Empieza a generar ingresos hoy mismo. Únete a miles de propietarios en todo Chile que confían en nuestra plataforma.</p>
+<button class="relative z-10 bg-secondary text-on-secondary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-xs text-lg">
+                    Publicar mi espacio
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-lg max-w-max-width mx-auto mt-xl">
+<div class="col-span-1">
+<span class="font-title-lg text-title-lg font-bold text-on-tertiary mb-sm block">EspaciosChile</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container mt-md">© 2024 EspaciosChile. Gestión de Propiedades y Bodegaje.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-sm">
+<a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#">Términos y Condiciones</a>
+<a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#">Privacidad</a>
+</div>
+<div class="col-span-1 flex flex-col gap-sm">
+<a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#">Contacto Local</a>
+<a class="font-body-sm text-body-sm text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#">Preguntas Frecuentes</a>
+</div>
+</footer>
+<div aria-hidden="true" data-snapdom-sandbox="true" id="snapdom-sandbox" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div>
+</body></html>

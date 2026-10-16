@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="es" style="width: 1280px; height: 1027px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Crear Cuenta - EspaciosChile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c3c6d1",
+                        "surface-dim": "#cbdbf5",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#66dd8b",
+                        "primary-fixed": "#d5e3ff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-tertiary-fixed": "#191c1e",
+                        "inverse-surface": "#213145",
+                        "primary-container": "#003366",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "secondary-fixed": "#83fba5",
+                        "secondary": "#006d36",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#3a5f94",
+                        "on-surface": "#0b1c30",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-container": "#e5eeff",
+                        "tertiary": "#1b1f20",
+                        "surface-bright": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#83fba5",
+                        "on-error": "#ffffff",
+                        "primary": "#001e40",
+                        "on-tertiary-container": "#999c9e",
+                        "on-secondary-fixed": "#00210c",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#737780",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-secondary-container": "#00743a",
+                        "background": "#f8f9ff",
+                        "on-surface-variant": "#43474f",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-variant": "#d3e4fe",
+                        "on-primary-fixed": "#001b3c",
+                        "on-primary-container": "#799dd6",
+                        "inverse-primary": "#a7c8ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-container-low": "#eff4ff",
+                        "tertiary-container": "#303436"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "xl": "64px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "base": "4px",
+                        "max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "lg": "40px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "mono-price": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "mono-price": ["16px", { "lineHeight": "24px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
+<!-- TopNavBar (Suppressed for Linear/Transactional Flow, replacing with simple brand header) -->
+<header class="w-full py-4 px-margin-mobile md:px-margin-desktop bg-surface-container-low flex justify-center items-center"><a class="inline-flex items-center gap-2 text-primary font-bold text-headline-md tracking-tight" href="#"><span class="material-symbols-outlined text-primary text-[28px]">real_estate_agent</span><span class="font-bold">Espacios<span class="text-secondary">Chile</span></span></a></header>
+<main class="flex-grow flex items-center justify-center px-margin-mobile py-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_12px_32px_rgba(0,0,0,0.12)] border border-outline-variant p-md md:p-lg w-full max-w-2xl">
+<div class="text-center mb-md"><h1 class="text-headline-lg font-bold text-on-surface mb-xs tracking-tight">Crear cuenta</h1><p class="text-body-sm text-on-surface-variant font-normal">Únete a la red inmobiliaria líder en Chile.</p></div>
+<form class="space-y-sm"><!-- Nombres y Apellidos -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="firstName">Nombres</label>
+    <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="firstName" name="firstName" placeholder="Ej: Juan Andrés" type="text" required="">
+  </div>
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="lastName">Apellidos</label>
+    <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="lastName" name="lastName" placeholder="Ej: Pérez González" type="text" required="">
+  </div>
+</div>
+
+<!-- RUT y Fecha de Nacimiento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+  <div>
+    <div class="flex justify-between items-center mb-base">
+      <label class="block font-label-md text-label-md text-on-surface-variant" for="rut">RUT</label>
+      <span class="font-label-md text-[11px] text-outline">Sin puntos y con guión</span>
+    </div>
+    <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="rut" name="rut" placeholder="Ej: 12.345.678-K" type="text" required="">
+  </div>
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="birthDate">Fecha de nacimiento</label>
+    <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="birthDate" name="birthDate" type="date" required="">
+  </div>
+</div>
+
+<!-- Correo Electrónico y Teléfono -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="email">Correo electrónico</label>
+    <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="email" name="email" placeholder="ejemplo@correo.cl" type="email" required="">
+  </div>
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="phone">Número de teléfono</label>
+    <div class="flex gap-xs">
+      <span class="inline-flex items-center px-3 rounded-lg border border-outline-variant bg-surface-container font-body-md text-body-md text-on-surface-variant font-medium">
+        +56
+      </span>
+      <input class="flex-1 rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="phone" name="phone" placeholder="9 1234 5678" type="tel" required="">
+    </div>
+  </div>
+</div>
+
+<!-- Género y Nacionalidad -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="gender">Género</label>
+    <select class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors cursor-pointer" id="gender" name="gender">
+      <option value="" disabled="" selected="">Selecciona una opción</option>
+      <option value="femenino">Femenino</option>
+      <option value="masculino">Masculino</option>
+      <option value="no-binario">No binario</option>
+      <option value="prefiero-no-decir">Prefiero no decir</option>
+    </select>
+  </div>
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="nationality">Nacionalidad</label>
+    <select class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors cursor-pointer" id="nationality" name="nationality">
+      <option value="" disabled="">Selecciona tu nacionalidad</option>
+      <option value="chilena" selected="">Chilena</option>
+      <option value="argentina">Argentina</option>
+      <option value="venezolana">Venezolana</option>
+      <option value="colombiana">Colombiana</option>
+      <option value="peruana">Peruana</option>
+      <option value="otra">Otra nacionalidad...</option>
+    </select>
+  </div>
+</div>
+
+<!-- Contraseña y Confirmar Contraseña -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="password">Contraseña</label>
+    <div class="relative">
+      <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 pr-10 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="password" name="password" placeholder="Mínimo 8 caracteres" type="password" required="">
+      <button class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+    </div>
+  </div>
+  <div>
+    <label class="block font-label-md text-label-md text-on-surface-variant mb-base" for="confirmPassword">Confirmar contraseña</label>
+    <div class="relative">
+      <input class="w-full rounded-lg border border-outline-variant bg-surface px-sm py-2 pr-10 font-body-md text-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="confirmPassword" name="confirmPassword" placeholder="Repite tu contraseña" type="password" required="">
+      <button class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- Términos y Condiciones -->
+<div class="flex items-start pt-2">
+  <div class="flex items-center h-5">
+    <input class="h-4 w-4 rounded border border-outline-variant text-primary focus:ring-primary bg-surface cursor-pointer" id="terms" name="terms" type="checkbox" required="">
+  </div>
+  <div class="ml-3 text-sm">
+    <label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="terms">
+      Acepto los <a class="text-primary hover:underline font-bold" href="#">Términos y condiciones</a> y la <a class="text-primary hover:underline font-bold" href="#">Política de privacidad</a> de EspaciosChile.
+    </label>
+  </div>
+</div>
+
+<!-- Botón Principal -->
+<button class="w-full mt-2 bg-primary text-on-primary font-title-lg text-title-lg rounded-lg py-3 px-4 hover:shadow-[0px_4px_12px_rgba(0,51,102,0.12)] hover:-translate-y-px transition-all duration-200 active:scale-95 cursor-pointer" type="submit">
+  Crear cuenta
+</button></form>
+<!-- Divisor -->
+<div class="mt-md relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+
+</div>
+<!-- Redes Sociales -->
+<div class="mt-md grid grid-cols-2 gap-xs">
+
+
+</div>
+<p class="mt-md text-center font-body-sm text-body-sm text-on-surface-variant">
+                ¿Ya tienes una cuenta? <a class="text-primary font-bold hover:underline" href="#">Inicia sesión aquí</a>
+</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-low border-t border-outline-variant">
+<div class="inline-flex items-center gap-2 text-primary font-bold text-title-lg"><span class="material-symbols-outlined text-primary text-[22px]">real_estate_agent</span><span class="">Espacios<span class="text-secondary">Chile</span></span></div>
+<div class="flex gap-md">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Privacidad</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Términos</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Contacto</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Ayuda</a>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 EspaciosChile. Todos los derechos reservados.</span>
+</footer>
+
+
+
+
+
+
+<div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div>
+
+</body></html>
