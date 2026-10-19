@@ -571,6 +571,42 @@
 </div>
 </div>
 <script>
+  const kycBrandText = Array.from(document.querySelectorAll('aside span.font-title-lg'))
+    .find((element) => element.textContent.trim() === 'EspaciosChile');
+  if (kycBrandText) {
+    const kycBrandLink = document.createElement('a');
+    kycBrandLink.className = kycBrandText.className;
+    kycBrandLink.href = '../inicio.html';
+    kycBrandLink.textContent = kycBrandText.textContent;
+    kycBrandText.replaceWith(kycBrandLink);
+  }
+
+  const kycSidebarRoutes = {
+    'moderacion-de-espacios': '../admin/moderaciondeespacios.html',
+    'verificacion-de-identidad': 'verificaciondeidentidadyKYC.html',
+    'transacciones-y-pagos': '../admin/transaccionesypagos.html',
+    'usuarios-y-propietarios': '../admin/directoriodeusuarios.html'
+  };
+  Object.entries(kycSidebarRoutes).forEach(([path, route]) => {
+    const link = document.querySelector(`[data-path="${path}"]`);
+    if (link) link.href = route;
+  });
+
+  const kycSidebar = document.querySelector('aside');
+  if (kycSidebar) {
+    const logoutLink = Array.from(kycSidebar.querySelectorAll('a'))
+      .find((link) => link.textContent.trim() === 'Cerrar Sesión');
+    if (logoutLink) {
+      logoutLink.href = '../auth/login.html';
+    } else if (kycSidebar.lastElementChild) {
+      const newLogoutLink = document.createElement('a');
+      newLogoutLink.className = 'flex items-center gap-xs text-error hover:text-on-error-container transition-colors px-xs py-base';
+      newLogoutLink.href = '../auth/login.html';
+      newLogoutLink.innerHTML = '<span class="material-symbols-outlined text-[16px]">logout</span><span class="font-label-md text-label-md">Cerrar Sesión</span>';
+      kycSidebar.lastElementChild.appendChild(newLogoutLink);
+    }
+  }
+
   // Simple micro-interaction for visual feedback on verification buttons
   document.addEventListener('DOMContentLoaded', () => {
     const approveBtns = document.querySelectorAll('button');

@@ -176,6 +176,7 @@
 <div class="flex flex-col">
 <h2 class="font-title-lg text-title-lg text-primary tracking-tight">Libro de Transacciones Recientes</h2>
 <span class="font-body-sm text-body-sm text-on-surface-variant">Liquidaciones vinculadas a contratos de arriendo y pasarelas bancarias</span>
+<a class="inline-flex items-center gap-xs mt-xs font-label-md text-label-md font-semibold text-primary hover:underline" href="../propietario/gestionreservas.html">Ver Reservas Activas →</a>
 </div>
 <!-- Filter pills -->
 <div class="flex items-center gap-xs overflow-x-auto pb-xs sm:pb-0">
@@ -208,7 +209,7 @@
 <span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 489201</span>
 </td>
 <td class="py-sm px-md align-top">
-<div class="font-semibold text-primary">Bodega Industrial San Bernardo</div>
+<a class="font-semibold text-primary hover:underline" href="../explorer/detalleespacio.html">Bodega Industrial San Bernardo</a>
 <div class="text-on-surface-variant text-label-md font-label-md">Módulo B-14 • 120 m²</div>
 <span class="font-label-md text-label-md text-outline">ID: BOD-SB-802</span>
 </td>
@@ -246,7 +247,7 @@
 <span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 938102</span>
 </td>
 <td class="py-sm px-md align-top">
-<div class="font-semibold text-primary">Mini-Bodega Providencia Centro</div>
+<a class="font-semibold text-primary hover:underline" href="../explorer/detalleespacio.html">Mini-Bodega Providencia Centro</a>
 <div class="text-on-surface-variant text-label-md font-label-md">Espacio Lock-22 • 14 m²</div>
 <span class="font-label-md text-label-md text-outline">ID: BOD-PV-019</span>
 </td>
@@ -284,7 +285,7 @@
 <span class="inline-block mt-xs px-xs py-base rounded bg-surface-container font-label-md text-label-md text-on-surface-variant">TBK Auth: 104882</span>
 </td>
 <td class="py-sm px-md align-top">
-<div class="font-semibold text-primary">Depósito Quilicura Logística</div>
+<a class="font-semibold text-primary hover:underline" href="../explorer/detalleespacio.html">Depósito Quilicura Logística</a>
 <div class="text-on-surface-variant text-label-md font-label-md">Nave Principal C • 450 m²</div>
 <span class="font-label-md text-label-md text-outline">ID: LOG-QC-450</span>
 </td>
@@ -700,4 +701,41 @@
       }
     })();
   </script>
+<script>
+  const brandText = Array.from(document.querySelectorAll('aside span.font-title-lg'))
+    .find((element) => element.textContent.trim() === 'EspaciosChile');
+  if (brandText) {
+    const brandLink = document.createElement('a');
+    brandLink.className = brandText.className;
+    brandLink.href = '../inicio.html';
+    brandLink.textContent = brandText.textContent;
+    brandText.replaceWith(brandLink);
+  }
+
+  const transactionSidebarRoutes = {
+    'moderacion-de-espacios': 'moderaciondeespacios.html',
+    'verificacion-de-identidad': '../verificacion/verificaciondeidentidadyKYC.html',
+    'transacciones-y-pagos': 'transaccionesypagos.html',
+    'usuarios-y-propietarios': 'directoriodeusuarios.html'
+  };
+  Object.entries(transactionSidebarRoutes).forEach(([path, route]) => {
+    const link = document.querySelector(`[data-path="${path}"]`);
+    if (link) link.href = route;
+  });
+
+  const sidebar = document.querySelector('aside');
+  if (sidebar) {
+    const logoutLink = Array.from(sidebar.querySelectorAll('a'))
+      .find((link) => link.textContent.trim() === 'Cerrar Sesión');
+    if (logoutLink) {
+      logoutLink.href = '../auth/login.html';
+    } else if (sidebar.lastElementChild) {
+      const newLogoutLink = document.createElement('a');
+      newLogoutLink.className = 'flex items-center gap-xs text-error hover:text-on-error-container transition-colors px-xs py-base';
+      newLogoutLink.href = '../auth/login.html';
+      newLogoutLink.innerHTML = '<span class="material-symbols-outlined text-[16px]">logout</span><span class="font-label-md text-label-md">Cerrar Sesión</span>';
+      sidebar.lastElementChild.appendChild(newLogoutLink);
+    }
+  }
+</script>
 </div></main></div></body></html>

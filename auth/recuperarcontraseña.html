@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es" style="width: 1280px; height: 648px; overflow: hidden; position: relative;"><head>
+<!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Recuperar Contraseña - EspaciosChile</title>
@@ -114,7 +114,7 @@
 <div class="w-full md:w-1/2 p-lg md:p-xl flex flex-col justify-center">
 <!-- Brand -->
 <div class="mb-lg">
-<h1 class="font-headline-lg text-headline-lg text-primary">EspaciosChile</h1>
+<h1 class="font-headline-lg text-headline-lg text-primary"><a href="../inicio.html">EspaciosChile</a></h1>
 </div>
 <!-- Header -->
 <div class="mb-md">
@@ -122,7 +122,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Ingresa tu correo electrónico asociado a tu cuenta y te enviaremos las instrucciones para restablecer tu contraseña.</p>
 </div>
 <!-- Form -->
-<form action="#" class="space-y-md" method="POST">
+<form class="space-y-md" method="POST">
 <!-- Email Input -->
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-xs uppercase tracking-wider" for="email">Correo Electrónico</label>
@@ -141,7 +141,7 @@
 </form>
 <!-- Back to Login -->
 <div class="mt-lg text-center">
-<a class="inline-flex items-center gap-xs font-body-md text-body-md text-surface-tint hover:text-primary transition-colors group" href="#">
+<a class="inline-flex items-center gap-xs font-body-md text-body-md text-surface-tint hover:text-primary transition-colors group" href="login.html">
 <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
 <span>Volver al inicio de sesión</span>
 </a>
@@ -162,4 +162,11 @@
 </div>
 </div>
 </div>
+<script>
+    document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Si el correo está asociado a una cuenta, recibirás instrucciones para restablecer tu contraseña.');
+        window.location.href = 'login.html';
+    });
+</script>
 <div id="snapdom-sandbox" data-snapdom-sandbox="true" aria-hidden="true" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div></body></html>

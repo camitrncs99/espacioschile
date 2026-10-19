@@ -395,7 +395,69 @@ Días Operativos Habilitados para el Motor de Reservas
 </div>
 </div>
 <script>
+    const brandText = Array.from(document.querySelectorAll('header span.font-headline-md'))
+      .find((element) => element.textContent.trim() === 'EspaciosChile');
+
+    if (brandText) {
+      const brandLink = document.createElement('a');
+      brandLink.className = brandText.className;
+      brandLink.href = '../inicio.html';
+      brandLink.textContent = brandText.textContent;
+      brandText.replaceWith(brandLink);
+    }
+
+    const headerRoutes = {
+      'Publicar espacio': '../publicar/publicarespacio.html',
+      'Buscar': '../explorer/buscadorespacios.html'
+    };
+    document.querySelectorAll('header nav a').forEach((link) => {
+      const route = headerRoutes[link.textContent.trim()];
+      if (route) link.href = route;
+    });
+
+    const sidebarRoutes = {
+      'mis-espacios': 'dashboardpropietario.html',
+      'mis-reservas': 'gestionreservas.html',
+      'calendario': 'ajustededisponibilidadxdia.html',
+      'cerrar-sesion': '../auth/login.html'
+    };
+    Object.entries(sidebarRoutes).forEach(([path, route]) => {
+      const link = document.querySelector(`[data-path="${path}"]`);
+      if (link) link.href = route;
+    });
+
+    function replaceWithLink(button, href) {
+      if (!button) return;
+      const link = document.createElement('a');
+      link.className = button.className;
+      link.href = href;
+      link.innerHTML = button.innerHTML;
+      button.replaceWith(link);
+    }
+
+    const publishButton = Array.from(document.querySelectorAll('header button'))
+      .find((button) => button.textContent.trim() === 'Publicar');
+    replaceWithLink(publishButton, '../publicar/publicarespacio.html');
+
+    const modalityRoutes = {
+      'Por Hora': 'ajustededisponibilidadxhora.html',
+      'Por Día / Jornada': 'ajustededisponibilidadxdia.html',
+      'Por Mes': 'ajustededisponibilidadxdia.html',
+      'Flexible (Todos)': 'ajustexdisponibilidadflexible.html'
+    };
+    document.querySelectorAll('#modalOverlay button').forEach((button) => {
+      const label = Object.keys(modalityRoutes).find((text) => button.textContent.trim().endsWith(text));
+      if (label) replaceWithLink(button, modalityRoutes[label]);
+    });
+
     function closeModal() {
+      const modal = document.getElementById('modalOverlay');
+      if (modal) {
+        window.location.href = 'dashboardpropietario.html';
+      }
+    }
+
+    function saveAndClose() {
       const modal = document.getElementById('modalOverlay');
       if (modal) {
         modal.classList.add('opacity-0', 'pointer-events-none');
@@ -403,10 +465,6 @@ Días Operativos Habilitados para el Motor de Reservas
           modal.style.display = 'none';
         }, 300);
       }
-    }
-
-    function saveAndClose() {
-      closeModal();
       const notification = document.getElementById('saveNotification');
       if (notification) {
         notification.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
@@ -414,6 +472,7 @@ Días Operativos Habilitados para el Motor de Reservas
         setTimeout(() => {
           notification.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
           notification.classList.remove('translate-y-0', 'opacity-100');
+          window.location.href = 'dashboardpropietario.html';
         }, 4000);
       }
     }

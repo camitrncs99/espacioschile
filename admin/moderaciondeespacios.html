@@ -207,6 +207,10 @@
 <span class="material-symbols-outlined text-[18px]">visibility</span>
 <span class="">Previsualizar Expediente y Galería</span>
 </button>
+<a class="inline-flex items-center justify-center gap-xs font-body-sm text-body-sm text-primary hover:text-surface-tint font-semibold" href="../explorer/detalleespacio.html">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Ver Ficha Pública</span>
+</a>
 <div class="flex items-center gap-xs flex-wrap sm:justify-end">
 <button class="px-sm py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors" type="button">
               Solicitar Aclaración
@@ -278,6 +282,10 @@
 <span class="material-symbols-outlined text-[18px]">photo_library</span>
 <span class="">Revisar Fotos (14 tomas HD)</span>
 </button>
+<a class="inline-flex items-center justify-center gap-xs font-body-sm text-body-sm text-primary hover:text-surface-tint font-semibold" href="../explorer/detalleespacio.html">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Ver Ficha Pública</span>
+</a>
 <div class="flex items-center gap-xs flex-wrap sm:justify-end">
 <button class="px-sm py-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors" type="button">
               Pausar Revisión
@@ -395,6 +403,10 @@
 <span class="material-symbols-outlined text-[18px]">edit_note</span>
 <span class="">Ingresar Observación Técnica al RUT</span>
 </button>
+<a class="w-full py-xs rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-container transition-colors flex items-center justify-center gap-xs" href="directoriodeusuarios.html">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Ver Expediente del Propietario</span>
+</a>
 </div>
 </div>
 <!-- Quick Tips / Legal Reminder Notice -->
@@ -409,6 +421,40 @@
 </div>
 </div>
 <script>
+  const brandText = Array.from(document.querySelectorAll('aside span.font-title-lg'))
+    .find((element) => element.textContent.trim() === 'EspaciosChile');
+
+  if (brandText) {
+    const brandLink = document.createElement('a');
+    brandLink.className = brandText.className;
+    brandLink.href = '../inicio.html';
+    brandLink.textContent = brandText.textContent;
+    brandText.replaceWith(brandLink);
+  }
+
+  const backofficeRoutes = {
+    'dashboard-general': '../propietario/dashboardpropietario.html',
+    'moderacion-de-espacios': 'moderaciondeespacios.html',
+    'verificacion-de-identidad': '../verificacion/verificaciondeidentidadyKYC.html',
+    'transacciones-y-pagos': 'transaccionesypagos.html',
+    'usuarios-y-propietarios': 'directoriodeusuarios.html'
+  };
+  Object.entries(backofficeRoutes).forEach(([path, route]) => {
+    const link = document.querySelector(`[data-path="${path}"]`);
+    if (link) link.href = route;
+  });
+
+  const sidebar = document.querySelector('aside');
+  const sidebarFooter = sidebar && sidebar.lastElementChild;
+  if (sidebarFooter && !sidebarFooter.querySelector('[data-path="cerrar-sesion"]')) {
+    const logoutLink = document.createElement('a');
+    logoutLink.className = 'flex items-center gap-xs text-error hover:text-on-error-container transition-colors px-xs py-base';
+    logoutLink.href = '../auth/login.html';
+    logoutLink.dataset.path = 'cerrar-sesion';
+    logoutLink.innerHTML = '<span class="material-symbols-outlined text-[16px]">logout</span><span class="font-label-md text-label-md">Cerrar Sesión</span>';
+    sidebarFooter.appendChild(logoutLink);
+  }
+
   function openInspectionDrawer(title, comuna, rut, surface, rol) {
     const cardTitle = document.getElementById('card-title');
     const cardComuna = document.getElementById('card-comuna');

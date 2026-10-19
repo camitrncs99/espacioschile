@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="light" lang="es" style="width: 1280px; height: 686px; overflow: hidden; position: relative;"><head>
+<!DOCTYPE html><html class="light" lang="es"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Iniciar Sesión - EspaciosChile</title>
@@ -118,7 +118,7 @@
 <div class="absolute top-0 left-0 w-full h-2 bg-primary-container"></div>
 <!-- Header -->
 <div class="text-center mb-sm">
-<h1 class="font-headline-lg text-headline-lg text-primary mb-xs">EspaciosChile</h1>
+<a class="font-headline-md text-headline-md font-bold text-primary" href="../inicio.html">EspaciosChile</a>
 <p class="font-body-md text-body-md text-on-surface-variant">Accede a tu cuenta para gestionar tus propiedades y bodegas.</p>
 </div>
 <!-- Form -->
@@ -142,7 +142,7 @@
 <input class="rounded border-outline-variant text-primary-container focus:ring-primary-container w-4 h-4 cursor-pointer" type="checkbox">
 <span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">Recordarme</span>
 </label>
-<a class="font-body-sm text-body-sm text-primary-container hover:underline font-semibold transition-all" href="#">¿Olvidaste tu contraseña?</a>
+<a class="font-body-sm text-body-sm text-primary-container hover:underline font-semibold transition-all" href="recuperarcontraseña.html">¿Olvidaste tu contraseña?</a>
 </div>
 <!-- Submit Button -->
 <button class="w-full bg-primary-container text-on-primary font-title-lg text-title-lg py-sm rounded-lg hover:bg-primary transition-colors active:scale-[0.98] duration-150 flex items-center justify-center gap-xs" type="submit">
@@ -162,9 +162,15 @@
 
 </div>
 <p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-sm">
-            ¿No tienes cuenta? <a class="text-primary-container hover:underline font-semibold" href="#">Regístrate aquí</a>
+            ¿No tienes cuenta? <a class="text-primary-container hover:underline font-semibold" href="crearcuenta.html">Regístrate aquí</a>
 </p>
 </main>
 <!-- Background decorative element for high-end feel -->
 <div class="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-surface-variant/40 via-surface to-surface pointer-events-none"></div>
+<script>
+    document.querySelector('form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        window.location.href = '../propietario/dashboardpropietario.html';
+    });
+</script>
 </body></html>

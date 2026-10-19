@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es" style="width: 1280px; height: 1027px; overflow: hidden; position: relative;"><head>
+<!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Crear Cuenta - EspaciosChile</title>
@@ -114,7 +114,7 @@
 </head>
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
 <!-- TopNavBar (Suppressed for Linear/Transactional Flow, replacing with simple brand header) -->
-<header class="w-full py-4 px-margin-mobile md:px-margin-desktop bg-surface-container-low flex justify-center items-center"><a class="inline-flex items-center gap-2 text-primary font-bold text-headline-md tracking-tight" href="#"><span class="material-symbols-outlined text-primary text-[28px]">real_estate_agent</span><span class="font-bold">Espacios<span class="text-secondary">Chile</span></span></a></header>
+<header class="w-full py-4 px-margin-mobile md:px-margin-desktop bg-surface-container-low flex justify-center items-center"><a class="inline-flex items-center gap-2 text-primary font-bold text-headline-md tracking-tight" href="../inicio.html"><span class="material-symbols-outlined text-primary text-[28px]">real_estate_agent</span><span class="font-bold">Espacios<span class="text-secondary">Chile</span></span></a></header>
 <main class="flex-grow flex items-center justify-center px-margin-mobile py-lg">
 <div class="bg-surface-container-lowest rounded-xl shadow-[0px_12px_32px_rgba(0,0,0,0.12)] border border-outline-variant p-md md:p-lg w-full max-w-2xl">
 <div class="text-center mb-md"><h1 class="text-headline-lg font-bold text-on-surface mb-xs tracking-tight">Crear cuenta</h1><p class="text-body-sm text-on-surface-variant font-normal">Únete a la red inmobiliaria líder en Chile.</p></div>
@@ -213,7 +213,7 @@
   </div>
   <div class="ml-3 text-sm">
     <label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="terms">
-      Acepto los <a class="text-primary hover:underline font-bold" href="#">Términos y condiciones</a> y la <a class="text-primary hover:underline font-bold" href="#">Política de privacidad</a> de EspaciosChile.
+      Acepto los <a class="text-primary hover:underline font-bold" href="../terminos-y-condiciones.html">Términos y condiciones</a> y la <a class="text-primary hover:underline font-bold" href="#">Política de privacidad</a> de EspaciosChile.
     </label>
   </div>
 </div>
@@ -235,16 +235,59 @@
 
 </div>
 <p class="mt-md text-center font-body-sm text-body-sm text-on-surface-variant">
-                ¿Ya tienes una cuenta? <a class="text-primary font-bold hover:underline" href="#">Inicia sesión aquí</a>
+                ¿Ya tienes una cuenta? <a class="text-primary font-bold hover:underline" href="login.html">Inicia sesión aquí</a>
 </p>
 </div>
 </main>
+<script>
+  const signupForm = document.querySelector('form');
+  const rutInput = document.getElementById('rut');
+
+  function isValidRut(value) {
+    const normalizedRut = value.trim().replace(/[.\s]/g, '').toUpperCase();
+    const rutMatch = normalizedRut.match(/^([1-9]\d{0,7})-?([\dK])$/);
+
+    if (!rutMatch) {
+      return false;
+    }
+
+    const body = rutMatch[1];
+    const verifier = rutMatch[2];
+    let sum = 0;
+    let multiplier = 2;
+
+    for (let index = body.length - 1; index >= 0; index--) {
+      sum += Number(body[index]) * multiplier;
+      multiplier = multiplier === 7 ? 2 : multiplier + 1;
+    }
+
+    const remainder = 11 - (sum % 11);
+    const expectedVerifier = remainder === 11 ? '0' : remainder === 10 ? 'K' : String(remainder);
+
+    return verifier === expectedVerifier;
+  }
+
+  rutInput.addEventListener('input', () => rutInput.setCustomValidity(''));
+
+  signupForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!isValidRut(rutInput.value)) {
+      rutInput.setCustomValidity('Ingresa un RUT válido, por ejemplo 12.345.678-K.');
+      rutInput.reportValidity();
+      rutInput.focus();
+      return;
+    }
+
+    window.location.href = 'login.html';
+  });
+</script>
 <!-- Footer -->
 <footer class="w-full py-xl px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-low border-t border-outline-variant">
 <div class="inline-flex items-center gap-2 text-primary font-bold text-title-lg"><span class="material-symbols-outlined text-primary text-[22px]">real_estate_agent</span><span class="">Espacios<span class="text-secondary">Chile</span></span></div>
 <div class="flex gap-md">
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Privacidad</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Términos</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="../terminos-y-condiciones.html">Términos</a>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Contacto</a>
 <a class="font-body-sm text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity duration-200" href="#">Ayuda</a>
 </div>

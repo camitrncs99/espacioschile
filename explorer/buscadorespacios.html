@@ -121,20 +121,20 @@
 <div class="flex justify-between items-center px-margin-desktop w-full max-w-max-width mx-auto h-20">
 <!-- Brand -->
 <div class="flex items-center gap-sm">
-<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">EspaciosChile</a>
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="../inicio.html">EspaciosChile</a>
 </div>
 <!-- Navigation Links (Desktop) -->
 <div class="hidden md:flex items-center gap-md h-full">
-<a class="h-full flex items-center font-title-lg text-title-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Publicar espacio</a>
-<a class="h-full flex items-center font-title-lg text-title-lg text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim opacity-80 transition-opacity" href="#">Buscar</a>
-<a class="h-full flex items-center font-title-lg text-title-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Mi Cuenta</a>
+<a class="h-full flex items-center font-title-lg text-title-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="../publicar/publicarespacio.html">Publicar espacio</a>
+<a class="h-full flex items-center font-title-lg text-title-lg text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim opacity-80 transition-opacity" href="buscadorespacios.html">Buscar</a>
+<a class="h-full flex items-center font-title-lg text-title-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="../auth/login.html">Mi Cuenta</a>
 </div>
 <!-- Trailing Action -->
 <div class="flex items-center gap-sm">
-<button class="bg-secondary text-on-secondary px-md py-xs rounded-lg font-label-md text-label-md hover:shadow-[0px_4px_12px_rgba(0,51,102,0.08)] transition-all">Publicar</button>
-<button class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<a class="bg-secondary text-on-secondary px-md py-xs rounded-lg font-label-md text-label-md hover:shadow-[0px_4px_12px_rgba(0,51,102,0.08)] transition-all inline-block" href="../publicar/publicarespacio.html">Publicar</a>
+<a class="block w-10 h-10 rounded-full overflow-hidden border border-outline-variant" href="../auth/login.html">
 <img alt="Foto de perfil del usuario" class="w-full h-full object-cover" data-alt="Professional headshot of a person, well lit, neutral background, corporate style avatar for real estate platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBtT3li_AUeT7mH4v_yapzEtqLPAAptG7jUwbmSA_dVmjAvRxdonKuy2j74Ho1StLZfLEwvWqMG7H19ZmR6J2sLkhdc5CEdmqD9u-gMlRUsF2aCUF-JSUgfulWDAUK1OH4iRK43NHnNpIt4UFd12QIF6cUCpsIFDcJg9DLEGlZxgLoRrwF61BvyD_h810_ztpsb0J3ARmc6v1r-wX84rSKtQC3n_0USjKePUXeEmuAmyVpy_90wOvP">
-</button>
+</a>
 </div>
 </div>
 </nav>
@@ -192,7 +192,7 @@
 <span class="font-title-lg text-title-lg font-bold text-on-tertiary">EspaciosChile</span>
 </div>
 <div class="flex flex-col gap-sm">
-<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Términos y Condiciones</a>
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="../terminos-y-condiciones.html">Términos y Condiciones</a>
 </div>
 <div class="flex flex-col gap-sm">
 <a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Privacidad</a>
@@ -201,7 +201,7 @@
 <a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Contacto Local</a>
 </div>
 <div class="flex flex-col gap-sm">
-<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Preguntas Frecuentes</a>
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant font-body-sm text-body-sm hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="../preguntas-frecuentes.html">Preguntas Frecuentes</a>
 </div>
 <div class="col-span-1 md:col-span-4 mt-lg pt-sm border-t border-on-tertiary/20">
 <p class="font-body-sm text-body-sm text-on-tertiary-container dark:text-on-tertiary-fixed-variant">© 2024 EspaciosChile. Gestión de Propiedades y Bodegaje.</p>
@@ -211,4 +211,25 @@
 </main>
 
 
+<script>
+    document.querySelectorAll('.group.cursor-pointer').forEach((card) => {
+        card.addEventListener('click', (event) => {
+            if (event.target.closest('button')) {
+                return;
+            }
+
+            window.location.href = 'detalleespacio.html';
+        });
+    });
+
+    const loadMoreButton = Array.from(document.querySelectorAll('button')).find((button) =>
+        button.textContent.trim() === 'Cargar más resultados'
+    );
+
+    if (loadMoreButton) {
+        loadMoreButton.addEventListener('click', () => {
+            alert('No hay más resultados disponibles por el momento.');
+        });
+    }
+</script>
 </body></html>

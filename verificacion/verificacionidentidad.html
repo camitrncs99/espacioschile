@@ -188,12 +188,12 @@
 </div>
 <!-- Primary Action & Back Link -->
 <div class="flex flex-col gap-sm pt-xs">
-<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-xs shadow-md hover:shadow-lg transition-all" type="button">
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-xs shadow-md hover:shadow-lg transition-all" id="verify-and-continue" type="button">
 <span class="">Verificar y Continuar</span>
 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
 </button>
 <div class="flex items-center justify-between pt-xs">
-<a class="inline-flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">
+<a class="inline-flex items-center gap-xs font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="../explorer/detalleespacio.html">
 <span class="material-symbols-outlined text-[16px]">arrow_back</span>
 <span class="">Volver al paso anterior</span>
 </a>
@@ -221,6 +221,33 @@
 </div>
 </div>
 <script>
+  const verificationBrand = Array.from(document.querySelectorAll('header span.font-headline-md'))
+    .find((element) => element.textContent.trim() === 'EspaciosChile');
+  if (verificationBrand) {
+    const brandLink = document.createElement('a');
+    brandLink.className = verificationBrand.className;
+    brandLink.href = '../inicio.html';
+    brandLink.textContent = verificationBrand.textContent;
+    verificationBrand.replaceWith(brandLink);
+  }
+
+  const verifyAndContinue = document.getElementById('verify-and-continue');
+  verifyAndContinue.addEventListener('click', () => {
+    const selectedMethod = document.querySelector('input[name="verification_method"]:checked');
+    if (selectedMethod && selectedMethod.value === 'sms') {
+      const otpInputs = Array.from(document.querySelectorAll('.otp-box'));
+      const incompleteInput = otpInputs.find((input) => !/^\d$/.test(input.value.trim()));
+      if (incompleteInput) {
+        alert('Ingresa los 6 dígitos del código SMS para continuar.');
+        incompleteInput.focus();
+        return;
+      }
+    }
+
+    alert('¡Verificación completada! Tu identidad ha sido validada correctamente.');
+    window.location.href = '../propietario/dashboardpropietario.html';
+  });
+
   function selectMethod(method) {
     const cardClave = document.getElementById('option-claveunica');
     const cardSms = document.getElementById('option-sms');

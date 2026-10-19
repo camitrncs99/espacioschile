@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es" style=""><head>
+<!DOCTYPE html><html lang="es"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Oficina Boutique en Barrio El Golf - EspaciosChile</title>
@@ -116,9 +116,9 @@
 <!-- TopNavBar -->
 <header class="bg-surface-container-lowest dark:bg-surface-container-low font-title-lg text-title-lg docked full-width top-0 border-b border-outline-variant dark:border-outline flat no shadows z-50">
 <div class="flex justify-between items-center px-margin-desktop w-full max-w-max-width mx-auto py-sm">
-<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="../inicio.html">
                 EspaciosChile
-            </div>
+            </a>
 <div class="hidden md:flex items-center space-x-lg flex-1 ml-lg">
 <div class="relative w-full max-w-md">
 <span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
@@ -126,12 +126,12 @@
 </div>
 </div>
 <nav class="hidden md:flex items-center space-x-lg">
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: opacity-80 transition-opacity" href="#">Publicar espacio</a>
-<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: opacity-80 transition-opacity" href="#">Buscar</a>
-<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: opacity-80 transition-opacity" href="#">Mi Cuenta</a>
-<button class="bg-primary text-on-primary px-sm py-xs rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm hover:shadow-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: opacity-80 transition-opacity" href="../publicar/publicarespacio.html">Publicar espacio</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: opacity-80 transition-opacity" href="buscadorespacios.html">Buscar</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Active: opacity-80 transition-opacity" href="../auth/login.html">Mi Cuenta</a>
+<a class="bg-primary text-on-primary px-sm py-xs rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm hover:shadow-md inline-block" href="../publicar/publicarespacio.html">
                     Publicar
-                </button>
+                </a>
 </nav>
 <button class="md:hidden text-on-surface p-xs">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
@@ -315,7 +315,7 @@
 <span class="material-symbols-outlined text-primary mt-1" data-icon="info">info</span>
 <p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-tight">No se cobrará nada hasta que el propietario apruebe tu solicitud de arriendo.</p>
 </div>
-<button class="w-full bg-primary text-on-primary py-sm rounded-lg font-title-lg text-title-lg text-[16px] hover:bg-primary-container transition-colors shadow-sm hover:shadow-md flex justify-center items-center gap-xs">
+<button class="w-full bg-primary text-on-primary py-sm rounded-lg font-title-lg text-title-lg text-[16px] hover:bg-primary-container transition-colors shadow-sm hover:shadow-md flex justify-center items-center gap-xs" id="reservation-submit" type="button">
                     Solicitar Arriendo
                 </button>
 <div class="pt-sm border-t border-outline-variant flex justify-center gap-md">
@@ -335,10 +335,10 @@
 <div class="col-span-1 md:col-span-4 mb-sm">
 <span class="font-title-lg text-title-lg font-bold text-on-tertiary">EspaciosChile</span>
 </div>
-<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Términos y Condiciones</a>
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="../terminos-y-condiciones.html">Términos y Condiciones</a>
 <a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Privacidad</a>
 <a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Contacto Local</a>
-<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="#">Preguntas Frecuentes</a>
+<a class="text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors" href="../preguntas-frecuentes.html">Preguntas Frecuentes</a>
 <div class="col-span-1 md:col-span-4 mt-lg text-on-tertiary-container text-[12px]">
                 © 2024 EspaciosChile. Gestión de Propiedades y Bodegaje.
             </div>
@@ -346,4 +346,70 @@
 </footer>
 
 
+<div class="fixed inset-0 z-[100] hidden items-center justify-center bg-primary/60 p-4" id="reservation-success-modal" role="dialog" aria-modal="true" aria-labelledby="reservation-success-title">
+<div class="w-full max-w-md rounded-xl bg-surface-container-lowest p-lg text-center shadow-2xl">
+<div class="mx-auto mb-md flex h-14 w-14 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" aria-hidden="true">check_circle</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary" id="reservation-success-title">¡Solicitud enviada!</h2>
+<p class="mt-sm font-body-md text-body-md text-on-surface-variant">Tu solicitud de arriendo fue enviada al propietario. Te avisaremos cuando recibas una respuesta.</p>
+<div class="mt-lg flex flex-col gap-sm sm:flex-row sm:justify-center">
+<button class="rounded-lg border border-outline-variant px-md py-sm font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" id="close-reservation-modal" type="button">Cerrar</button>
+<a class="rounded-lg bg-primary px-md py-sm font-label-md text-label-md text-on-primary hover:bg-primary-container transition-colors" href="buscadorespacios.html">Explorar otros espacios</a>
+</div>
+</div>
+</div>
+<script>
+    const reservationDate = document.querySelector('input[type="date"]');
+    const reservationPurpose = document.querySelector('textarea');
+    const reservationSubmit = document.getElementById('reservation-submit');
+    const reservationModal = document.getElementById('reservation-success-modal');
+    const closeReservationModal = document.getElementById('close-reservation-modal');
+
+    function closeModal() {
+        reservationModal.classList.add('hidden');
+        reservationModal.classList.remove('flex');
+    }
+
+    reservationDate.addEventListener('input', () => reservationDate.setCustomValidity(''));
+    reservationPurpose.addEventListener('input', () => reservationPurpose.setCustomValidity(''));
+
+    reservationSubmit.addEventListener('click', () => {
+        reservationDate.setCustomValidity('');
+        reservationPurpose.setCustomValidity('');
+
+        if (!reservationDate.value) {
+            reservationDate.setCustomValidity('Selecciona una fecha de inicio para el arriendo.');
+            reservationDate.reportValidity();
+            return;
+        }
+
+        const selectedDate = new Date(`${reservationDate.value}T00:00:00`);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        if (Number.isNaN(selectedDate.getTime()) || selectedDate < today) {
+            reservationDate.setCustomValidity('Selecciona una fecha válida, que no sea anterior a hoy.');
+            reservationDate.reportValidity();
+            return;
+        }
+
+        if (!reservationPurpose.value.trim()) {
+            reservationPurpose.setCustomValidity('Indica el propósito o uso del espacio.');
+            reservationPurpose.reportValidity();
+            return;
+        }
+
+        reservationModal.classList.remove('hidden');
+        reservationModal.classList.add('flex');
+        closeReservationModal.focus();
+    });
+
+    closeReservationModal.addEventListener('click', closeModal);
+    reservationModal.addEventListener('click', (event) => {
+        if (event.target === reservationModal) {
+            closeModal();
+        }
+    });
+</script>
 </body></html>

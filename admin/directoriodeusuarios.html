@@ -667,12 +667,12 @@
 <!-- Quick Administration Operations Bar -->
 <div class="flex flex-col gap-xs pt-sm">
 <div class="grid grid-cols-2 gap-xs">
-<button class="px-sm py-xs bg-primary text-on-primary rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs hover:bg-primary-container transition-colors shadow-sm" type="button">
-<span class="material-symbols-outlined text-[18px]">article</span> Expediente
-            </button>
-<button class="px-sm py-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs transition-colors" type="button">
-<span class="material-symbols-outlined text-[18px]">edit_square</span> Permisos
-            </button>
+<a class="px-sm py-xs bg-primary text-on-primary rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs hover:bg-primary-container transition-colors shadow-sm" href="../verificacion/verificaciondeidentidadyKYC.html">
+<span class="material-symbols-outlined text-[18px]">verified_user</span> Revisar KYC Completo
+            </a>
+<a class="px-sm py-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs transition-colors" href="transaccionesypagos.html">
+<span class="material-symbols-outlined text-[18px]">payments</span> Ver Transacciones
+            </a>
 </div>
 <button class="w-full px-sm py-xs bg-surface-container-high hover:bg-surface-variant text-primary rounded-lg font-body-sm text-body-sm font-semibold flex items-center justify-center gap-xs transition-colors" type="button">
 <span class="material-symbols-outlined text-[18px]">forum</span> Iniciar Chat Seguro de Mesa de Ayuda
@@ -686,6 +686,48 @@
 </div>
 </div>
 <script>
+  const brandText = Array.from(document.querySelectorAll('aside span.font-title-lg'))
+    .find((element) => element.textContent.trim() === 'EspaciosChile');
+  if (brandText) {
+    const brandLink = document.createElement('a');
+    brandLink.className = brandText.className;
+    brandLink.href = '../inicio.html';
+    brandLink.textContent = brandText.textContent;
+    brandText.replaceWith(brandLink);
+  }
+
+  const directoryRoutes = {
+    'moderacion-de-espacios': 'moderaciondeespacios.html',
+    'verificacion-de-identidad': '../verificacion/verificaciondeidentidadyKYC.html',
+    'transacciones-y-pagos': 'transaccionesypagos.html',
+    'usuarios-y-propietarios': 'directoriodeusuarios.html'
+  };
+  Object.entries(directoryRoutes).forEach(([path, route]) => {
+    const link = document.querySelector(`[data-path="${path}"]`);
+    if (link) link.href = route;
+  });
+
+  const createOwnerButton = Array.from(document.querySelectorAll('button'))
+    .find((button) => button.textContent.trim() === 'Nuevo Propietario / Empresa');
+  if (createOwnerButton) {
+    const createOwnerLink = document.createElement('a');
+    createOwnerLink.className = createOwnerButton.className;
+    createOwnerLink.href = '../auth/crearcuenta.html';
+    createOwnerLink.innerHTML = createOwnerButton.innerHTML;
+    createOwnerButton.replaceWith(createOwnerLink);
+  }
+
+  const sidebar = document.querySelector('aside');
+  const sidebarFooter = sidebar && sidebar.lastElementChild;
+  if (sidebarFooter && !sidebarFooter.querySelector('[data-path="cerrar-sesion"]')) {
+    const logoutLink = document.createElement('a');
+    logoutLink.className = 'flex items-center gap-xs text-error hover:text-on-error-container transition-colors px-xs py-base';
+    logoutLink.href = '../auth/login.html';
+    logoutLink.dataset.path = 'cerrar-sesion';
+    logoutLink.innerHTML = '<span class="material-symbols-outlined text-[16px]">logout</span><span class="font-label-md text-label-md">Cerrar Sesión</span>';
+    sidebarFooter.appendChild(logoutLink);
+  }
+
   // Filter Tabs Interaction
   document.querySelectorAll('.filter-tab').forEach(tab => {
     tab.addEventListener('click', function() {
