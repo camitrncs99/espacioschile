@@ -110,22 +110,49 @@
 </style>
 </head>
 <body class="bg-surface text-on-surface antialiased">
-<!-- TopNavBar -->
-<nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
-<div class="flex justify-between items-center px-margin-desktop w-full max-w-max-width mx-auto h-20">
-<div class="flex items-center gap-md">
-<a class="font-headline-md text-headline-md font-bold text-primary" href="inicio.html">EspaciosChile</a>
-<div class="hidden md:flex items-center gap-md ml-lg">
-<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="publicar/publicarespacio.html">Publicar espacio</a>
-<a class="font-title-lg text-title-lg text-primary border-b-2 border-primary pb-1" href="explorer/buscadorespacios.html">Buscar</a>
-<a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="auth/login.html">Mi Cuenta</a>
-</div>
-</div>
-<div class="flex items-center gap-sm"> 
-  <a class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-1g hover : shadow-1g transition-all inline-block" href="publicar/publicarespacio.html"> Publicar </a>
-  <a class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant ml-sm hidden md:block hover :opacity-80 transition-opacity" href="auth/login.html" title="Mi Cuenta"></a>
-</div>
-</div>
+
+<!-- TopNavBar Optimizado -->
+<nav class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50 w-full">
+  <div class="flex justify-between items-center px-margin-desktop w-full max-w-max-width mx-auto h-20">
+    <!-- Logo y Navegación Principal -->
+    <div class="flex items-center gap-md">
+      <a class="font-headline-md text-headline-md font-bold text-primary" href="inicio.html">EspaciosChile</a>
+      <div class="hidden md:flex items-center gap-md ml-lg">
+        <a class="font-title-lg text-title-lg text-primary border-b-2 border-primary pb-1" href="explorer/buscadorespacios.html">Buscar</a>
+        <a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="explorer/buscadorespacios.html?cat=cerrados">Espacios Cerrados</a>
+        <a class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors" href="explorer/buscadorespacios.html?cat=abiertos">Espacios Abiertos</a>
+      </div>
+    </div>
+
+    <!-- Acciones y Estado de Usuario -->
+    <div class="flex items-center gap-sm"> 
+      <!-- Único Botón de Publicar -->
+      <a class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:shadow-lg transition-all inline-block" href="publicar/publicarespacio.html">
+        Publicar espacio
+      </a>
+
+      <!-- Contenedor Dinámico: Invitado vs Usuario Autenticado -->
+      <div id="nav-auth-container" class="flex items-center gap-xs ml-sm">
+        <!-- Estado 1: Invitado (por defecto) -->
+        <a id="nav-guest-btn" class="font-title-lg text-title-lg text-on-surface-variant hover:text-primary transition-colors px-2 py-1" href="auth/login.html">
+          Iniciar Sesión
+        </a>
+
+        <!-- Estado 2: Con Sesión Iniciada (oculto por defecto) -->
+        <div id="nav-user-menu" class="hidden items-center gap-sm">
+          <a id="nav-user-dashboard" href="propietario/dashboardpropietario.html" class="flex items-center gap-xs group text-on-surface-variant hover:text-primary">
+            <div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant group-hover:border-primary transition-colors">
+              <img alt="Foto de perfil" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80">
+            </div>
+            <span id="nav-user-name" class="font-body-md text-sm font-semibold hidden lg:inline-block">Mi Panel</span>
+          </a>
+          <button onclick="logoutPrototipo()" title="Cerrar Sesión" class="text-outline hover:text-error transition-colors p-1 flex items-center">
+            <span class="material-symbols-outlined text-xl">logout</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
 <main>
 <!-- Hero Section -->
@@ -150,9 +177,9 @@
 <span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant mt-xs md:mt-0">location_on</span>
 <input class="w-full pl-xl pr-sm py-md rounded-lg border-none bg-transparent focus:ring-2 focus:ring-primary font-body-md text-body-md text-on-surface placeholder-on-surface-variant" placeholder="¿Dónde? (ej. Providencia)" type="text">
 </div>
-<button class="w-full md:w-auto bg-primary text-on-primary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-primary-container transition-colors mt-xs md:mt-0 flex items-center justify-center gap-xs">
+<a class="w-full md:w-auto bg-primary text-on-primary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-primary-container transition-colors mt-xs md:mt-0 flex items-center justify-center gap-xs" href="explorer/buscadorespacios.html">
                             Buscar
-                        </button>
+            </a>
 </div>
 </div>
 </div>
@@ -210,7 +237,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Desde 15 m²</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/detalleespacio.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -232,7 +259,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Desde 6 m²</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -254,7 +281,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Por día o mes</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -276,7 +303,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Por horas</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -298,7 +325,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Hasta 300 pers.</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -320,7 +347,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Hasta 800 butacas</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -342,7 +369,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Por jornada</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -364,7 +391,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Plazos flexibles</span>
-<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -402,7 +429,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Ubicaciones top</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -424,7 +451,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Desde 500 m²</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -446,7 +473,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Capacidad media</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -468,7 +495,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Por día / fin de semana</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -490,7 +517,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">5.000+ m²</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -512,7 +539,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Gran envergadura</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -534,7 +561,7 @@
 </div>
 <div class="mt-md pt-sm border-t border-surface-container-high flex items-center justify-between">
 <span class="text-xs text-on-surface-variant font-medium">Temporada estival</span>
-<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="#">Ver espacios →</a>
+<a class="inline-flex items-center text-secondary font-semibold text-sm group-hover:translate-x-1 transition-transform" href="explorer/buscadorespacios.html">Ver espacios →</a>
 </div>
 </div>
 </div>
@@ -601,17 +628,17 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl"></section>
 <div class="bg-primary rounded-xl p-xl text-center relative overflow-hidden flex flex-col items-center">
 <!-- Subtle background pattern using tailwind -->
 <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
 <h2 class="relative z-10 font-display-lg text-display-lg text-on-primary mb-md hidden md:block">¿Tienes un espacio vacío?</h2>
 <h2 class="relative z-10 font-headline-lg-mobile text-headline-lg-mobile text-on-primary mb-md md:hidden">¿Tienes un espacio vacío?</h2>
 <p class="relative z-10 font-body-lg text-body-lg text-primary-fixed-dim mb-lg max-w-xl mx-auto">Empieza a generar ingresos hoy mismo. Únete a miles de propietarios en todo Chile que confían en nuestra plataforma.</p>
-<button class="relative z-10 bg-secondary text-on-secondary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-xs text-lg">
+<a class="relative z-10 bg-secondary text-on-secondary font-label-md text-label-md px-xl py-md rounded-lg hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-xs text-lg" href="publicar/publicarespacio.html">
                     Publicar mi espacio
                     <span class="material-symbols-outlined">arrow_forward</span>
-</button>
+</a>
 </div>
 </section>
 </main>
@@ -631,4 +658,76 @@
 </div>
 </footer>
 <div aria-hidden="true" data-snapdom-sandbox="true" id="snapdom-sandbox" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div>
+<script>
+  function actualizarNavbarSesion() {
+    let sesion = null;
+    try {
+      sesion = JSON.parse(localStorage.getItem('espacioschile_user'));
+    } catch (e) {
+      sesion = null;
+    }
+
+    // Buscamos el contenedor derecho del navbar (donde están Publicar y Mi Cuenta)
+    const nav = document.querySelector('nav');
+    if (!nav) return;
+
+    // Buscar enlace "Mi Cuenta" o enlaces que lleven a login
+    const linksLogin = Array.from(nav.querySelectorAll('a')).filter(a => 
+      a.getAttribute('href') && a.getAttribute('href').includes('login.html')
+    );
+
+    if (sesion && sesion.isLoggedIn) {
+      const nombreUsuario = sesion.nombre || 'Camila T.';
+      let urlPanel = 'propietario/dashboardpropietario.html';
+      const rol = (sesion.rol || '').toLowerCase();
+      if (rol === 'admin') urlPanel = 'admin/moderaciondeespacios.html';
+      if (rol === 'cliente') urlPanel = 'explorer/buscadorespacios.html';
+
+      // 1. Si existe el enlace de texto "Mi Cuenta" en el menú central, cambiarlo al Panel
+      const enlaceTexto = linksLogin.find(a => a.textContent.trim().toLowerCase().includes('mi cuenta'));
+      if (enlaceTexto) {
+        enlaceTexto.textContent = 'Mi Panel';
+        enlaceTexto.href = urlPanel;
+      }
+
+      // 2. Si existe el avatar o botón circular de login a la derecha, reemplazarlo por el bloque de sesión
+      const avatarBtn = linksLogin.find(a => a !== enlaceTexto) || linksLogin[0];
+      if (avatarBtn) {
+        const contenedorPadre = avatarBtn.parentElement;
+        
+        // Creamos el bloque con Foto, Nombre y Botón de Salida
+        const divSesion = document.createElement('div');
+        divSesion.className = 'flex items-center gap-sm ml-sm';
+        divSesion.innerHTML = `
+          <a href="${urlPanel}" class="flex items-center gap-xs group text-on-surface hover:text-primary transition-colors" title="Ir al Panel">
+            <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary">
+              <img alt="Perfil" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80">
+            </div>
+            <span class="font-body-md text-sm font-semibold hidden md:inline-block">${nombreUsuario}</span>
+          </a>
+          <button onclick="cerrarSesionPrototipo(event)" title="Cerrar Sesión" class="text-outline hover:text-error transition-colors p-1.5 flex items-center justify-center rounded-lg hover:bg-error-container/20 cursor-pointer">
+            <span class="material-symbols-outlined text-xl">logout</span>
+          </button>
+        `;
+        avatarBtn.replaceWith(divSesion);
+      }
+    }
+  }
+
+  function cerrarSesionPrototipo(e) {
+    if (e) e.preventDefault();
+    localStorage.removeItem('espacioschile_user');
+    window.location.href = 'inicio.html';
+  }
+
+  // Ejecutar al cargar la página
+  document.addEventListener('DOMContentLoaded', actualizarNavbarSesion);
+  // Ejecutar también inmediatamente por si el DOM ya estaba listo
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    actualizarNavbarSesion();
+  }
+</script>
+
+
+
 </body></html>
