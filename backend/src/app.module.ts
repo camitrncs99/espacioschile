@@ -8,6 +8,8 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { Space } from './spaces/entities/space.entity';
 import { User } from './users/entities/user.entity';
+import { SpaceImage } from './spaces/entities/space-image.entity';
+import { SpaceAmenity } from './spaces/entities/space-amenity.entity';
 
 @Module({
   imports: [
@@ -19,7 +21,7 @@ import { User } from './users/entities/user.entity';
       username: process.env.DB_USER || 'postgres',
       password: process.env.DB_PASSWORD || 'postgrespassword',
       database: process.env.DB_NAME || 'espacioschile_db',
-      entities: [Space, User],
+      entities: [Space, User, SpaceImage, SpaceAmenity],
       synchronize: false,
     }),
     SpacesModule,

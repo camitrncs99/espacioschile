@@ -5,8 +5,11 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   Index,
+  OneToMany,
 } from 'typeorm';
 import { Point } from 'geojson';
+import { SpaceImage } from './space-image.entity';
+import { SpaceAmenity } from './space-amenity.entity';
 
 export enum SpaceCategory {
   CERRADO = 'CERRADO',
@@ -58,7 +61,6 @@ export class Space {
   @Column({ length: 100, default: 'Metropolitana' })
   region: string;
 
-  // PostGIS Point (WGS84 SRID 4326) con índice espacial GiST
   @Index({ spatial: true })
   @Column({
     type: 'geometry',
@@ -88,6 +90,12 @@ export class Space {
 
   @Column({ name: 'is_moderated', type: 'boolean', default: false })
   isModerated: boolean;
+
+  @OneToMany(() => SpaceImage, (image) => image.space, { cascade: true })
+  images: SpaceImage[];
+
+  @OneToMany(() => SpaceAmenity, (amenity) => amenity.space, { cascade: true })
+  amenities: SpaceAmenity[];
 
   @CreateDateColumn({ name: 'created_at', type: 'timestamp with time zone' })
   createdAt: Date;
