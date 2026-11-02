@@ -1,13 +1,18 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { SpacesService } from './spaces.service';
-import { Space } from './entities/space.entity';
+import { SearchSpacesDto } from './dto/search-spaces.dto';
 
 @Controller('spaces')
 export class SpacesController {
   constructor(private readonly spacesService: SpacesService) {}
 
   @Get()
-  async getAllSpaces(): Promise<Space[]> {
-    return await this.spacesService.findAll();
+  async getSpaces(@Query() searchDto: SearchSpacesDto) {
+    return await this.spacesService.search(searchDto);
+  }
+
+  @Get(':id')
+  async getSpaceById(@Param('id') id: string) {
+    return await this.spacesService.findOne(id);
   }
 }
