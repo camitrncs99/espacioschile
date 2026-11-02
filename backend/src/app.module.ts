@@ -12,6 +12,8 @@ import { SpaceImage } from './spaces/entities/space-image.entity';
 import { SpaceAmenity } from './spaces/entities/space-amenity.entity';
 import { BookingsModule } from './bookings/bookings.module';
 import { Booking } from './bookings/entities/booking.entity';
+import { TransactionsModule } from './transactions/transactions.module';
+import { Transaction } from './transactions/entities/transaction.entity';
 
 @Module({
   imports: [
@@ -23,13 +25,14 @@ import { Booking } from './bookings/entities/booking.entity';
       username: process.env.DB_USER || 'postgres',
       password: process.env.DB_PASSWORD || 'postgrespassword',
       database: process.env.DB_NAME || 'espacioschile_db',
-      entities: [Space, User, SpaceImage, SpaceAmenity, Booking],
+      entities: [Space, User, SpaceImage, SpaceAmenity, Booking, Transaction],
       synchronize: false,
     }),
     SpacesModule,
     UsersModule,
     AuthModule,
     BookingsModule,
+    TransactionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
