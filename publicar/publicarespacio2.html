@@ -120,30 +120,42 @@
 </div>
 </header>
 <main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-lg max-w-max-width mx-auto w-full">
+
 <!-- Stepper -->
-<div class="w-full max-w-3xl mx-auto mb-xl">
-<div class="flex items-center justify-between relative">
-<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-surface-container-high rounded-full z-0"></div>
-<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/2 h-1 bg-primary rounded-full z-0 transition-all duration-500"></div>
-<div class="flex flex-col items-center relative z-10 gap-xs">
-<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shadow-sm">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
-</div>
-<span class="font-label-md text-label-md text-on-surface-variant">1. Tipo y Modalidad</span>
-</div>
-<div class="flex flex-col items-center relative z-10 gap-xs">
-<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shadow-sm ring-4 ring-primary/20">
-                        2
-                    </div>
-<span class="font-label-md text-label-md text-primary font-bold">2. Detalles y Fotos</span>
-</div>
-<div class="flex flex-col items-center relative z-10 gap-xs">
-<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold text-sm shadow-sm">
-                        3
-                    </div>
-<span class="font-label-md text-label-md text-on-surface-variant">3. Revisión</span>
-</div>
-</div>
+<div class="w-full max-w-4xl mx-auto mb-xl">
+    <div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-4 sm:px-8 shadow-sm">
+        <div class="flex items-center justify-between relative">
+            <!-- Barra de fondo -->
+            <div class="absolute left-8 right-8 top-4 h-0.5 bg-surface-container-high z-0"></div>
+            <!-- Barra de progreso -->
+            <div class="absolute left-8 top-4 h-0.5 bg-primary z-0 transition-all duration-500" style="width: 33%;"></div>
+
+            <!-- Paso 1 (Completado) -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-semibold text-xs shadow-sm ring-4 ring-white">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                </div>
+                <span class="text-[11px] sm:text-xs font-medium text-on-surface-variant text-center">1. Tipo</span>
+            </div>
+            <!-- Paso 2 (Activo) -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs shadow-md ring-4 ring-primary-fixed">
+                    2
+                </div>
+                <span class="text-[11px] sm:text-xs font-bold text-primary text-center">2. Ubicación y Detalles</span>
+            </div>
+            <!-- Paso 3 -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-semibold text-xs ring-4 ring-white">3</div>
+                <span class="text-[11px] sm:text-xs font-medium text-on-surface-variant/70 text-center">3. Características</span>
+            </div>
+            <!-- Paso 4 -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-semibold text-xs ring-4 ring-white">4</div>
+                <span class="text-[11px] sm:text-xs font-medium text-on-surface-variant/70 text-center">4. Revisión Final</span>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Form Content -->
 <div class="w-full max-w-3xl mx-auto bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-md md:p-lg">
@@ -181,19 +193,30 @@
 </section>
 <!-- Media Upload Section -->
 <section class="space-y-md">
-<div class="flex justify-between items-end border-b border-outline-variant pb-xs">
-<h2 class="font-title-lg text-title-lg text-on-surface">Imágenes del Espacio</h2>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Mínimo 3 fotos</span>
-</div>
-<div class="border-2 border-dashed border-outline rounded-xl bg-surface-container-low p-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high hover:border-primary transition-colors group">
-<div class="w-16 h-16 bg-surface-variant rounded-full flex items-center justify-center text-primary mb-sm group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: &quot;FILL&quot; 0;">cloud_upload</span>
-</div>
-<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Arrastra tus fotos aquí</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-md">o haz clic para explorar tus archivos.</p>
-<button class="bg-primary text-on-primary px-lg py-2 rounded-lg font-label-md text-label-md hover:shadow-[0px_4px_12px_rgba(0,51,102,0.15)] transition-shadow" type="button">Seleccionar Archivos</button>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-sm">Formatos soportados: JPG, PNG. Max 5MB por foto.</p>
-</div>
+    <div class="flex justify-between items-end border-b border-outline-variant pb-xs">
+        <h2 class="font-title-lg text-title-lg text-on-surface">Imágenes del Espacio</h2>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Mínimo 3 fotos</span>
+    </div>
+    
+    <!-- Input oculto para cargar archivos -->
+    <input type="file" id="file-input" multiple accept="image/jpeg, image/png" class="hidden">
+    
+    <!-- Zona de Drag & Drop -->
+    <div id="drop-zone" class="border-2 border-dashed border-outline rounded-xl bg-surface-container-low p-xl flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container-high hover:border-primary transition-colors group">
+        <div class="w-16 h-16 bg-surface-variant rounded-full flex items-center justify-center text-primary mb-sm group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0;">cloud_upload</span>
+        </div>
+        <h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Arrastra tus fotos aquí</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-md">o haz clic para explorar tus archivos.</p>
+        <button id="browse-btn" class="bg-primary text-on-primary px-lg py-2 rounded-lg font-label-md text-label-md hover:shadow-[0px_4px_12px_rgba(0,51,102,0.15)] transition-shadow" type="button">Seleccionar Archivos</button>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-sm">Formatos soportados: JPG, PNG. Max 5MB por foto.</p>
+    </div>
+    
+    <!-- Contenedor dinámico de miniaturas (Previews) -->
+    <div id="preview-container" class="grid grid-cols-2 md:grid-cols-4 gap-sm mt-sm">
+        <!-- Las miniaturas se inyectarán aquí vía JavaScript -->
+    </div>
+</section>
 <!-- Placeholder for uploaded thumbnails -->
 <div class="grid grid-cols-2 md:grid-cols-4 gap-sm mt-sm">
 <!-- Thumb 1 -->
@@ -308,4 +331,102 @@
 
 
 <script src="../session-management.js"></script>
+<script>
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    const browseBtn = document.getElementById('browse-btn');
+    const previewContainer = document.getElementById('preview-container');
+    let uploadedFiles = [];
+
+    // 1. Abrir selector de archivos al hacer clic en el botón o la zona
+    browseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+    });
+    
+    dropZone.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // 2. Efectos visuales de Drag & Drop
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight(e) {
+        dropZone.classList.add('border-primary', 'bg-surface-container-high');
+    }
+
+    function unhighlight(e) {
+        dropZone.classList.remove('border-primary', 'bg-surface-container-high');
+    }
+
+    // 3. Manejo de archivos soltados o seleccionados
+    dropZone.addEventListener('drop', handleDrop, false);
+    fileInput.addEventListener('change', handleFilesSelect, false);
+
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+    }
+
+    function handleFilesSelect(e) {
+        const files = e.target.files;
+        handleFiles(files);
+    }
+
+    function handleFiles(files) {
+        [...files].forEach(file => {
+            if (file.type.startsWith('image/')) {
+                uploadedFiles.push(file);
+                renderPreviews();
+            }
+        });
+    }
+
+    // 4. Renderizar las miniaturas
+    function renderPreviews() {
+        previewContainer.innerHTML = ''; // Limpiar contenedor
+        
+        uploadedFiles.forEach((file, index) => {
+            const reader = new FileReader();
+            
+            reader.readAsDataURL(file);
+            reader.onloadend = function() {
+                const isCover = index === 0; // La primera es la portada
+                
+                const thumbHtml = `
+                <div class="relative rounded-lg overflow-hidden border border-outline-variant aspect-square bg-surface-container-high group">
+                    <div class="bg-cover bg-center w-full h-full opacity-80 group-hover:opacity-100 transition-opacity" style="background-image: url('${reader.result}');"></div>
+                    <button type="button" onclick="removeFile(${index})" class="absolute top-2 right-2 w-8 h-8 bg-surface/80 rounded-full flex items-center justify-center text-error hover:bg-error hover:text-on-error transition-colors backdrop-blur-sm shadow-sm z-10">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                    </button>
+                    ${isCover ? '<div class="absolute bottom-0 left-0 w-full bg-primary/80 backdrop-blur-sm text-on-primary font-label-md text-label-md py-1 text-center z-10">Portada</div>' : ''}
+                </div>`;
+                
+                previewContainer.insertAdjacentHTML('beforeend', thumbHtml);
+            }
+        });
+    }
+
+    // 5. Eliminar imagen
+    window.removeFile = function(index) {
+        uploadedFiles.splice(index, 1);
+        renderPreviews();
+    }
+</script>
 </body></html>

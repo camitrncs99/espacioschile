@@ -143,31 +143,39 @@
 <!-- TopNavBar (Suppressed due to transactional/linear flow) -->
 <!-- Navigation shell is deliberately omitted for this linear "Publicar Espacio" flow to focus the user on the task. -->
 <main class="flex-grow flex flex-col items-center py-lg px-margin-mobile md:px-margin-desktop w-full max-w-max-width mx-auto">
-<!-- Header & Stepper -->
-<div class="w-full max-w-4xl mb-lg">
-<a class="font-headline-md text-headline-md font-bold text-primary" href="../inicio.html">EspaciosChile</a>
-<h1 class="font-headline-lg text-headline-lg text-primary mb-md text-center">Publicar Nuevo Espacio</h1>
-<!-- Progress Bar -->
-<div class="flex items-center justify-between w-full relative">
-<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-outline-variant z-0 rounded-full"></div>
-<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/4 h-1 bg-primary z-0 rounded-full transition-all duration-300"></div>
-<div class="relative z-10 flex flex-col items-center">
-<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs shadow-sm">1</div>
-<span class="font-label-md text-label-md text-primary font-bold">Información Básica</span>
-</div>
-<div class="relative z-10 flex flex-col items-center">
-<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs">2</div>
-<span class="font-label-md text-label-md text-on-surface-variant">Ubicación</span>
-</div>
-<div class="relative z-10 flex flex-col items-center">
-<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs">3</div>
-<span class="font-label-md text-label-md text-on-surface-variant">Detalles</span>
-</div>
-<div class="relative z-10 flex flex-col items-center">
-<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant text-on-surface-variant flex items-center justify-center font-bold font-body-sm text-body-sm mb-xs">4</div>
-<span class="font-label-md text-label-md text-on-surface-variant">Publicar</span>
-</div>
-</div>
+<!-- Stepper -->
+<div class="w-full max-w-4xl mx-auto mb-xl">
+    <div class="bg-surface-container-lowest border border-outline-variant/60 rounded-2xl p-4 sm:px-8 shadow-sm">
+        <div class="flex items-center justify-between relative">
+            <!-- Barra de fondo -->
+            <div class="absolute left-8 right-8 top-4 h-0.5 bg-surface-container-high z-0"></div>
+            <!-- Barra de progreso -->
+            <div class="absolute left-8 top-4 h-0.5 bg-primary z-0 transition-all duration-500" style="width: 0%;"></div>
+
+            <!-- Paso 1 (Activo) -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs shadow-md ring-4 ring-primary-fixed">
+                    1
+                </div>
+                <span class="text-[11px] sm:text-xs font-bold text-primary text-center">1. Tipo</span>
+            </div>
+            <!-- Paso 2 -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-semibold text-xs ring-4 ring-white">2</div>
+                <span class="text-[11px] sm:text-xs font-medium text-on-surface-variant/70 text-center">2. Ubicación y Detalles</span>
+            </div>
+            <!-- Paso 3 -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-semibold text-xs ring-4 ring-white">3</div>
+                <span class="text-[11px] sm:text-xs font-medium text-on-surface-variant/70 text-center">3. Características</span>
+            </div>
+            <!-- Paso 4 -->
+            <div class="flex flex-col items-center gap-2 relative z-10 w-24">
+                <div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-semibold text-xs ring-4 ring-white">4</div>
+                <span class="text-[11px] sm:text-xs font-medium text-on-surface-variant/70 text-center">4. Revisión Final</span>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Main Form Area -->
 <div class="w-full max-w-4xl bg-surface-container-lowest rounded-xl border border-outline-variant p-md md:p-lg shadow-sm">
